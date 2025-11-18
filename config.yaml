@@ -9,34 +9,25 @@ params:
   description: "Data Engineer | Cloud Platforms | DataOps"
   author: "Pradeep Kalluri"
   
-  profileMode:
-    enabled: true
-    title: "Pradeep Kalluri"
-    subtitle: |
-      Data Engineer specializing in scalable cloud data platforms, ELT pipelines, and AI-driven analytics solutions.
+  homeInfoParams:
+    Title: "Hi there 👋"
+    Content: |
+      I'm **Pradeep Kalluri**, a Data Engineer specializing in building scalable cloud data platforms and production-grade ELT pipelines.
       
-      Currently at NatWest Bank leading cloud data platform modernization.
+      Currently at **NatWest Bank** in London, leading cloud data platform modernization projects.
       
-      💡 What I Do:
-      • Design ELT pipelines processing petabyte-scale data
-      • Build distributed systems with PySpark, Databricks, Airflow
-      • Deploy infrastructure with Terraform across AWS, Azure, GCP
-      • Enable ML/AI adoption through robust data engineering
+      ## 💡 What I Do
       
-      📍 London, UK
-    imageUrl: ""
-    imageTitle: ""
-    imageWidth: 120
-    imageHeight: 120
-    buttons:
-      - name: About
-        url: /about
-      - name: Experience
-        url: /experience
-      - name: Projects
-        url: /projects
-      - name: Contact
-        url: /contact
+      - Design & Build ELT Pipelines processing petabyte-scale data
+      - Distributed Data Systems with PySpark, Databricks, Airflow
+      - Cloud Infrastructure with Terraform across AWS, Azure, GCP
+      - DataOps & MLOps with CI/CD, Docker, Kubernetes
+      
+      ## 🎯 Technical Expertise
+      
+      **Cloud:** AWS, Azure, GCP | **Data Engineering:** PySpark, Airflow, dbt, Kafka, Snowflake | **DevOps:** Docker, Kubernetes, Terraform
+      
+      📍 Based in London, UK
 
   socialIcons:
     - name: email
@@ -67,10 +58,6 @@ menu:
       name: Projects
       url: /projects/
       weight: 30
-    - identifier: blog
-      name: Blog
-      url: /blog/
-      weight: 40
     - identifier: contact
       name: Contact
       url: /contact/
