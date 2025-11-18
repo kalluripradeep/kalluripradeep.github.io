@@ -1,0 +1,70 @@
+baseURL: "https://kalluripradeep.github.io/"
+languageCode: "en-us"
+title: "Pradeep Kalluri - Data Engineer"
+theme: "PaperMod"
+
+params:
+  env: production
+  title: "Pradeep Kalluri"
+  description: "Data Engineer | Cloud Platforms | DataOps"
+  author: "Pradeep Kalluri"
+  
+  profileMode:
+    enabled: true
+    title: "Pradeep Kalluri"
+    subtitle: "Data Engineer specializing in scalable cloud data platforms, ELT pipelines, and AI-driven analytics solutions"
+    imageUrl: ""
+    imageTitle: ""
+    buttons:
+      - name: About
+        url: /about
+      - name: Experience
+        url: /experience
+      - name: Projects
+        url: /projects
+      - name: Contact
+        url: /contact
+
+  socialIcons:
+    - name: email
+      url: "mailto:Pradeepkalluri143@gmail.com"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/pradeepkalluri"
+    - name: github
+      url: "https://github.com/kalluripradeep"
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  
+menu:
+  main:
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 10
+    - identifier: experience
+      name: Experience
+      url: /experience/
+      weight: 20
+    - identifier: projects
+      name: Projects
+      url: /projects/
+      weight: 30
+    - identifier: blog
+      name: Blog
+      url: /blog/
+      weight: 40
+    - identifier: contact
+      name: Contact
+      url: /contact/
+      weight: 50
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
