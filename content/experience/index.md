@@ -14,7 +14,7 @@ date: 2024-11-18
 
 \## Data Engineer — NatWest Bank
 
-\*\*May 2024 – Present | London, UK\*\*
+\*\*September 2025 – Present | London, UK\*\*
 
 
 
@@ -40,9 +40,9 @@ Cloud Data Platform Modernisation
 
 
 
-\## Data Engineer — Accenture (Barclays Investment Bank)
+\## Data Engineer — Accenture.
 
-\*\*April 2023 – May 2024 | London, UK\*\*
+\*\*April 2023 – august 2025 | London, UK\*\*
 
 
 
@@ -64,13 +64,13 @@ Cloud Data Platform Modernisation
 
 
 
-\## Data Engineer — Accenture (Asset Management)
+\## Data Engineer — DPoint Group.
 
-\*\*June 2022 – March 2023 | London, UK\*\*
+\*\*June 2022 – March 2023 | Barcelona, SPAIN\*\*
 
 
 
-\- Designed distributed ELT pipelines integrating Bloomberg APIs
+\- Designed distributed ELT pipelines integrating SAP
 
 \- Developed transformation frameworks in dbt/SQLMesh
 
