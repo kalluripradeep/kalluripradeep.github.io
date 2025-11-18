@@ -8,13 +8,23 @@ params:
   title: "Pradeep Kalluri"
   description: "Data Engineer | Cloud Platforms | DataOps"
   author: "Pradeep Kalluri"
-  
-  profileMode:
+
+profileMode:
     enabled: true
     title: "Pradeep Kalluri"
-    subtitle: "Data Engineer specializing in scalable cloud data platforms, ELT pipelines, and AI-driven analytics solutions"
+    subtitle: |
+      Data Engineer specializing in scalable cloud data platforms, ELT pipelines, and AI-driven analytics solutions.
+      
+      Currently at NatWest Bank leading cloud data platform modernization.
+      
+      • Design ELT pipelines processing petabyte-scale data
+      • Build distributed systems with PySpark, Databricks, Airflow
+      • Deploy infrastructure with Terraform across AWS, Azure, GCP
+      • Enable ML/AI adoption through robust data engineering
     imageUrl: ""
     imageTitle: ""
+    imageWidth: 120
+    imageHeight: 120
     buttons:
       - name: About
         url: /about
@@ -24,8 +34,8 @@ params:
         url: /projects
       - name: Contact
         url: /contact
-
-  socialIcons:
+  
+    socialIcons:
     - name: email
       url: "mailto:Pradeepkalluri143@gmail.com"
     - name: linkedin
