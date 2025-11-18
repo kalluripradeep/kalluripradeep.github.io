@@ -56,3 +56,4 @@ Currently working at \*\*NatWest Bank\*\* on cloud data platform modernization.
 
 \- \*\*GitHub:\*\* \[github.com/kalluripradeep](https://github.com/kalluripradeep)
 
+
