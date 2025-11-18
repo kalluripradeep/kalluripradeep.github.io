@@ -1,59 +1,49 @@
 ---
-
 title: "Home"
+layout: "home"
+---
+
+# Welcome! 👋
+
+I'm **Pradeep Kalluri**, a Data Engineer specializing in building scalable cloud data platforms and production-grade ELT pipelines.
+
+Currently at **NatWest Bank** in London, leading cloud data platform modernization projects.
 
 ---
 
+## 💡 What I Do
 
+- **Design & Build ELT Pipelines** - Processing petabyte-scale data for ML and analytics
+- **Distributed Data Systems** - PySpark, Databricks, Apache Airflow orchestration
+- **Cloud Infrastructure** - Terraform IaC across AWS, Azure, and GCP
+- **DataOps & MLOps** - CI/CD pipelines, Docker, Kubernetes
 
-\# Welcome to My Portfolio
+---
 
+## 🎯 Technical Expertise
 
+**Cloud Platforms:** AWS, Azure, GCP  
+**Data Engineering:** PySpark, Airflow, dbt, Kafka, Snowflake, Databricks  
+**DevOps:** Docker, Kubernetes, Terraform, GitHub Actions  
+**Programming:** Python, SQL, Scala
 
-I'm Pradeep Kalluri, a Data Engineer specializing in scalable cloud data platforms, ELT pipelines, and AI-driven analytics solutions.
+---
 
+## 📚 Explore
 
+- [About Me](/about/) - Learn more about my background and education
+- [Experience](/experience/) - See my professional journey at NatWest, Accenture, Barclays
+- [Projects](/projects/) - Check out my data engineering projects
+- [Contact](/contact/) - Get in touch
 
-Currently working at \*\*NatWest Bank\*\* on cloud data platform modernization.
+---
 
+## 🔗 Connect With Me
 
+- **Email:** [Pradeepkalluri143@gmail.com](mailto:Pradeepkalluri143@gmail.com)
+- **LinkedIn:** [linkedin.com/in/pradeepkalluri](https://linkedin.com/in/pradeepkalluri)
+- **GitHub:** [github.com/kalluripradeep](https://github.com/kalluripradeep)
 
-\## What I Do
+---
 
-
-
-\- Design and implement ELT pipelines processing petabyte-scale data
-
-\- Build distributed data systems using PySpark, Databricks, and Airflow  
-
-\- Deploy infrastructure-as-code with Terraform across AWS, Azure, and GCP
-
-\- Enable ML/AI adoption through robust data engineering practices
-
-
-
-\## Explore
-
-
-
-\- \[About Me](/about/) - Learn more about my background
-
-\- \[Experience](/experience/) - See my professional journey
-
-\- \[Projects](/projects/) - Check out my work
-
-\- \[Contact](/contact/) - Get in touch
-
-
-
-\## Connect With Me
-
-
-
-\- \*\*Email:\*\* Pradeepkalluri143@gmail.com
-
-\- \*\*LinkedIn:\*\* \[linkedin.com/in/pradeepkalluri](https://linkedin.com/in/pradeepkalluri)
-
-\- \*\*GitHub:\*\* \[github.com/kalluripradeep](https://github.com/kalluripradeep)
-
-
+📍 **Based in London, United Kingdom**
