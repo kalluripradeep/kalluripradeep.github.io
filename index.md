@@ -1,60 +1,39 @@
 ---
-
 layout: home
-
 title: Home
-
 ---
 
+# Welcome! 👋
 
+I'm **Pradeep Kalluri**, a Data Engineer specializing in building scalable cloud data platforms and production-grade data pipelines.
 
-\# Welcome! 👋
+Currently at **NatWest Bank** in London, working across modern data platforms to build reliable, scalable data flows that support analytics and reporting across the business.
 
+## 💡 What I Do
 
+- **Data Ingestion & Processing** - Kafka, PySpark, Amazon S3, Snowflake
+- **Pipeline Orchestration** - Airflow DAGs, workflow automation
+- **Cloud Data Platforms** - Azure (Databricks, ADF, Data Lake), AWS (S3, Glue)
+- **Data Transformation** - ETL/ELT pipelines, dbt, SQL, Python
+- **Analytics & Visualization** - Tableau dashboards, business intelligence, Power BI
 
-I'm \*\*Pradeep Kalluri\*\*, a Data Engineer specializing in building scalable cloud data platforms and production-grade ELT pipelines.
+## 🎯 Technical Stack
 
+**Cloud Platforms:** AWS, Azure, Microsoft Fabric  
+**Data Engineering:** PySpark, Kafka, Snowflake, Azure Databricks, ADF  
+**Orchestration:** Apache Airflow, Azure Data Factory  
+**ETL/ELT:** SSIS, Python, SQL, dbt  
+**Visualization:** Tableau, Power BI  
+**Tools:** Confluence, Jira, Git
 
+## 🏢 Experience Highlights
 
-Currently at \*\*NatWest Bank\*\* in London, leading cloud data platform modernization projects.
+- **NatWest Bank** - Building scalable data flows with Kafka, PySpark, Snowflake, and Airflow
+- **Accenture** - Delivered enterprise cloud data solutions across Azure and AWS
+- **Dpoint Group** - Developed BI and analytics solutions with SSIS and SAP BW
 
+## 🔗 Connect With Me
 
+[Email](mailto:kalluripradeep99@gmail.com) | [LinkedIn](https://linkedin.com/in/pradeepkalluri) | [GitHub](https://github.com/kalluripradeep)
 
-\## 💡 What I Do
-
-
-
-\- Design \& Build ELT Pipelines processing petabyte-scale data
-
-\- Distributed Data Systems with PySpark, Databricks, Airflow
-
-\- Cloud Infrastructure with Terraform across AWS, Azure, GCP  
-
-\- DataOps \& MLOps with CI/CD, Docker, Kubernetes
-
-
-
-\## 🎯 Technical Expertise
-
-
-
-\*\*Cloud:\*\* AWS, Azure, GCP  
-
-\*\*Data Engineering:\*\* PySpark, Airflow, dbt, Kafka, Snowflake, Databricks  
-
-\*\*DevOps:\*\* Docker, Kubernetes, Terraform, GitHub Actions  
-
-\*\*Programming:\*\* Python, SQL, Scala
-
-
-
-\## 🔗 Connect
-
-
-
-\[Email](mailto:Pradeepkalluri143@gmail.com) | \[LinkedIn](https://linkedin.com/in/pradeepkalluri) | \[GitHub](https://github.com/kalluripradeep)
-
-
-
-📍 London, United Kingdom
-
+📍 **Based in London, United Kingdom**
