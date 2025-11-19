@@ -1,55 +1,21 @@
 baseURL: "https://kalluripradeep.github.io/"
 languageCode: "en-us"
 title: "Pradeep Kalluri - Data Engineer"
-theme: "PaperMod"
+theme: "clarity"
 
 params:
-  env: production
-  title: "Pradeep Kalluri"
-  description: "Data Engineer | Cloud Platforms | DataOps"
   author: "Pradeep Kalluri"
+  description: "Data Engineer specializing in cloud data platforms, ELT pipelines, and DataOps"
+  introDescription: "Data Engineer at NatWest Bank | Cloud Platforms (AWS, Azure, GCP) | Building scalable data pipelines"
   
-  homeInfoParams:
-    Title: "Welcome! 👋"
-    Content: |
-      I'm **Pradeep Kalluri**, a Data Engineer specializing in building scalable cloud data platforms and production-grade ELT pipelines.
-      
-      Currently at **NatWest Bank** in London, leading cloud data platform modernization projects.
-      
-      ## 💡 What I Do
-      
-      - Design & Build ELT Pipelines processing petabyte-scale data
-      - Distributed Data Systems with PySpark, Databricks, Airflow  
-      - Cloud Infrastructure with Terraform across AWS, Azure, GCP
-      - DataOps & MLOps with CI/CD, Docker, Kubernetes
-      
-      ## 🎯 Technical Expertise
-      
-      **Cloud:** AWS, Azure, GCP  
-      **Data Engineering:** PySpark, Airflow, dbt, Kafka, Snowflake, Databricks  
-      **DevOps:** Docker, Kubernetes, Terraform, GitHub Actions  
-      **Programming:** Python, SQL, Scala
-      
-      ## 📚 Quick Links
-      
-      - [About Me](/about/) | [Experience](/experience/) | [Projects](/projects/) | [Contact](/contact/)
-      
-      📍 Based in London, United Kingdom
-  socialIcons:
-    - name: email
-      url: "mailto:Pradeepkalluri143@gmail.com"
-    - name: linkedin
-      url: "https://www.linkedin.com/in/pradeepkalluri"
+  social:
     - name: github
-      url: "https://github.com/kalluripradeep"
+      url: https://github.com/kalluripradeep
+    - name: linkedin
+      url: https://www.linkedin.com/in/pradeepkalluri
+    - name: email
+      url: mailto:Pradeepkalluri143@gmail.com
 
-  ShowReadingTime: true
-  ShowShareButtons: true
-  ShowPostNavLinks: true
-  ShowBreadCrumbs: true
-  ShowCodeCopyButtons: true
-  ShowWordCount: true
-  
 menu:
   main:
     - identifier: about
@@ -67,10 +33,4 @@ menu:
     - identifier: contact
       name: Contact
       url: /contact/
-      weight: 50
-
-outputs:
-  home:
-    - HTML
-    - RSS
-    - JSON
+      weight: 40

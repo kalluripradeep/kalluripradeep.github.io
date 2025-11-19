@@ -1,6 +1,5 @@
 ---
 title: "Home"
-layout: "home"
 ---
 
 # Welcome! 👋
@@ -24,12 +23,12 @@ Currently at **NatWest Bank** in London, leading cloud data platform modernizati
 
 **Cloud Platforms:** AWS, Azure, GCP  
 **Data Engineering:** PySpark, Airflow, dbt, Kafka, Snowflake, Databricks  
-**DevOps:** Docker, Kubernetes, Terraform, GitHub Actions  
+**DevOps/DataOps:** Docker, Kubernetes, Terraform, GitHub Actions  
 **Programming:** Python, SQL, Scala
 
 ---
 
-## 📚 Explore
+## 📚 Explore My Work
 
 - [About Me](/about/) - Learn more about my background and education
 - [Experience](/experience/) - See my professional journey at NatWest, Accenture, Barclays
@@ -41,7 +40,7 @@ Currently at **NatWest Bank** in London, leading cloud data platform modernizati
 ## 🔗 Connect With Me
 
 - **Email:** [Pradeepkalluri143@gmail.com](mailto:Pradeepkalluri143@gmail.com)
-- **LinkedIn:** [linkedin.com/in/pradeepkalluri](https://linkedin.com/in/pradeepkalluri)
+- **LinkedIn:** [linkedin.com/in/pradeepkalluri](https://www.linkedin.com/in/pradeepkalluri)
 - **GitHub:** [github.com/kalluripradeep](https://github.com/kalluripradeep)
 
 ---
