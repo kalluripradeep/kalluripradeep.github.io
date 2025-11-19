@@ -1,10 +1,8 @@
 title: Pradeep Kalluri
 description: Data Engineer | Cloud Platforms | DataOps
 theme: minima
-
-author:
-  name: Pradeep Kalluri
-  email: kalluripradeep99@gmail.com
+author: Pradeep Kalluri
+email: kalluripradeep99@gmail.com
 
 social_links:
   github: kalluripradeep
@@ -16,7 +14,5 @@ header_pages:
   - projects.md
   - contact.md
 
-# Custom CSS
-sass:
-  sass_dir: _sass
-  style: compressed
+minima:
+  skin: classic
