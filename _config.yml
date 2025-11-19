@@ -15,3 +15,8 @@ header_pages:
   - experience.md
   - projects.md
   - contact.md
+
+# Custom CSS
+sass:
+  sass_dir: _sass
+  style: compressed

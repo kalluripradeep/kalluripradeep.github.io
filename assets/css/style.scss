@@ -1,0 +1,238 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/* Custom Styles for Professional Look */
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.8;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+/* Header Styling */
+.site-header {
+  border-top: 5px solid #2563eb;
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 20px 0;
+}
+
+.site-title {
+  font-size: 28px !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  letter-spacing: 0.5px;
+}
+
+.site-title:hover {
+  color: #e0e7ff !important;
+  text-decoration: none !important;
+}
+
+.site-nav .page-link {
+  color: #ffffff !important;
+  font-weight: 500;
+  margin-left: 25px;
+  transition: all 0.3s ease;
+}
+
+.site-nav .page-link:hover {
+  color: #bfdbfe !important;
+  transform: translateY(-2px);
+}
+
+/* Main Content Area */
+.page-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  background-color: #ffffff;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+  border-radius: 8px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/* Typography */
+h1 {
+  color: #1e3a8a;
+  font-weight: 700;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 3px solid #2563eb;
+}
+
+h2 {
+  color: #1e40af;
+  font-weight: 600;
+  font-size: 1.8em;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+h2::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 28px;
+  background-color: #2563eb;
+  margin-right: 12px;
+}
+
+h3 {
+  color: #374151;
+  font-weight: 600;
+  font-size: 1.3em;
+  margin-top: 25px;
+}
+
+p {
+  margin-bottom: 20px;
+  font-size: 1.05em;
+  line-height: 1.8;
+}
+
+strong {
+  color: #1e40af;
+  font-weight: 600;
+}
+
+/* Links */
+a {
+  color: #2563eb;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid transparent;
+}
+
+a:hover {
+  color: #1e40af;
+  border-bottom: 1px solid #2563eb;
+}
+
+/* Lists */
+ul {
+  margin-bottom: 25px;
+  padding-left: 0;
+}
+
+ul li {
+  margin-bottom: 12px;
+  padding-left: 30px;
+  position: relative;
+  line-height: 1.7;
+}
+
+ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #10b981;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Horizontal Rules */
+hr {
+  border: none;
+  border-top: 2px solid #e5e7eb;
+  margin: 40px 0;
+}
+
+/* Code Blocks */
+code {
+  background-color: #f3f4f6;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.9em;
+  color: #dc2626;
+}
+
+pre {
+  background-color: #1f2937;
+  color: #e5e7eb;
+  padding: 20px;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 25px 0;
+}
+
+/* Footer */
+.site-footer {
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+  color: #ffffff;
+  padding: 30px 0;
+  margin-top: 60px;
+}
+
+.site-footer a {
+  color: #bfdbfe;
+  border-bottom: none;
+}
+
+.site-footer a:hover {
+  color: #ffffff;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .page-content {
+    padding: 30px 15px;
+    margin-top: 15px;
+  }
+  
+  h1 {
+    font-size: 2em;
+  }
+  
+  h2 {
+    font-size: 1.5em;
+  }
+  
+  .site-title {
+    font-size: 22px !important;
+  }
+  
+  .site-nav .page-link {
+    margin-left: 15px;
+  }
+}
+
+/* Special Styling for Home Page Sections */
+.page-content ul li strong {
+  color: #1e40af;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Highlight Current Section */
+.page-link.current {
+  border-bottom: 2px solid #ffffff;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add subtle animations */
+.page-content {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
