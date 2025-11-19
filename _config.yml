@@ -4,6 +4,9 @@ theme: minima
 author: Pradeep Kalluri
 email: kalluripradeep99@gmail.com
 
+baseurl: ""
+url: "https://kalluripradeep.github.io"
+
 social_links:
   github: kalluripradeep
   linkedin: pradeepkalluri
@@ -16,3 +19,23 @@ header_pages:
 
 minima:
   skin: classic
+  social_links:
+    github: kalluripradeep
+    linkedin: pradeepkalluri
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
