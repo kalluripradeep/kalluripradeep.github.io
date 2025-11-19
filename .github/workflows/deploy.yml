@@ -1,4 +1,4 @@
-name: Deploy Hugo site to Pages
+name: Deploy Jekyll site to Pages
 
 on:
   push:
@@ -14,33 +14,21 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
-defaults:
-  run:
-    shell: bash
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
         with:
-          submodules: recursive
-          fetch-depth: 0
-      
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
-        with:
-          hugo-version: 'latest'
-          extended: true
-      
-      - name: Build
-        run: hugo --minify
-      
+          source: ./
+          destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./public
 
   deploy:
     environment:
