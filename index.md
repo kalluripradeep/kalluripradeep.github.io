@@ -26,6 +26,13 @@ Currently at **NatWest Bank** in London, working across modern data platforms to
 **Visualization:** Tableau, Power BI  
 **Tools:** Confluence, Jira, Git
 
+## 🚀 Currently
+
+- Building production data pipelines at NatWest Bank
+- Contributing to open-source projects: **dbt-core**, Apache Airflow, Great Expectations
+- Writing about data engineering best practices
+- Exploring speaking opportunities at tech meetups
+
 ## 🏢 Experience Highlights
 
 - **NatWest Bank** - Building scalable data flows with Kafka, PySpark, Snowflake, and Airflow
@@ -34,6 +41,6 @@ Currently at **NatWest Bank** in London, working across modern data platforms to
 
 ## 🔗 Connect With Me
 
-[Email](mailto:kalluripradeep99@gmail.com) | [LinkedIn](https://linkedin.com/in/pradeepkalluri) | [GitHub](https://github.com/kalluripradeep)
+[Email](mailto:kalluripradeep99@gmail.com) | [LinkedIn](https://linkedin.com/in/pradeepkalluri) | [GitHub](https://github.com/kalluripradeep) | [Open Source](/opensource/)
 
 📍 **Based in London, United Kingdom**
