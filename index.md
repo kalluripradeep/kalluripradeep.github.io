@@ -7,53 +7,83 @@ title: Home
 
 I'm **Pradeep Kalluri**, a Data Engineer specializing in building scalable cloud data platforms and production-grade data pipelines.
 
-Currently at **NatWest Bank** in London, working across modern data platforms to build reliable, scalable data flows that support analytics and reporting across the business.
+Currently at **NatWest Bank** in London, designing and delivering reliable data engineering solutions that power analytics and business intelligence across the organization.
 
 ## 💡 What I Do
 
-- **Data Ingestion & Processing** - Kafka, PySpark, Amazon S3, Snowflake
-- **Pipeline Orchestration** - Airflow DAGs, workflow automation
-- **Cloud Data Platforms** - Azure (Databricks, ADF, Data Lake), AWS (S3, Glue)
-- **Data Transformation** - ETL/ELT pipelines, dbt, SQL, Python
-- **Analytics & Visualization** - Tableau dashboards, business intelligence, Power BI
+I build end-to-end data platforms that transform raw data into actionable insights:
+
+- **Data Ingestion** - Real-time streaming (Kafka) and batch processing from cloud storage (S3, Azure Data Lake)
+- **Distributed Processing** - Large-scale data transformation using PySpark and Databricks
+- **Data Warehousing** - Building curated datasets in Snowflake with optimized data models
+- **Pipeline Orchestration** - Workflow automation and monitoring with Apache Airflow
+- **Analytics Engineering** - dbt transformations, data quality frameworks, BI integration
 
 ## 🎯 Technical Stack
 
-**Cloud Platforms:** AWS, Azure, Microsoft Fabric  
-**Data Engineering:** PySpark, Kafka, Snowflake, Azure Databricks, ADF  
-**Orchestration:** Apache Airflow, Azure Data Factory  
-**ETL/ELT:** SSIS, Python, SQL, dbt  
-**Visualization:** Tableau, Power BI  
-**Tools:** Confluence, Jira, Git
+**Languages:** Python (PySpark, Pandas), SQL, Shell Scripting  
+**Cloud Platforms:** AWS (S3, Glue, Lambda), Azure (Databricks, ADF, Data Lake), Microsoft Fabric  
+**Data Engineering:** Apache Kafka, Apache Airflow, Snowflake, dbt, ETL/ELT pipelines  
+**Databases:** Snowflake, Azure SQL, Redshift, PostgreSQL, MySQL  
+**DevOps:** Docker, Terraform, CI/CD (GitHub Actions, Azure DevOps), Git  
+**BI Tools:** Tableau, Power BI  
 
-## 📝 Recent Work
+## 📊 Recent Achievements
 
-**Technical Writing:**
-- [From Raw to Refined: Data Pipeline Architecture at Scale](https://medium.com/@kalluripradeep99/from-raw-to-refined-data-pipeline-architecture-at-scale-52cd4b02ef10) - Medium, Nov 2024
-- [Cross-posted on Dev.to](https://dev.to/pradeep_kaalluri/from-raw-to-refined-data-pipeline-architecture-at-scale-119l)
+### 📝 Technical Writing
+**71,000+ views across platforms**
 
-**Open Source Contributions:**
-- **dbt-core** - Improved user experience after project initialization ([PR #12190](https://github.com/dbt-labs/dbt-core/pull/12190)) - Nov 2024
-- **Apache Airflow** - Enhanced documentation for data masking features ([PR #58587](https://github.com/apache/airflow/pull/58587)) - Nov 2024
+- [Why 71,000 Data Engineers Read My Article](https://medium.com/@kalluripradeep99) - Lessons on technical writing (Dec 2024)
+- [The Time Our Pipeline Processed the Same Day 47 Times](https://medium.com/@kalluripradeep99) - Debugging retry logic (Dec 2024)
+- [5 Data Pipeline Mistakes That Cost Me Weeks](https://medium.com/@kalluripradeep99) - Production debugging stories (Dec 2024)
+- [Data Quality at Scale](https://medium.com/@kalluripradeep99) - 71,000 views! (Nov 2024)
+- [From Raw to Refined: Data Pipeline Architecture](https://medium.com/@kalluripradeep99) - Scalable pipeline design (Nov 2024)
 
-**Speaking:**
-- Submitted talks to 5 data engineering conferences and meetups across the UK
+Cross-posted on [Dev.to](https://dev.to/pradeep_kaalluri) and discussed on Reddit's r/dataengineering
+
+### 🎤 Speaking
+**Oxford Microsoft Data Platform Group** - January 21, 2026 (Confirmed)  
+Topic: "From Raw to Refined: Building Production Data Pipelines That Scale"  
+Format: Online presentation with Azure-based demos
+
+**13 conference proposals submitted** to data engineering conferences and meetups across Europe
+
+### 💻 Open Source Contributions
+
+**Apache Airflow** - Documentation enhancement ([PR #58587](https://github.com/apache/airflow/pull/58587)) - ✅ **MERGED**  
+Improved data masking documentation for production deployments
+
+**dbt-core** - Active contributions:
+- Freshness summary output ([PR #12231](https://github.com/dbt-labs/dbt-core/pull/12231)) - 🟡 Under review
+- User experience improvement ([PR #12232](https://github.com/dbt-labs/dbt-core/pull/12232)) - 🟡 Under review
 
 ## 🚀 Currently
 
-- Building production data pipelines at NatWest Bank
-- Writing about data engineering on [Medium](https://medium.com/@kalluripradeep99) and [Dev.to](https://dev.to/pradeep_kaalluri)
-- Contributing to open-source projects: dbt-core, Apache Airflow
-- Pursuing speaking opportunities at data engineering meetups
+- **Building** production data pipelines at NatWest Bank processing millions of transactions daily
+- **Writing** about data engineering on Medium (71K+ views) and Dev.to
+- **Contributing** to Apache Airflow and dbt-core open source projects
+- **Speaking** at the Oxford Microsoft Data Platform Group (Jan 2026)
+- **Pursuing** UK Global Talent Visa in Digital Technology
 
-## 🏢 Experience Highlights
+## 🏢 Professional Experience
 
-- **NatWest Bank** - Building scalable data flows with Kafka, PySpark, Snowflake, and Airflow
-- **Accenture** - Delivered enterprise cloud data solutions across Azure and AWS
-- **Capgemini** - Developed data engineering solutions for enterprise clients
+**NatWest Bank** (Sep 2025 - Present) - Data Engineer  
+Building scalable data platforms with Kafka, PySpark, Snowflake, and Airflow
+
+**Accenture** (Jul 2023 - Aug 2025) - Data Engineer  
+Delivered enterprise cloud data solutions across Azure and AWS for major clients
+
+**Dpoint Group** (May 2022 - Jun 2023) - Data Engineer  
+Developed BI solutions and ETL pipelines supporting operational analytics
+
+[View detailed experience →](/experience/)
 
 ## 🔗 Connect With Me
 
-[Email](mailto:kalluripradeep99@gmail.com) | [LinkedIn](https://linkedin.com/in/pradeepkalluri) | [GitHub](https://github.com/kalluripradeep) | [Medium](https://medium.com/@kalluripradeep99) | [Dev.to](https://dev.to/pradeep_kaalluri)
+[Email](mailto:kalluripradeep99@gmail.com) • [LinkedIn](https://linkedin.com/in/pradeepkalluri) • [GitHub](https://github.com/kalluripradeep) • [Medium](https://medium.com/@kalluripradeep99) • [Dev.to](https://dev.to/pradeep_kaalluri)
 
 📍 **Based in London, United Kingdom**
+
+---
+
+*Passionate about building reliable, scalable data platforms that empower data-driven decision making.*

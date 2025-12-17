@@ -1,0 +1,147 @@
+---
+layout: page
+title: Technical Writing
+permalink: /articles/
+---
+
+# Technical Writing
+
+I write about data engineering, production debugging, and lessons learned from building scalable data platforms. My articles focus on real-world experiences and practical insights that help other data engineers solve similar problems.
+
+## 📊 Impact
+
+- **71,000+ total views** across Medium, LinkedIn, Reddit, and Dev.to
+- **Featured on Reddit** r/dataengineering with 100+ upvotes
+- **Cross-platform reach** with engaged discussions and community feedback
+
+---
+
+## 📝 Published Articles
+
+### Why 71,000 Data Engineers Read My Article: What I Learned About Technical Writing
+**Published:** December 8, 2024
+
+An analysis of what made my data quality article reach 71,000 views. Lessons on writing technical content that resonates: focusing on pain over solutions, showing vulnerability, using specific numbers, and structuring for skimmers.
+
+**Key Insights:**
+- Write about pain, not just solutions
+- Show mistakes, not expertise
+- Use specific numbers (10%, $100 → 10,000)
+- Structure for skimmers with clear headings
+- End with questions to spark discussion
+
+**Platforms:** [Medium](https://medium.com/@kalluripradeep99) • [Dev.to](https://dev.to/pradeep_kaalluri) • [LinkedIn](https://linkedin.com/in/pradeepkalluri) • Reddit
+
+**Impact:** Helped data engineers understand how to write technical content that gets read and shared
+
+---
+
+### The Time Our Pipeline Processed the Same Day's Data 47 Times
+**Published:** December 16, 2024
+
+A production debugging story about retry logic gone wrong. After deploying new analytics code on Friday, our pipeline processed the same day's data 47 times over the weekend due to a combination of zero-count edge cases and poorly designed retry logic.
+
+**Key Lessons:**
+- Test with realistic data patterns (weekdays, weekends, holidays)
+- Retry logic should reprocess the same data, not fallback data
+- Handle division by zero explicitly in analytics
+- Monitor successful runs, not just failures
+- Keep execution date and data date separate
+
+**Platforms:** [Medium](https://medium.com/@kalluripradeep99) • [Dev.to](https://dev.to/pradeep_kaalluri) • [LinkedIn](https://linkedin.com/in/pradeepkalluri) • Reddit
+
+**Technologies:** Apache Airflow, PySpark, Python, ETL
+
+---
+
+### 5 Production Data Pipeline Mistakes That Cost Me Weeks
+**Published:** December 2, 2024
+
+Real production incidents from financial services data engineering: silent data loss, weekend-only failures, currency format changes, undocumented schema changes, and validation issues. Each story includes the debugging process and lessons learned.
+
+**Mistakes Covered:**
+1. Validation logic silently dropping 10% of transactions
+2. Hard-coded thresholds causing weekend-only failures
+3. Currency format changes ($100 → 10,000)
+4. Undocumented schema changes creating duplicates
+5. COALESCE logic missing critical columns
+
+**Platforms:** [Medium](https://medium.com/@kalluripradeep99) • [Dev.to](https://dev.to/pradeep_kaalluri) • [LinkedIn](https://linkedin.com/in/pradeepkalluri) • Reddit
+
+**Technologies:** PySpark, Data Quality, SQL, Production Debugging
+
+**Community Response:** Featured discussion on r/dataengineering with engineers sharing similar experiences
+
+---
+
+### Data Quality at Scale: Building Reliable Data Pipelines
+**Published:** November 2024  
+**Views:** 71,000+
+
+The article that started it all. Covers practical approaches to data quality in production pipelines: validation strategies, monitoring patterns, schema evolution, and handling edge cases. Based on real experiences processing millions of transactions daily.
+
+**Key Topics:**
+- Data validation patterns at scale
+- Schema evolution strategies
+- Monitoring and alerting approaches
+- Handling edge cases and exceptions
+- Production debugging techniques
+
+**Platforms:** [Medium](https://medium.com/@kalluripradeep99) • [Dev.to](https://dev.to/pradeep_kaalluri) • [LinkedIn](https://linkedin.com/in/pradeepkalluri) • Reddit
+
+**Technologies:** PySpark, Kafka, Airflow, Data Quality
+
+**Impact:** 71,000+ views, 100+ upvotes on Reddit, extensive discussion and community engagement
+
+---
+
+### From Raw to Refined: Building Production Data Pipelines That Scale
+**Published:** November 2024
+
+Architecture patterns for building scalable data pipelines. Covers the journey from raw data ingestion through transformation to analytics-ready datasets, including best practices for each layer.
+
+**Architecture Covered:**
+- Bronze (Raw) → Silver (Cleaned) → Gold (Business) layer pattern
+- Data ingestion strategies (batch vs streaming)
+- Transformation best practices
+- Data modeling for analytics
+- Orchestration and monitoring
+
+**Platforms:** [Medium](https://medium.com/@kalluripradeep99) • [Dev.to](https://dev.to/pradeep_kaalluri) • [LinkedIn](https://linkedin.com/in/pradeepkalluri)
+
+**Technologies:** Kafka, PySpark, Snowflake, Airflow, Databricks
+
+**Use Case:** Submitted as speaking proposal to Oxford Microsoft Data Platform Group (Accepted for Jan 2026)
+
+---
+
+## 🎯 Writing Philosophy
+
+**Practical over theoretical** - Real production experiences, not abstract concepts
+
+**Honest about failures** - Sharing mistakes and debugging journeys, not just solutions
+
+**Specific and actionable** - Concrete examples with code, numbers, and real scenarios
+
+**Community-focused** - Ending with questions to spark discussion and shared learning
+
+---
+
+## 📢 Where to Read
+
+**Primary:** [Medium](https://medium.com/@kalluripradeep99)  
+**Cross-posted:** [Dev.to](https://dev.to/pradeep_kaalluri)  
+**Discussions:** Reddit r/dataengineering  
+**Professional updates:** [LinkedIn](https://linkedin.com/in/pradeepkalluri)
+
+---
+
+## 💬 Get in Touch
+
+Have questions about data engineering? Want to discuss pipeline architecture or share your own production war stories?
+
+Connect with me on [LinkedIn](https://linkedin.com/in/pradeepkalluri) or reach out via [email](mailto:kalluripradeep99@gmail.com).
+
+---
+
+[← Back to Home](/) | [View Open Source Contributions →](/opensource/)
