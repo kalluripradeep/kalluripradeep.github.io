@@ -16,7 +16,8 @@ I speak about data engineering, production debugging, and building scalable data
 **Date:** January 21, 2026  
 **Format:** Online Presentation (1.5 hours with Q&A)  
 **Location:** Virtual  
-**Status:** ✅ **CONFIRMED**
+**Status:** ✅ **CONFIRMED**  
+**Event Link:** [Register on Meetup.com](https://www.meetup.com/oxfordmicrosoft/events/305535226/)
 
 **Title:** From Raw to Refined: Building Production Data Pipelines That Scale
 
