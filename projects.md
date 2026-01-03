@@ -152,12 +152,14 @@ Event-driven microservices architecture processing streaming data with real-time
 - Historical trend analysis with interactive charts
 - RESTful metrics API for integration with monitoring tools
 
-**Production Metrics (Live System - 3 Hours):**
-- 📊 **92,628 orders processed** with sub-100ms latency per record
-- 🔍 **26,016 quality issues detected** and classified by severity
-- ⭐ **96.58% average quality score** maintained across dimensions
-- 🎯 **Issue Breakdown:** 5,618 critical | 15,038 high | 5,624 medium | 2 low
-- ⚡ **10 orders/second throughput** with horizontal scalability
+**Production Metrics (Live System - 37.8 Hours):**
+- 📊 **235,457 orders processed** with sub-100ms latency per record
+- 🔍 **65,665 quality issues detected** and classified by severity
+- ⭐ **96.64% average quality score** maintained across dimensions
+- 🎯 **Quality Dimensions:** Completeness 99.1% | Timeliness 95.6% | Accuracy 96.1%
+- 🚨 **Issue Breakdown:** 14,081 critical | 37,647 high | 14,115 medium | 6 low
+- ⏱️ **37.8 hours continuous uptime** with zero downtime
+- ⚡ **~1.7 orders/second average throughput** with proven stability
 
 **Technologies:** Apache Kafka 7.5, Python 3.11, PostgreSQL 15, Streamlit 1.31, Docker, Pandas, Plotly, psycopg2
 
