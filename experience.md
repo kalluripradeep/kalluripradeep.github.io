@@ -78,17 +78,33 @@ Tor Vergata University, Rome, Italy
 
 ---
 
-## Certifications & Training
+## Certifications
 
-**Data Engineering & Cloud:**
-- AWS Certified Solutions Architect (In Progress)
-- Azure Data Engineer Associate (In Progress)
+### Microsoft Certified: Fabric Data Engineer Associate
+**Microsoft** | January 2026 – January 2027  
+**Credential ID:** 1D3467-780915  
+[Verify Credential](https://learn.microsoft.com/en-us/users/pradeepkalluri-0755/credentials/certification/fabric-data-engineer-associate)
 
-**Professional Development:**
+Validated expertise in building and managing data engineering solutions on Microsoft Fabric, including:
+- Data lakehouse architecture with OneLake and Delta Lake
+- Building data pipelines with Data Factory and Dataflow Gen2
+- Real-time analytics with KQL databases and Eventstream
+- Data transformation with Notebooks and Spark
+- Power BI integration and semantic modeling
+- Data governance and security in Fabric workspaces
+
+---
+
+## Additional Training & Certifications
+
+**In Progress:**
+- AWS Certified Solutions Architect
+- Azure Data Engineer Associate
+
+**Completed:**
 - Apache Airflow workflow orchestration
 - Databricks Apache Spark certification training
 - dbt Analytics Engineering fundamentals
-
 ---
 
 ## Skills Summary
