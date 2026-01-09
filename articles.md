@@ -11,12 +11,47 @@ I write about data engineering, production debugging, and lessons learned from b
 ## 📊 Impact
 
 - **71,000+ total views** across Medium, LinkedIn, Reddit, and Dev.to
+- **Published in Apache Airflow official Medium publication** (2.6K followers) - *NEW!*
+- **Approved by The New Stack** - Article pending publication - *NEW!*
 - **Featured on Reddit** r/dataengineering with 100+ upvotes
 - **Cross-platform reach** with engaged discussions and community feedback
 
 ---
 
 ## 📝 Published Articles
+
+### Rewriting My Apache Airflow PR: When Your First Solution Isn't the Right One ⭐ NEW!
+**Published:** January 2026  
+**Platform:** Apache Airflow Official Medium Publication (2.6K followers)
+
+The story of contributing to Apache Airflow and completely rewriting my pull request after maintainer feedback. Covers the journey from initial solution to a better approach, handling feedback professionally, and the importance of understanding maintainer perspective.
+
+**The Journey:**
+- Initial PR (#59938) fixing `InvalidStatsNameException` for pool names with special characters
+- Maintainer feedback suggesting a different approach
+- Complete rewrite from local fix to centralized normalization
+- Successfully merged into Apache Airflow main branch
+
+**Key Lessons:**
+- Maintainer feedback is about improving the codebase, not rejecting you
+- The first solution that works isn't always the best solution
+- Understanding the broader codebase leads to better contributions
+- Documentation and tests are as important as the fix itself
+- Complete rewrites can result in cleaner, more maintainable code
+
+**Technical Details:**
+- Implemented `normalize_metric_name()` function for pool name sanitization
+- Applied normalization in both `trigger_task()` and `allocate_slots()` methods
+- Ensured backward compatibility with existing pool naming patterns
+- Added comprehensive test coverage for edge cases
+
+**Platforms:** [Apache Airflow Medium](https://medium.com/apache-airflow/) • [Dev.to](https://dev.to/pradeep_kaalluri) • [Substack](https://pradeepkalluri.substack.com/) • [LinkedIn](https://linkedin.com/in/pradeepkalluri)
+
+**Technologies:** Apache Airflow, Python, Open Source Contribution, Code Review
+
+**Impact:** Featured in Apache Airflow's official publication, helping other contributors navigate the PR process
+
+---
 
 ### Why 71,000 Data Engineers Read My Article: What I Learned About Technical Writing
 **Published:** December 8, 2024
@@ -36,8 +71,9 @@ An analysis of what made my data quality article reach 71,000 views. Lessons on 
 
 ---
 
-### The Time Our Pipeline Processed the Same Day's Data 47 Times
-**Published:** December 16, 2024
+### The Time Our Pipeline Processed the Same Day's Data 47 Times ⭐ Approved by The New Stack
+**Published:** December 16, 2024  
+**Status:** Approved by The New Stack - Pending Publication Date
 
 A production debugging story about retry logic gone wrong. After deploying new analytics code on Friday, our pipeline processed the same day's data 47 times over the weekend due to a combination of zero-count edge cases and poorly designed retry logic.
 
@@ -48,9 +84,11 @@ A production debugging story about retry logic gone wrong. After deploying new a
 - Monitor successful runs, not just failures
 - Keep execution date and data date separate
 
-**Platforms:** [Medium](https://medium.com/@kalluripradeep99) • [Dev.to](https://dev.to/pradeep_kaalluri) • [LinkedIn](https://linkedin.com/in/pradeepkalluri) • Reddit
+**Platforms:** [The New Stack](https://thenewstack.io/) (pending) • [Medium](https://medium.com/@kalluripradeep99) • [Dev.to](https://dev.to/pradeep_kaalluri) • [LinkedIn](https://linkedin.com/in/pradeepkalluri) • Reddit
 
 **Technologies:** Apache Airflow, PySpark, Python, ETL
+
+**Recognition:** Selected for publication by The New Stack, a leading software development and infrastructure publication
 
 ---
 
@@ -125,12 +163,15 @@ Architecture patterns for building scalable data pipelines. Covers the journey f
 
 **Community-focused** - Ending with questions to spark discussion and shared learning
 
+**Open source focused** - Contributing back to the tools and communities that help us
+
 ---
 
 ## 📢 Where to Read
 
+**Apache Airflow Publication:** [medium.com/apache-airflow](https://medium.com/apache-airflow/)  
 **Primary:** [Medium](https://medium.com/@kalluripradeep99)  
-**Cross-posted:** [Dev.to](https://dev.to/pradeep_kaalluri)  
+**Cross-posted:** [Dev.to](https://dev.to/pradeep_kaalluri) • [Substack](https://pradeepkalluri.substack.com/)  
 **Discussions:** Reddit r/dataengineering  
 **Professional updates:** [LinkedIn](https://linkedin.com/in/pradeepkalluri)
 
@@ -144,4 +185,4 @@ Connect with me on [LinkedIn](https://linkedin.com/in/pradeepkalluri) or reach o
 
 ---
 
-[← Back to Home](/) | [View Open Source Contributions →](/opensource/)
+[← Back to Home](/) | [View Open Source Contributions →](/opensource/) | [View Projects →](/projects/)
