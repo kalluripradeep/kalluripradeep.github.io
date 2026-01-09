@@ -109,7 +109,14 @@ Architecture patterns for production data platforms, from ingestion to analytics
 
 ---
 
-## 📊 Speaking Experience
+## 📊 Speaking Experience & Credentials
+
+**Recent Achievements:**
+- **Microsoft Certified: Fabric Data Engineer Associate** (January 2026)
+- **Published in Apache Airflow Official Medium Publication** (2.6K followers)
+- **2 Merged Pull Requests** to Apache Airflow open source project
+- **Approved by The New Stack** for article publication
+- **Real-Time Data Quality Monitor** - Production-grade project with 46K+ checks/24h
 
 **Technical presentations:**
 - Internal technical talks at NatWest Bank and Accenture
@@ -117,11 +124,11 @@ Architecture patterns for production data platforms, from ingestion to analytics
 - Client presentations on data platform architecture
 
 **Community engagement:**
-- Active participant in data engineering communities (Reddit, LinkedIn, Slack)
-- Technical writing with 71,000+ views
+- Active contributor to Apache Airflow open source (2 merged PRs)
+- Technical writing with 71,000+ views across platforms
+- Published in official Apache Airflow Medium publication
 - Open source contributions with code reviews and discussions
-
----
+- Real-world production data platform experience
 
 ## 🎤 Want Me to Speak?
 
