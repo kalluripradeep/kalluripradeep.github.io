@@ -10,9 +10,9 @@ I write about data engineering, production debugging, and lessons learned from b
 
 ## 📊 Impact
 
+- **Published on The New Stack** - Leading cloud-native and DevOps publication ⭐ **NEW!**
 - **71,000+ total views** across Medium, LinkedIn, Reddit, and Dev.to
-- **Published in Apache Airflow official Medium publication** (2.6K followers) - *NEW!*
-- **Approved by The New Stack** - Article pending publication - *NEW!*
+- **Published in Apache Airflow official Medium publication** (2.6K followers)
 - **Featured on Reddit** r/dataengineering with 100+ upvotes
 - **Cross-platform reach** with engaged discussions and community feedback
 
@@ -20,7 +20,28 @@ I write about data engineering, production debugging, and lessons learned from b
 
 ## 📝 Published Articles
 
-### Rewriting My Apache Airflow PR: When Your First Solution Isn't the Right One ⭐ NEW!
+### The Weekend Our Pipeline Processed the Same Data 47 Times ⭐ Published on The New Stack
+**Published:** January 12, 2026  
+**Platform:** [The New Stack](https://thenewstack.io/the-weekend-our-pipeline-processed-the-same-data-47-times/)
+
+A production debugging story published on The New Stack, a leading publication for software development and cloud-native infrastructure. After deploying new analytics code on Friday, our pipeline processed the same day's data 47 times over the weekend due to a combination of zero-count edge cases and poorly designed retry logic.
+
+**Key Lessons:**
+- Test with realistic data patterns (weekdays, weekends, holidays)
+- Retry logic should reprocess the same data, not fallback data
+- Handle division by zero explicitly in analytics
+- Monitor successful runs, not just failures
+- Keep execution date and data date separate
+
+**Platforms:** [The New Stack](https://thenewstack.io/author/pradeep-kalluri/) • [Medium](https://medium.com/@kalluripradeep99) • [Dev.to](https://dev.to/pradeep_kaalluri) • [LinkedIn](https://linkedin.com/in/pradeepkalluri)
+
+**Technologies:** Apache Airflow, PySpark, Python, ETL
+
+**Recognition:** Selected for publication by The New Stack, a leading software development and infrastructure publication read by enterprise engineers and CTOs globally
+
+---
+
+### Rewriting My Apache Airflow PR: When Your First Solution Isn't the Right One
 **Published:** January 2026  
 **Platform:** Apache Airflow Official Medium Publication (2.6K followers)
 
@@ -68,27 +89,6 @@ An analysis of what made my data quality article reach 71,000 views. Lessons on 
 **Platforms:** [Medium](https://medium.com/@kalluripradeep99) • [Dev.to](https://dev.to/pradeep_kaalluri) • [LinkedIn](https://linkedin.com/in/pradeepkalluri) • Reddit
 
 **Impact:** Helped data engineers understand how to write technical content that gets read and shared
-
----
-
-### The Time Our Pipeline Processed the Same Day's Data 47 Times ⭐ Approved by The New Stack
-**Published:** December 16, 2024  
-**Status:** Approved by The New Stack - Pending Publication Date
-
-A production debugging story about retry logic gone wrong. After deploying new analytics code on Friday, our pipeline processed the same day's data 47 times over the weekend due to a combination of zero-count edge cases and poorly designed retry logic.
-
-**Key Lessons:**
-- Test with realistic data patterns (weekdays, weekends, holidays)
-- Retry logic should reprocess the same data, not fallback data
-- Handle division by zero explicitly in analytics
-- Monitor successful runs, not just failures
-- Keep execution date and data date separate
-
-**Platforms:** [The New Stack](https://thenewstack.io/) (pending) • [Medium](https://medium.com/@kalluripradeep99) • [Dev.to](https://dev.to/pradeep_kaalluri) • [LinkedIn](https://linkedin.com/in/pradeepkalluri) • Reddit
-
-**Technologies:** Apache Airflow, PySpark, Python, ETL
-
-**Recognition:** Selected for publication by The New Stack, a leading software development and infrastructure publication
 
 ---
 
@@ -149,7 +149,7 @@ Architecture patterns for building scalable data pipelines. Covers the journey f
 
 **Technologies:** Kafka, PySpark, Snowflake, Airflow, Databricks
 
-**Use Case:** Submitted as speaking proposal to Oxford Microsoft Data Platform Group (Accepted for Jan 2026)
+**Use Case:** Topic presented at Oxford Microsoft Data Platform Group (January 2026)
 
 ---
 
@@ -169,6 +169,7 @@ Architecture patterns for building scalable data pipelines. Covers the journey f
 
 ## 📢 Where to Read
 
+**The New Stack:** [thenewstack.io/author/pradeep-kalluri](https://thenewstack.io/author/pradeep-kalluri/)  
 **Apache Airflow Publication:** [medium.com/apache-airflow](https://medium.com/apache-airflow/)  
 **Primary:** [Medium](https://medium.com/@kalluripradeep99)  
 **Cross-posted:** [Dev.to](https://dev.to/pradeep_kaalluri) • [Substack](https://pradeepkalluri.substack.com/)  

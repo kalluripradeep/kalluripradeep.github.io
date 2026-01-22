@@ -31,15 +31,17 @@ I build end-to-end data platforms that transform raw data into actionable insigh
 ## 📊 Recent Achievements
 
 ### 📝 Technical Writing
-**71,000+ views across platforms**
+**Published on The New Stack** ⭐ + **71,000+ views across platforms**
 
+- [The Weekend Our Pipeline Processed the Same Data 47 Times](https://thenewstack.io/author/pradeep-kalluri/) - **Published on The New Stack** (Jan 2026)
 - [Why 71,000 Data Engineers Read My Article](https://medium.com/@kalluripradeep99) - Lessons on technical writing (Dec 2024)
-- [The Time Our Pipeline Processed the Same Day 47 Times](https://medium.com/@kalluripradeep99) - Debugging retry logic (Dec 2024)
 - [5 Data Pipeline Mistakes That Cost Me Weeks](https://medium.com/@kalluripradeep99) - Production debugging stories (Dec 2024)
 - [Data Quality at Scale](https://medium.com/@kalluripradeep99) - 71,000 views! (Nov 2024)
 - [From Raw to Refined: Data Pipeline Architecture](https://medium.com/@kalluripradeep99) - Scalable pipeline design (Nov 2024)
 
-Cross-posted on [Dev.to](https://dev.to/pradeep_kaalluri) and discussed on Reddit's r/dataengineering
+Published on [The New Stack](https://thenewstack.io/author/pradeep-kalluri/), cross-posted on [Dev.to](https://dev.to/pradeep_kaalluri), and discussed on Reddit's r/dataengineering
+
+[View all articles →](/articles/)
 
 ### 🎤 Speaking
 **Oxford Microsoft Data Platform Group** - January 21, 2026 ✅ **COMPLETED**  
