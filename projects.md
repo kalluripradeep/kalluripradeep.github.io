@@ -8,6 +8,49 @@ permalink: /projects/
 
 ## Production Data Platforms
 
+### Real-Time Data Quality Monitoring with ML — NatWest Bank
+**Duration:** December 2025 - January 2026 (Phase 5)  
+**Role:** Data Engineer  
+**Status:** ✅ Production
+
+Built ML-powered real-time data quality monitoring system that detects anomalies in streaming data with sub-10ms latency, preventing data quality issues before they reach production systems.
+
+**Architecture:**
+- **Streaming Ingestion:** Apache Kafka consuming 600+ events per minute
+- **Real-Time Processing:** Spark Structured Streaming with micro-batch processing
+- **ML Anomaly Detection:** Isolation Forest algorithm detecting quality issues in real-time
+- **Data Storage:** PostgreSQL for metrics, checkpointing for exactly-once semantics
+- **Quality Scoring:** Multi-dimensional quality assessment (completeness, accuracy, freshness)
+- **Monitoring:** Real-time dashboards tracking quality scores and anomaly rates
+
+**Key Features:**
+- **Sub-10ms latency** for ML-based quality scoring on streaming data
+- **93% quality scores** maintained across all production pipelines
+- **Automatic anomaly detection** using Isolation Forest trained on historical patterns
+- **Multi-dimensional quality checks:** Completeness, uniqueness, validity, consistency, accuracy, timeliness
+- **Exactly-once processing** with Kafka checkpointing and idempotent operations
+- **Real-time alerting** when quality scores drop below thresholds
+
+**Technical Implementation:**
+- Kafka consumer with configurable batch sizes for optimal throughput
+- scikit-learn Isolation Forest model trained on 51+ historical quality samples
+- PostgreSQL for storing quality metrics with time-series analysis
+- Configurable quality thresholds per data source
+- Comprehensive logging and error handling
+
+**Technologies:** Apache Kafka, Spark Structured Streaming, Python, scikit-learn, PostgreSQL, Isolation Forest ML, pandas
+
+**Impact:**
+- **Reduced detection time** from 48 hours to real-time for data quality issues
+- **Prevented downstream corruption** by catching anomalies at ingestion
+- **Automated quality monitoring** replacing manual spot-checks
+- **Enabled proactive alerting** before business users encounter issues
+- **Supports 200+ business users** with reliable data quality
+
+**Code & Documentation:** Available on [GitHub](https://github.com/kalluripradeep) (contact for access)
+
+---
+
 ### Real-Time Data Pipeline Platform — NatWest Bank
 **Duration:** September 2025 - Present  
 **Role:** Data Engineer
@@ -19,12 +62,12 @@ Building and maintaining production-grade data pipelines that process millions o
 - **Storage Layer:** Raw data landing in Amazon S3 with partitioning strategies
 - **Processing Layer:** PySpark distributed processing for transformation and validation
 - **Warehouse Layer:** Curated datasets in Snowflake with optimized data models
-- **Orchestration:** Apache Airflow DAGs managing dependencies and scheduling
+- **Orchestration:** Apache Airflow DAGs managing 40+ interdependent pipelines
 - **Analytics:** Tableau dashboards connecting to Snowflake for business intelligence
 
 **Key Features:**
 - Real-time data ingestion handling peak loads of 10K+ events/second
-- Multi-stage transformation pipeline (Raw → Cleaned → Business layers)
+- Three-zone architecture (Raw → Curated → Refined) for data reliability
 - Data quality framework with automated validation and alerting
 - Incremental processing patterns for efficient compute usage
 - Monitoring and observability with SLA tracking
@@ -36,6 +79,38 @@ Building and maintaining production-grade data pipelines that process millions o
 - Supports regulatory reporting with audit trails and data lineage
 - Reduced data processing latency from hours to minutes
 - Improved data quality through automated validation
+- **Recovery time reduced from 6 hours to 30 minutes** through three-zone architecture
+
+---
+
+### Customer 360 Platform — NatWest Bank
+**Duration:** October 2025 - December 2025  
+**Role:** Data Engineer
+
+Built unified customer view aggregating data from 12 source systems, providing comprehensive customer insights for marketing, risk, and product teams.
+
+**Architecture:**
+- **Data Integration:** 12 source systems (Salesforce, core banking, wealth management, ServiceNow, web analytics)
+- **Processing:** Azure Databricks with PySpark for data transformation
+- **Storage:** Delta Lake for ACID transactions and time travel
+- **Analytics Layer:** Pre-calculated KPIs and aggregates in Azure Synapse
+- **Updates:** Batch processing every 4 hours with incremental logic
+- **Consumption:** Power BI dashboards for 200+ business users
+
+**Key Features:**
+- **360-degree customer view** with unified profile across all touchpoints
+- **Pre-calculated KPIs:** Lifetime value, churn risk, product penetration, engagement scores
+- **Date partitioning** for optimized query performance (10x faster queries)
+- **Incremental processing** to handle late-arriving data
+- **Star schema design** optimized for analytical queries
+
+**Technologies:** Azure Databricks, PySpark, Delta Lake, Azure Synapse, Power BI, SQL
+
+**Impact:**
+- **200+ business users** across Marketing, Risk, and Product teams
+- **10x query performance improvement** through proper partitioning
+- **Unified customer insights** enabling personalized marketing campaigns
+- **Reduced manual data gathering** from days to seconds
 
 ---
 
@@ -156,6 +231,18 @@ I document lessons learned from these projects through technical writing:
 - **Featured discussions** on Reddit r/dataengineering
 
 [Read my technical articles →](/articles/)
+
+---
+
+## Speaking Engagements
+
+I share production lessons through conference talks and meetups:
+
+- **Oxford Microsoft Data Platform Group** (January 2026) - Completed
+- Topic: "From Raw to Refined: Building Production Data Pipelines That Scale"
+- Invited back for dedicated Apache Airflow session
+
+[View all speaking engagements →](/speaking/)
 
 ---
 

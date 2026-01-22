@@ -42,11 +42,13 @@ I build end-to-end data platforms that transform raw data into actionable insigh
 Cross-posted on [Dev.to](https://dev.to/pradeep_kaalluri) and discussed on Reddit's r/dataengineering
 
 ### 🎤 Speaking
-**Oxford Microsoft Data Platform Group** - January 21, 2026 (Confirmed)  
+**Oxford Microsoft Data Platform Group** - January 21, 2026 ✅ **COMPLETED**  
 Topic: "From Raw to Refined: Building Production Data Pipelines That Scale"  
-Format: Online presentation with Azure-based demos
+Presented to 14+ data engineers on production data pipeline architecture. Received positive feedback from Microsoft Senior Cloud Solution Architect and invited back for dedicated Apache Airflow session.
 
 **13 conference proposals submitted** to data engineering conferences and meetups across Europe
+
+[View all speaking engagements →](/speaking/)
 
 ### 💻 Open Source Contributions
 
@@ -62,7 +64,7 @@ Improved data masking documentation for production deployments
 - **Building** production data pipelines at NatWest Bank processing millions of transactions daily
 - **Writing** about data engineering on Medium (71K+ views) and Dev.to
 - **Contributing** to Apache Airflow and dbt-core open source projects
-- **Speaking** at the Oxford Microsoft Data Platform Group (Jan 2026)
+- **Speaking** at data engineering meetups and conferences (Oxford Microsoft Data Platform Group - Jan 2026)
 - **Pursuing** UK Global Talent Visa in Digital Technology
 
 ## 🏢 Professional Experience
