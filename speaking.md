@@ -18,7 +18,7 @@ I speak about data engineering, production debugging, and building scalable data
 **Location:** Virtual  
 **Status:** ✅ **COMPLETED**  
 **Slides:** [Download Presentation (5MB PPTX)](../presentations/Oxford_Talk_Jan2026_Production_Data_Pipelines.pptx)  
-**Event Link:** [Meetup Page](https://www.meetup.com/oxford-azure-user-group/)
+**Event Link:** [Meetup Event](https://www.meetup.com/oxford-microsoft-data-platform-group/events/312486402/)
 
 **Title:** From Raw to Refined: Building Production Data Pipelines That Scale
 
