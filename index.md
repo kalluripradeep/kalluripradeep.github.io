@@ -34,10 +34,10 @@ I build end-to-end data platforms that transform raw data into actionable insigh
 **Published on The New Stack** ⭐ + **71,000+ views across platforms**
 
 - [The Weekend Our Pipeline Processed the Same Data 47 Times](https://thenewstack.io/author/pradeep-kalluri/) - **Published on The New Stack** (Jan 2026)
-- [Why 71,000 Data Engineers Read My Article](https://medium.com/@kalluripradeep99) - Lessons on technical writing (Dec 2024)
-- [5 Data Pipeline Mistakes That Cost Me Weeks](https://medium.com/@kalluripradeep99) - Production debugging stories (Dec 2024)
-- [Data Quality at Scale](https://medium.com/@kalluripradeep99) - 71,000 views! (Nov 2024)
-- [From Raw to Refined: Data Pipeline Architecture](https://medium.com/@kalluripradeep99) - Scalable pipeline design (Nov 2024)
+- [Why 71,000 Data Engineers Read My Article](https://medium.com/@kalluripradeep99) - Lessons on technical writing (Dec 2025)
+- [5 Data Pipeline Mistakes That Cost Me Weeks](https://medium.com/@kalluripradeep99) - Production debugging stories (Dec 2025)
+- [Data Quality at Scale](https://medium.com/@kalluripradeep99) - 71,000 views! (Nov 2025)
+- [From Raw to Refined: Data Pipeline Architecture](https://medium.com/@kalluripradeep99) - Scalable pipeline design (Nov 2025)
 
 Published on [The New Stack](https://thenewstack.io/author/pradeep-kalluri/), cross-posted on [Dev.to](https://dev.to/pradeep_kaalluri), and discussed on Reddit's r/dataengineering
 
@@ -45,8 +45,11 @@ Published on [The New Stack](https://thenewstack.io/author/pradeep-kalluri/), cr
 
 ### 🎤 Speaking
 **Oxford Microsoft Data Platform Group** - January 21, 2026 ✅ **COMPLETED**  
-Topic: "From Raw to Refined: Building Production Data Pipelines That Scale"  
-Presented to 14+ data engineers on production data pipeline architecture. Received positive feedback from Microsoft Senior Cloud Solution Architect and invited back for dedicated Apache Airflow session.
+Topic: "From Raw to Refined: Building Production Data Pipelines That Scale"
+**Audience:** 50+ registrations from industry leaders
+
+Presented to data engineers with 50+ registrations for the event from industry leaders on production data pipeline architecture. Received positive feedback from Microsoft Senior Cloud Solution Architect and invited back for dedicated Apache Airflow session.  
+
 
 **13 conference proposals submitted** to data engineering conferences and meetups across Europe
 
