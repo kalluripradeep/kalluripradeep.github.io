@@ -5,6 +5,8 @@ title: Home
 
 # Welcome! 👋
 
+<div class="hero-role"><span id="typing-text">Data Engineer</span></div>
+
 I'm **Pradeep Kalluri**, a Data Engineer specializing in building scalable cloud data platforms and production-grade data pipelines.
 
 Currently at **NatWest Bank** in London, designing and delivering reliable data engineering solutions that power analytics and business intelligence across the organization.
@@ -31,7 +33,7 @@ I build end-to-end data platforms that transform raw data into actionable insigh
 ## 📊 Recent Achievements
 
 ### 📝 Technical Writing
-**Published on The New Stack** ⭐ + **71,000+ views across platforms**
+**Published on The New Stack** ⭐ + **<span data-count="71000" data-suffix="+">71,000+</span> views across platforms**
 
 - [The Weekend Our Pipeline Processed the Same Data 47 Times](https://thenewstack.io/author/pradeep-kalluri/) - **Published on The New Stack** (Jan 2026)
 - [Why 71,000 Data Engineers Read My Article](https://medium.com/@kalluripradeep99) - Lessons on technical writing (Dec 2025)
@@ -51,7 +53,7 @@ Topic: "From Raw to Refined: Building Production Data Pipelines That Scale"
 Presented to data engineers with 50+ registrations for the event from industry leaders on production data pipeline architecture. Received positive feedback from Microsoft Senior Cloud Solution Architect and invited back for dedicated Apache Airflow session.  
 
 
-**13 conference proposals submitted** to data engineering conferences and meetups across Europe
+**<span data-count="13" data-suffix="">13</span> conference proposals submitted** to data engineering conferences and meetups across Europe
 
 [View all speaking engagements →](/speaking/)
 
