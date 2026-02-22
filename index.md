@@ -36,12 +36,13 @@ I build end-to-end data platforms that transform raw data into actionable insigh
 **Published on The New Stack** ⭐ + **<span data-count="71000" data-suffix="+">71,000+</span> views across platforms**
 
 - [The Weekend Our Pipeline Processed the Same Data 47 Times](https://thenewstack.io/author/pradeep-kalluri/) - **Published on The New Stack** (Jan 2026)
+- [A Beginner's Guide to Contributing to Apache Airflow](https://medium.com/apache-airflow/a-beginners-guide-to-contributing-to-apache-airflow-065fc7081dbc) - **Published on Apache Airflow Official Medium** (Feb 2026)
 - [Why 71,000 Data Engineers Read My Article](https://medium.com/@kalluripradeep99) - Lessons on technical writing (Dec 2025)
 - [5 Data Pipeline Mistakes That Cost Me Weeks](https://medium.com/@kalluripradeep99) - Production debugging stories (Dec 2025)
 - [Data Quality at Scale](https://medium.com/@kalluripradeep99) - 71,000 views! (Nov 2025)
 - [From Raw to Refined: Data Pipeline Architecture](https://medium.com/@kalluripradeep99) - Scalable pipeline design (Nov 2025)
 
-Published on [The New Stack](https://thenewstack.io/author/pradeep-kalluri/), cross-posted on [Dev.to](https://dev.to/pradeep_kaalluri), and discussed on Reddit's r/dataengineering
+Published on [The New Stack](https://thenewstack.io/author/pradeep-kalluri/), [Apache Airflow Official Medium](https://medium.com/apache-airflow/), cross-posted on [Dev.to](https://dev.to/pradeep_kaalluri), and discussed on Reddit's r/dataengineering
 
 [View all articles →](/articles/)
 
@@ -59,19 +60,31 @@ Presented to data engineers with 50+ registrations for the event from industry l
 
 ### 💻 Open Source Contributions
 
-**Apache Airflow** - Documentation enhancement ([PR #58587](https://github.com/apache/airflow/pull/58587)) - ✅ **MERGED**  
-Improved data masking documentation for production deployments
+**Apache Airflow** - **3 merged PRs** + 5+ PR reviews completed:
+- Data masking documentation ([PR #58587](https://github.com/apache/airflow/pull/58587)) - ✅ **MERGED**
+- Pool name validation fix ([PR #59938](https://github.com/apache/airflow/pull/59938)) - ✅ **MERGED**
+- Bug fix contribution ([PR #61005](https://github.com/apache/airflow/pull/61005)) - ✅ **MERGED**
 
-**dbt-core** - Active contributions:
-- Freshness summary output ([PR #12231](https://github.com/dbt-labs/dbt-core/pull/12231)) - 🟡 Under review
-- User experience improvement ([PR #12232](https://github.com/dbt-labs/dbt-core/pull/12232)) - 🟡 Under review
+**dbt-core** - 1 merged + 2 active contributions:
+- Fixed `@requires.catalogs` decorator for compile command ([PR #12388](https://github.com/dbt-labs/dbt-core/pull/12388)) - ✅ **MERGED** (Feb 2026)
+- dbt init UX fix ([PR #12232](https://github.com/dbt-labs/dbt-core/pull/12232)) - 🟡 Under review
+- Debug compilation error fix ([PR #12502](https://github.com/dbt-labs/dbt-core/pull/12502)) - 🟡 Under review
+
+## 🏅 Certifications
+
+**Microsoft Fabric Data Engineer Associate** — January 4, 2026
+[View credential](https://learn.microsoft.com/api/credentials/share/en-us/pradeepkalluri-0755/AB21F6AD929986B8?sharingId)
+
+**SnowPro Core (COF-C03)** — Score: 923/1000 — February 16, 2026
+[View credential](https://achieve.snowflake.com/babf58c4-26e3-4804-8574-7a0d0b924014#acc.EJ1CpPmg)
 
 ## 🚀 Currently
 
 - **Building** production data pipelines at NatWest Bank processing millions of transactions daily
 - **Writing** about data engineering on Medium (71K+ views) and Dev.to
-- **Contributing** to Apache Airflow and dbt-core open source projects
+- **Contributing** to Apache Airflow (3 merged PRs) and dbt-core open source projects
 - **Speaking** at data engineering meetups and conferences (Oxford Microsoft Data Platform Group - Jan 2026)
+- **Mentoring** data engineers on [Topmate](https://topmate.io/pradeep_kalluri/) — "The Career Launcher" service
 - **Pursuing** UK Global Talent Visa in Digital Technology
 
 ## 🏢 Professional Experience

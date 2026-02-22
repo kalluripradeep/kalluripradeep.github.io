@@ -20,6 +20,27 @@ I write about data engineering, production debugging, and lessons learned from b
 
 ## 📝 Published Articles
 
+### A Beginner's Guide to Contributing to Apache Airflow
+**Published:** February 2026
+**Platform:** [Apache Airflow Official Medium Publication](https://medium.com/apache-airflow/a-beginners-guide-to-contributing-to-apache-airflow-065fc7081dbc)
+
+A practical guide for developers looking to make their first open source contribution to Apache Airflow. Covers setting up a local development environment, navigating the codebase, understanding the contribution process, and working with maintainers effectively — lessons drawn from my own three merged PRs and 5+ code reviews.
+
+**Key Topics:**
+- Setting up a local Airflow dev environment
+- Finding good first issues
+- Understanding the PR review process
+- Working with maintainer feedback
+- Writing tests and documentation alongside code
+
+**Platforms:** [Apache Airflow Medium](https://medium.com/apache-airflow/a-beginners-guide-to-contributing-to-apache-airflow-065fc7081dbc) • [LinkedIn](https://linkedin.com/in/pradeepkalluri)
+
+**Technologies:** Apache Airflow, Python, Open Source Contribution
+
+**Impact:** Published in Apache Airflow's official publication, helping new contributors navigate the open source contribution process
+
+---
+
 ### The Weekend Our Pipeline Processed the Same Data 47 Times ⭐ Published on The New Stack
 **Published:** January 12, 2026  
 **Platform:** [The New Stack](https://thenewstack.io/the-weekend-our-pipeline-processed-the-same-data-47-times/)

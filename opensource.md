@@ -12,6 +12,15 @@ Contributing to open-source projects to improve data engineering tools and give 
 
 ## Apache Airflow
 
+### Bug Fix Contribution (PR #61005) - ✅ MERGED
+**Status:** Merged into main branch (February 2026)
+**Repository:** [apache/airflow](https://github.com/apache/airflow)
+**Pull Request:** [#61005](https://github.com/apache/airflow/pull/61005)
+
+Contributing a bug fix to the Apache Airflow codebase, continuing engagement with the project's open source community.
+
+---
+
 ### Pool Name Validation Fix (PR #59938) - ✅ MERGED
 **Status:** Merged into main branch (January 2026)  
 **Repository:** [apache/airflow](https://github.com/apache/airflow)  
@@ -70,30 +79,45 @@ The documentation for data masking in Airflow connections lacked clear guidance 
 
 ## dbt-core
 
-### Freshness Summary Output Enhancement (PR #12231) - 🟡 Under Review
-**Status:** Open, under review  
-**Repository:** [dbt-labs/dbt-core](https://github.com/dbt-labs/dbt-core)  
-**Pull Request:** [#12231](https://github.com/dbt-labs/dbt-core/pull/12231)
+### Fixed @requires.catalogs Decorator for Compile Command (PR #12388) - ✅ MERGED
+**Status:** Merged into main branch (February 2026)
+**Repository:** [dbt-labs/dbt-core](https://github.com/dbt-labs/dbt-core)
+**Pull Request:** [#12388](https://github.com/dbt-labs/dbt-core/pull/12388)
 
-**Problem Addressed:**
-The `dbt source freshness` command currently outputs verbose logs without a clear summary of pass/fail status, making it difficult to quickly assess freshness check results in CI/CD pipelines.
+**Problem Solved:**
+The `@requires.catalogs` decorator was incorrectly applied to the `compile` command, causing unexpected behaviour when running `dbt compile` in certain scenarios.
 
-**Proposed Solution:**
-- Add summary output showing total sources checked, passed, warned, and failed
-- Improve log formatting for better readability
-- Maintain backward compatibility with existing output
+**Solution Implemented:**
+- Identified and fixed the incorrect decorator application
+- Ensured `dbt compile` behaves correctly without unintended catalog requirements
+- Added appropriate test coverage to prevent regressions
 
-**Status:** Awaiting maintainer feedback on implementation approach
+**Impact:**
+- Fixes a real-world usability issue reported by dbt users
+- Improves reliability of the `dbt compile` command
+- Merged into dbt-core main branch (February 2026)
 
 ---
 
-### User Experience Improvement (PR #12232) - 🟡 Under Review
-**Status:** Open, under review  
-**Repository:** [dbt-labs/dbt-core](https://github.com/dbt-labs/dbt-core)  
+### dbt init UX Fix (PR #12232) - 🟡 Under Review
+**Status:** Open, under review
+**Repository:** [dbt-labs/dbt-core](https://github.com/dbt-labs/dbt-core)
 **Pull Request:** [#12232](https://github.com/dbt-labs/dbt-core/pull/12232)
 
 **Problem Addressed:**
-Enhancing user experience for common dbt workflows based on community feedback.
+Improving the `dbt init` user experience based on community feedback to make onboarding smoother for new dbt users.
+
+**Status:** Under review by maintainers
+
+---
+
+### Debug Compilation Error Fix (PR #12502) - 🟡 Under Review
+**Status:** Open, under review
+**Repository:** [dbt-labs/dbt-core](https://github.com/dbt-labs/dbt-core)
+**Pull Request:** [#12502](https://github.com/dbt-labs/dbt-core/pull/12502)
+
+**Problem Addressed:**
+Fixing a compilation error that surfaces during `dbt debug`, improving the reliability of the debugging workflow.
 
 **Status:** Under review by maintainers
 
@@ -125,9 +149,11 @@ I believe in contributing back to the tools I use daily. My contributions focus 
 
 ## Contribution Stats
 
-- **2 Merged PRs** in Apache Airflow (one of the most popular data engineering tools)
-- **3 Active PRs** under review in dbt-core and Confluent Kafka Python
-- **1 Published Article** in Apache Airflow's official Medium publication
+- **3 Merged PRs** in Apache Airflow (one of the most popular data engineering tools)
+- **1 Merged PR** in dbt-core
+- **2 Active PRs** under review in dbt-core
+- **5+ PR Reviews** completed in Apache Airflow
+- **2 Published Articles** in Apache Airflow's official Medium publication
 - **Community Impact:** Documentation improvements and bug fixes benefiting thousands of users
 
 ---
@@ -135,6 +161,7 @@ I believe in contributing back to the tools I use daily. My contributions focus 
 ## Want to Learn More?
 
 Read about my contribution journey:
+- [A Beginner's Guide to Contributing to Apache Airflow](https://medium.com/apache-airflow/a-beginners-guide-to-contributing-to-apache-airflow-065fc7081dbc) - Apache Airflow Official Publication
 - [Rewriting My Apache Airflow PR: When Your First Solution Isn't the Right One](https://medium.com/apache-airflow/rewriting-my-apache-airflow-pr-when-your-first-solution-isnt-the-right-one-abc123) - Apache Airflow Publication
 - [Why 71,000 Data Engineers Read My Article](https://medium.com/@kalluripradeep99/why-71000-data-engineers-read-my-article-xyz)
 
