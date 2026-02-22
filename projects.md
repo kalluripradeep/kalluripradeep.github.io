@@ -122,7 +122,7 @@ Developed BI and analytics solutions supporting operational reporting and execut
 ## Personal Projects & Learning
 
 ### Real-Time Data Quality Monitoring with ML
-**GitHub:** [kalluripradeep/realtime-data-quality-monitor](https://github.com/kalluripradeep/realtime-data-quality-monitor)  
+**GitHub:** [kalluripradeep/realtime-data-quality-monitor](https://github.com/kalluripradeep/realtime-data-quality-monitor)
 **Status:** ✅ Production-Ready
 
 ML-powered real-time data quality monitoring system that detects anomalies in streaming data with sub-10ms latency, preventing data quality issues before they reach production systems.
@@ -138,6 +138,7 @@ ML-powered real-time data quality monitoring system that detects anomalies in st
 **Key Features:**
 - **Sub-10ms latency** for ML-based quality scoring on streaming data
 - **93% quality scores** maintained across all test pipelines
+- **332,000+ orders processed** through the monitoring pipeline
 - **Automatic anomaly detection** using Isolation Forest trained on historical patterns
 - **Multi-dimensional quality checks:** Completeness, uniqueness, validity, consistency, accuracy, timeliness
 - **Exactly-once processing** with Kafka checkpointing and idempotent operations
@@ -153,10 +154,41 @@ ML-powered real-time data quality monitoring system that detects anomalies in st
 **Technologies:** Apache Kafka, Spark Structured Streaming, Python, scikit-learn, PostgreSQL, Isolation Forest ML, pandas
 
 **Impact:**
-- Demonstrates production-ready ML integration with streaming systems
-- Shows real-time anomaly detection patterns
+- 332K+ orders processed with 93% quality scores maintained
+- Sub-10ms latency proves feasibility for high-throughput production systems
+- Demonstrates production-ready ML integration with streaming data
 - Provides reusable framework for data quality monitoring
-- Sub-10ms latency proves feasibility for high-throughput systems
+
+---
+
+### Modern ETL / Data Platform
+**GitHub:** [kalluripradeep/modern-etl-stack](https://github.com/kalluripradeep/modern-etl-stack)
+**Status:** ✅ Open Source
+
+A full modern data engineering platform built from scratch, demonstrating enterprise-grade architecture at zero cost. A cost-effective alternative to commercial enterprise tools, potentially saving companies £100K+ annually.
+
+**Architecture:**
+- **Orchestration:** Apache Airflow managing end-to-end pipeline workflows
+- **Change Data Capture:** Apache Kafka with Debezium for real-time CDC from source databases
+- **Processing:** Apache Spark for distributed transformation at scale
+- **Transformation Layer:** dbt with Bronze → Silver → Gold medallion architecture
+- **Storage:** PostgreSQL as source system, MinIO as S3-compatible object store
+- **Monitoring:** Prometheus + Grafana for pipeline observability and alerting
+
+**Key Features:**
+- **1,000+ orders** processed with real-time CDC and sub-second latency
+- **Medallion architecture** (Bronze/Silver/Gold) for reliable, layered data quality
+- **Real-time CDC** via Debezium — captures every insert, update, and delete
+- **Full observability** with Prometheus metrics and Grafana dashboards
+- **Fully containerised** — runs locally with Docker Compose
+- **Cost-effective** — replicates £100K+ enterprise tooling with open source components
+
+**Technologies:** Apache Airflow, Apache Kafka, Debezium, Apache Spark, dbt, PostgreSQL, MinIO, Prometheus, Grafana, Docker
+
+**Impact:**
+- Demonstrates a complete modern data stack that any team can self-host
+- Open sourced to help data engineers learn and adopt best practices
+- Shows end-to-end CDC pipeline patterns rarely documented in full
 
 ---
 
@@ -180,8 +212,8 @@ End-to-end data pipeline demonstrating modern data engineering practices. Simula
 
 Beyond client and personal projects, I actively contribute to open-source data engineering tools:
 
-- **Apache Airflow** - Documentation improvements ([merged PR](https://github.com/apache/airflow/pull/58587))
-- **dbt-core** - Feature additions ([active PRs](https://github.com/dbt-labs/dbt-core/pulls?q=is%3Apr+author%3Akalluripradeep))
+- **Apache Airflow** - 3 merged PRs: documentation, bug fixes, and community reviews ([#58587](https://github.com/apache/airflow/pull/58587), [#59938](https://github.com/apache/airflow/pull/59938), [#61005](https://github.com/apache/airflow/pull/61005))
+- **dbt-core** - 1 merged PR + 2 active contributions ([PRs](https://github.com/dbt-labs/dbt-core/pulls?q=is%3Apr+author%3Akalluripradeep))
 
 [View all open source contributions →](/opensource/)
 
