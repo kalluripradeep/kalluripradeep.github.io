@@ -951,9 +951,9 @@ function initTechBubbles() {
             ctx.moveTo(na.x, na.y);
             ctx.lineTo(nb.x, nb.y);
             ctx.strokeStyle = isHighlighted
-                ? (light ? 'rgba(0, 212, 255, 0.5)' : 'rgba(0, 212, 255, 0.35)')
-                : (light ? 'rgba(0, 0, 0, 0.06)' : 'rgba(255, 255, 255, 0.04)');
-            ctx.lineWidth = isHighlighted ? 2 : 1;
+                ? (light ? 'rgba(14, 165, 233, 0.6)' : 'rgba(0, 212, 255, 0.35)')
+                : (light ? 'rgba(100, 116, 139, 0.18)' : 'rgba(255, 255, 255, 0.04)');
+            ctx.lineWidth = isHighlighted ? 2.5 : 1.5;
             ctx.stroke();
         });
 
@@ -980,7 +980,7 @@ function initTechBubbles() {
             ctx.beginPath();
             ctx.arc(n.x, n.y, pulseSize, 0, Math.PI * 2);
             ctx.fillStyle = light
-                ? (isDimmed ? 'rgba(240, 240, 250, 0.8)' : 'rgba(255, 255, 255, 0.9)')
+                ? (isDimmed ? 'rgba(241, 245, 249, 0.9)' : 'rgba(255, 255, 255, 0.95)')
                 : (isDimmed ? 'rgba(10, 10, 26, 0.6)' : 'rgba(10, 10, 26, 0.9)');
             ctx.fill();
             ctx.strokeStyle = catColor.replace('C', isDimmed ? '0.15' : (isHovered ? '0.9' : '0.4'));
@@ -1004,7 +1004,7 @@ function initTechBubbles() {
             ctx.arc(legendX, legendY, 4, 0, Math.PI * 2);
             ctx.fillStyle = cat.color.replace('C', '0.7');
             ctx.fill();
-            ctx.fillStyle = light ? 'rgba(0, 0, 0, 0.5)' : 'rgba(255, 255, 255, 0.4)';
+            ctx.fillStyle = light ? 'rgba(15, 23, 42, 0.6)' : 'rgba(255, 255, 255, 0.4)';
             ctx.textAlign = 'left';
             ctx.textBaseline = 'middle';
             ctx.fillText(cat.label, legendX + 8, legendY);
