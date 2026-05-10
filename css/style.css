@@ -1645,6 +1645,7 @@ a.pr-item:hover {
 
 .testimonial-card {
     min-width: 100%;
+    max-width: 100%;
     padding: 40px;
     text-align: center;
     flex-shrink: 0;
@@ -1652,6 +1653,7 @@ a.pr-item:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
 }
 
 .testimonial-card:hover {
@@ -1670,7 +1672,11 @@ a.pr-item:hover {
     color: var(--text-secondary);
     line-height: 1.8;
     font-style: italic;
-    margin-bottom: 24px;
+    margin: 0 auto 24px;
+    max-width: 600px;
+    width: 100%;
+    white-space: normal;
+    overflow-wrap: break-word;
 }
 
 .testimonial-author {
