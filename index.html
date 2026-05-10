@@ -108,16 +108,12 @@
                     <span class="stat-label">Article Views</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number" data-target="8" data-suffix="+">0</span>
+                    <span class="stat-number" data-target="10" data-suffix="+">0</span>
                     <span class="stat-label">Merged PRs</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number" data-target="3" data-suffix="+">0</span>
+                    <span class="stat-number" data-target="4" data-suffix="+">0</span>
                     <span class="stat-label">Years Exp</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" data-target="332000" data-suffix="K+">0</span>
-                    <span class="stat-label">Orders Processed</span>
                 </div>
             </div>
             <div class="hero-cta">
@@ -810,7 +806,13 @@
                         <!-- Medium articles will load here dynamically -->
                         <div class="medium-loading">Loading latest articles...</div>
                     </div>
-                    <div class="article-list article-list-static" style="display:none">
+                    <div class="article-list article-list-static">
+                        <a href="https://dzone.com/articles/how-i-fixed-silent-production-bug-apache-airflow" target="_blank" rel="noopener"
+                            class="article-card glass-card">
+                            <span class="article-badge">DZone ⭐</span>
+                            <h4>How I Fixed a Silent Production Bug in Apache Airflow</h4>
+                            <span class="article-date">February 2026</span>
+                        </a>
                         <a href="https://thenewstack.io/author/pradeep-kalluri/" target="_blank" rel="noopener"
                             class="article-card glass-card">
                             <span class="article-badge">The New Stack ⭐</span>
@@ -858,11 +860,12 @@
                             from Microsoft Senior Cloud Solution Architect. Invited back for dedicated Apache Airflow
                             session.</p>
                     </div>
-                    <div class="speaking-card glass-card upcoming">
-                        <span class="speaking-status">🔜 Upcoming</span>
+                    <div class="speaking-card glass-card completed">
+                        <span class="speaking-status">✅ Completed</span>
                         <h4>Oxford Microsoft Data Platform Group</h4>
                         <p class="speaking-topic">Apache Airflow Deep Dive</p>
-                        <span class="date-badge">Invited back</span>
+                        <span class="date-badge">February 2026</span>
+                        <p class="speaking-detail">Deep dive into Airflow internals and best practices for production pipelines.</p>
                     </div>
                     <div class="speaking-proposals glass-card">
                         <h4>📋 Conference Proposals</h4>
@@ -888,7 +891,7 @@
                 <div class="os-card glass-card">
                     <div class="os-header">
                         <h3>Apache Airflow</h3>
-                        <span class="os-stat">4+ Merged PRs + 10+ Reviews</span>
+                        <span class="os-stat">6+ Merged PRs + 15+ Reviews</span>
                     </div>
                     <div class="pr-list">
                         <a href="https://github.com/apache/airflow/pull/64908" target="_blank" rel="noopener"
@@ -909,13 +912,25 @@
                             <span class="pr-title">Worker: ensure Celery tasks are registered at startup</span>
                             <span class="pr-number">#63110</span>
                         </a>
+                        <a href="https://github.com/apache/airflow/pull/61005" target="_blank" rel="noopener"
+                            class="pr-item">
+                            <span class="pr-status merged">✅ MERGED</span>
+                            <span class="pr-title">Bug fix contribution: migration stability</span>
+                            <span class="pr-number">#61005</span>
+                        </a>
+                        <a href="https://github.com/apache/airflow/pull/59938" target="_blank" rel="noopener"
+                            class="pr-item">
+                            <span class="pr-status merged">✅ MERGED</span>
+                            <span class="pr-title">Pool name validation fix</span>
+                            <span class="pr-number">#59938</span>
+                        </a>
                     </div>
                 </div>
                 <!-- dbt-core -->
                 <div class="os-card glass-card">
                     <div class="os-header">
                         <h3>dbt-core</h3>
-                        <span class="os-stat">4+ Merged PRs</span>
+                        <span class="os-stat">5+ Merged PRs</span>
                     </div>
                     <div class="pr-list">
                         <a href="https://github.com/dbt-labs/dbt-core/pull/12618" target="_blank" rel="noopener"
@@ -941,6 +956,12 @@
                             <span class="pr-status merged">✅ MERGED</span>
                             <span class="pr-title">dbt init UX: add directory change instruction</span>
                             <span class="pr-number">#12232</span>
+                        </a>
+                        <a href="https://github.com/dbt-labs/dbt-core/pull/12502" target="_blank" rel="noopener"
+                            class="pr-item">
+                            <span class="pr-status review">🟡 Under Review</span>
+                            <span class="pr-title">Debug compilation error fix</span>
+                            <span class="pr-number">#12502</span>
                         </a>
                     </div>
                 </div>
@@ -1221,7 +1242,7 @@
                     </div>
                     <div class="resume-section">
                         <h3>Open Source</h3>
-                        <p>Apache Airflow (4+ merged PRs) • dbt-core (4+ merged) • Confluent Kafka</p>
+                        <p>Apache Airflow (6+ merged PRs) • dbt-core (5+ merged) • Confluent Kafka</p>
                     </div>
                 </div>
             </div>

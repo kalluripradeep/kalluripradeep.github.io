@@ -1296,6 +1296,13 @@ ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
+    align-items: stretch;
+}
+
+.os-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .os-header {
@@ -1316,6 +1323,7 @@ ul {
 }
 
 .pr-list {
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -1640,6 +1648,10 @@ a.pr-item:hover {
     padding: 40px;
     text-align: center;
     flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .testimonial-card:hover {

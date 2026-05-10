@@ -282,12 +282,12 @@ function initPipelineCanvas() {
         const w = canvas.width;
         const h = canvas.height;
         const positions = [
-            { x: w * 0.08, y: h * 0.25 },
-            { x: w * 0.25, y: h * 0.55 },
-            { x: w * 0.42, y: h * 0.20 },
-            { x: w * 0.60, y: h * 0.60 },
-            { x: w * 0.78, y: h * 0.30 },
-            { x: w * 0.92, y: h * 0.55 },
+            { x: w * 0.08, y: h * 0.20 },
+            { x: w * 0.22, y: h * 0.35 },
+            { x: w * 0.45, y: h * 0.15 },
+            { x: w * 0.55, y: h * 0.30 },
+            { x: w * 0.78, y: h * 0.18 },
+            { x: w * 0.92, y: h * 0.40 },
         ];
         nodeNames.forEach((name, i) => {
             nodes.push({
