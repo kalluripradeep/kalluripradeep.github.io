@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pradeep Kalluri — One-Pager</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: #0a0a1a;
+            color: #e0e0ef;
+            width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            padding: 28px 32px 24px;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-bottom: 14px;
+            border-bottom: 2px solid;
+            border-image: linear-gradient(90deg, #00d4ff, #7c3aed, #ec4899) 1;
+            margin-bottom: 16px;
+        }
+
+        .header-left h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 26px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #00d4ff, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.2;
+        }
+
+        .header-left .tagline {
+            font-size: 13px;
+            color: #9ca3af;
+            margin-top: 3px;
+            font-weight: 500;
+        }
+
+        .header-right {
+            text-align: right;
+            font-size: 10.5px;
+            color: #9ca3af;
+            line-height: 1.7;
+        }
+
+        .header-right a {
+            color: #00d4ff;
+            text-decoration: none;
+        }
+
+        /* ===== SECTION TITLES ===== */
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #00d4ff;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .section-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(0, 212, 255, 0.3), transparent);
+        }
+
+        /* ===== TWO-COLUMN LAYOUT ===== */
+        .columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 14px;
+        }
+
+        /* ===== SUMMARY ===== */
+        .summary {
+            font-size: 11px;
+            line-height: 1.6;
+            color: #c0c0d0;
+            margin-bottom: 14px;
+            padding: 10px 14px;
+            background: rgba(0, 212, 255, 0.04);
+            border-left: 3px solid #00d4ff;
+            border-radius: 0 6px 6px 0;
+        }
+
+        .summary strong {
+            color: #e0e0ef;
+        }
+
+        /* ===== EXPERIENCE ===== */
+        .exp-item {
+            margin-bottom: 10px;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .exp-role {
+            font-size: 12px;
+            font-weight: 700;
+            color: #e0e0ef;
+        }
+
+        .exp-date {
+            font-size: 9.5px;
+            color: #7c3aed;
+            font-weight: 600;
+        }
+
+        .exp-company {
+            font-size: 10.5px;
+            color: #00d4ff;
+            font-weight: 600;
+            margin-bottom: 3px;
+        }
+
+        .exp-bullets {
+            list-style: none;
+            padding: 0;
+        }
+
+        .exp-bullets li {
+            font-size: 10px;
+            color: #9ca3af;
+            line-height: 1.5;
+            padding-left: 12px;
+            position: relative;
+        }
+
+        .exp-bullets li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #00d4ff;
+        }
+
+        /* ===== SKILLS ===== */
+        .skill-group {
+            margin-bottom: 8px;
+        }
+
+        .skill-label {
+            font-size: 10px;
+            font-weight: 700;
+            color: #c0c0d0;
+            margin-bottom: 3px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+
+        .tag {
+            font-size: 9px;
+            padding: 3px 8px;
+            border-radius: 4px;
+            background: rgba(124, 58, 237, 0.12);
+            color: #c4b5fd;
+            font-weight: 500;
+            border: 1px solid rgba(124, 58, 237, 0.2);
+        }
+
+        .tag.primary {
+            background: rgba(0, 212, 255, 0.1);
+            color: #00d4ff;
+            border-color: rgba(0, 212, 255, 0.25);
+        }
+
+        /* ===== EDUCATION & CERTS ===== */
+        .edu-item,
+        .cert-item {
+            margin-bottom: 6px;
+        }
+
+        .edu-degree {
+            font-size: 10.5px;
+            font-weight: 700;
+            color: #e0e0ef;
+        }
+
+        .edu-school {
+            font-size: 9.5px;
+            color: #9ca3af;
+        }
+
+        .cert-name {
+            font-size: 10px;
+            font-weight: 600;
+            color: #c0c0d0;
+        }
+
+        .cert-issuer {
+            font-size: 9px;
+            color: #7c3aed;
+        }
+
+        /* ===== HIGHLIGHTS BAR ===== */
+        .highlights {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+
+        .highlight-box {
+            text-align: center;
+            padding: 10px 8px;
+            border-radius: 8px;
+            background: rgba(124, 58, 237, 0.06);
+            border: 1px solid rgba(124, 58, 237, 0.15);
+        }
+
+        .highlight-box .number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 20px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #00d4ff, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .highlight-box .label {
+            font-size: 8.5px;
+            color: #9ca3af;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-top: 2px;
+        }
+
+        /* ===== NOTABLE ===== */
+        .notable {
+            margin-bottom: 14px;
+        }
+
+        .notable-item {
+            font-size: 10px;
+            color: #c0c0d0;
+            line-height: 1.5;
+            padding-left: 14px;
+            position: relative;
+            margin-bottom: 3px;
+        }
+
+        .notable-item::before {
+            content: '⭐';
+            position: absolute;
+            left: 0;
+            font-size: 8px;
+        }
+
+        .notable-item strong {
+            color: #e0e0ef;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            text-align: center;
+            padding-top: 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            font-size: 9px;
+            color: #6b7280;
+        }
+
+        .footer a {
+            color: #00d4ff;
+            text-decoration: none;
+        }
+
+        /* ===== DOWNLOAD BUTTON (screen only) ===== */
+        .download-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #0f0f2a;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            z-index: 100;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+        }
+
+        .download-bar button {
+            padding: 8px 24px;
+            border-radius: 8px;
+            border: none;
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .download-bar .btn-print {
+            background: linear-gradient(135deg, #00d4ff, #7c3aed);
+            color: white;
+        }
+
+        .download-bar .btn-print:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 20px rgba(0, 212, 255, 0.3);
+        }
+
+        .download-bar .btn-back {
+            background: rgba(255, 255, 255, 0.06);
+            color: #9ca3af;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .download-bar .btn-back:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #e0e0ef;
+        }
+
+        @media print {
+            .download-bar {
+                display: none !important;
+            }
+
+            body {
+                padding-top: 28px;
+            }
+        }
+
+        @media screen {
+            body {
+                padding-top: 60px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Screen-only download bar -->
+    <div class="download-bar">
+        <button class="btn-print" onclick="window.print()">📄 Save as PDF</button>
+        <button class="btn-back" onclick="window.location.href='index.html'">← Back to Portfolio</button>
+    </div>
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="header-left">
+            <h1>Pradeep Kalluri</h1>
+            <div class="tagline">Data Engineer · Cloud Platforms · DataOps</div>
+        </div>
+        <div class="header-right">
+            London, United Kingdom<br>
+            <a href="mailto:kalluripradeep99@gmail.com">kalluripradeep99@gmail.com</a><br>
+            <a href="https://linkedin.com/in/pradeepkalluri">linkedin.com/in/pradeepkalluri</a><br>
+            <a href="https://github.com/kalluripradeep">github.com/kalluripradeep</a>
+        </div>
+    </div>
+
+    <!-- SUMMARY -->
+    <div class="summary">
+        Data Engineer with <strong>3+ years</strong> building scalable cloud data platforms and production-grade
+        pipelines.
+        Currently at <strong>NatWest Bank</strong>, processing millions of transactions daily.
+        Published author with <strong>71K+ article views</strong> and active <strong>Apache Airflow
+            contributor</strong>.
+        International experience across UK, Spain, and Italy.
+    </div>
+
+    <!-- HIGHLIGHTS -->
+    <div class="highlights">
+        <div class="highlight-box">
+            <div class="number">71K+</div>
+            <div class="label">Article Views</div>
+        </div>
+        <div class="highlight-box">
+            <div class="number">3+</div>
+            <div class="label">Years Experience</div>
+        </div>
+        <div class="highlight-box">
+            <div class="number">4+</div>
+            <div class="label">Merged PRs</div>
+        </div>
+        <div class="highlight-box">
+            <div class="number">332K+</div>
+            <div class="label">Orders Processed</div>
+        </div>
+    </div>
+
+    <!-- TWO COLUMNS -->
+    <div class="columns">
+        <!-- LEFT: Experience -->
+        <div>
+            <div class="section-title">Experience</div>
+
+            <div class="exp-item">
+                <div class="exp-header">
+                    <span class="exp-role">Data Engineer</span>
+                    <span class="exp-date">Sep 2025 – Present</span>
+                </div>
+                <div class="exp-company">NatWest Bank · London, UK</div>
+                <ul class="exp-bullets">
+                    <li>Real-time data ingestion with Kafka & Amazon S3</li>
+                    <li>Distributed processing with PySpark; curated models in Snowflake</li>
+                    <li>Orchestrated end-to-end pipelines with Apache Airflow</li>
+                </ul>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-header">
+                    <span class="exp-role">Data Engineer</span>
+                    <span class="exp-date">Jul 2023 – Aug 2025</span>
+                </div>
+                <div class="exp-company">Accenture</div>
+                <ul class="exp-bullets">
+                    <li>Scalable ETL/ELT with Azure Databricks, ADF & Snowflake</li>
+                    <li>Reusable transformation layers with dbt; CI/CD with Terraform</li>
+                    <li>Unified analytics using Microsoft Fabric lakehouse architecture</li>
+                </ul>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-header">
+                    <span class="exp-role">Data Engineer</span>
+                    <span class="exp-date">May 2022 – Jun 2023</span>
+                </div>
+                <div class="exp-company">Dpoint Group · Barcelona, Spain</div>
+                <ul class="exp-bullets">
+                    <li>ETL processes with SSIS; Power BI dashboards for executive insights</li>
+                    <li>Migrated on-premise ETL to Azure Data Factory</li>
+                </ul>
+            </div>
+
+            <!-- Notable -->
+            <div class="section-title" style="margin-top: 6px;">Notable Achievements</div>
+            <div class="notable">
+                <div class="notable-item"><strong>Published in The New Stack</strong> — industry-leading DevOps
+                    publication</div>
+                <div class="notable-item"><strong>Apache Airflow Contributor</strong> — 4+ merged PRs to official
+                    project</div>
+                <div class="notable-item"><strong>71K+ views</strong> on data engineering articles across platforms
+                </div>
+                <div class="notable-item"><strong>Speaker</strong> at Oxford Microsoft Data Platform Group (50+
+                    attendees)</div>
+                <div class="notable-item"><strong>13 conference proposals</strong> submitted across Europe</div>
+            </div>
+        </div>
+
+        <!-- RIGHT: Skills, Education, Certifications -->
+        <div>
+            <div class="section-title">Technical Skills</div>
+
+            <div class="skill-group">
+                <div class="skill-label">Cloud & Data Platforms</div>
+                <div class="tags">
+                    <span class="tag primary">Azure Databricks</span>
+                    <span class="tag primary">Snowflake</span>
+                    <span class="tag primary">AWS</span>
+                    <span class="tag primary">Microsoft Fabric</span>
+                </div>
+            </div>
+
+            <div class="skill-group">
+                <div class="skill-label">Data Engineering</div>
+                <div class="tags">
+                    <span class="tag">Kafka</span>
+                    <span class="tag">PySpark</span>
+                    <span class="tag">Apache Airflow</span>
+                    <span class="tag">dbt</span>
+                    <span class="tag">SSIS</span>
+                    <span class="tag">ADF</span>
+                </div>
+            </div>
+
+            <div class="skill-group">
+                <div class="skill-label">Programming & Tools</div>
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">SQL</span>
+                    <span class="tag">Terraform</span>
+                    <span class="tag">Git</span>
+                    <span class="tag">Docker</span>
+                    <span class="tag">CI/CD</span>
+                </div>
+            </div>
+
+            <div class="skill-group">
+                <div class="skill-label">Analytics & BI</div>
+                <div class="tags">
+                    <span class="tag">Tableau</span>
+                    <span class="tag">Power BI</span>
+                    <span class="tag">SAP BW</span>
+                </div>
+            </div>
+
+            <div class="section-title" style="margin-top: 12px;">Education</div>
+
+            <div class="edu-item">
+                <div class="edu-degree">MBA — Master in Business Administration</div>
+                <div class="edu-school">York St John University, London · 2023–2024</div>
+            </div>
+            <div class="edu-item">
+                <div class="edu-degree">Bachelor of Internet & Communication Technology</div>
+                <div class="edu-school">Tor Vergata University, Rome · 2020–2023</div>
+            </div>
+
+            <div class="section-title" style="margin-top: 12px;">Certifications</div>
+
+            <div class="cert-item">
+                <div class="cert-name">☁️ Microsoft Azure Fundamentals (AZ-900)</div>
+                <div class="cert-issuer">Microsoft</div>
+            </div>
+            <div class="cert-item">
+                <div class="cert-name">📊 Microsoft Power BI Data Analyst (PL-300)</div>
+                <div class="cert-issuer">Microsoft</div>
+            </div>
+            <div class="cert-item">
+                <div class="cert-name">📚 Azure Data Engineer Associate (DP-203)</div>
+                <div class="cert-issuer">Microsoft · In Progress</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <a href="https://kalluripradeep.github.io/">kalluripradeep.github.io</a> ·
+        <a href="https://medium.com/@kalluripradeep99">medium.com/@kalluripradeep99</a> ·
+        <a href="https://topmate.io/pradeep_kalluri/">topmate.io/pradeep_kalluri</a>
+    </div>
+
+</body>
+
+</html>

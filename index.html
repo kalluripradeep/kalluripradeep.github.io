@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pradeep Kalluri — Data Engineer | Cloud Platforms | DataOps</title>
+    <meta name="description"
+        content="Pradeep Kalluri — Data Engineer specializing in building scalable cloud data platforms and production-grade data pipelines. Currently at NatWest Bank, London.">
+    <meta property="og:title" content="Pradeep Kalluri — Data Engineer">
+    <meta property="og:description"
+        content="Data Engineer specializing in scalable cloud data platforms and production-grade data pipelines.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kalluripradeep.github.io/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- ===== SCROLL PROGRESS BAR ===== -->
+    <div id="scrollProgress" class="scroll-progress"></div>
+
+    <!-- SVG gradient definition for skill rings -->
+    <svg style="position:absolute;width:0;height:0">
+        <defs>
+            <linearGradient id="skillGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#00d4ff" />
+                <stop offset="100%" stop-color="#7c3aed" />
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <!-- ===== PRELOADER ===== -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-inner">
+            <span class="preloader-logo">PK<span class="preloader-dot">.</span></span>
+            <div class="preloader-spinner"></div>
+        </div>
+    </div>
+
+    <!-- ===== CURSOR GLOW ===== -->
+    <div id="cursorGlow" class="cursor-glow"></div>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">PK<span class="logo-dot">.</span></a>
+            <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+                <svg class="theme-icon sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    width="20" height="20">
+                    <circle cx="12" cy="12" r="5" />
+                    <line x1="12" y1="1" x2="12" y2="3" />
+                    <line x1="12" y1="21" x2="12" y2="23" />
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                    <line x1="1" y1="12" x2="3" y2="12" />
+                    <line x1="21" y1="12" x2="23" y2="12" />
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                </svg>
+                <svg class="theme-icon moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    width="20" height="20">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+                </svg>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#writing" class="nav-link">Writing</a></li>
+                <li><a href="#opensource" class="nav-link">Open Source</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="one-pager.html" target="_blank" class="nav-onepager-btn">📄 One-Pager</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section id="hero" class="hero">
+        <canvas id="pipelineCanvas" class="pipeline-canvas"></canvas>
+        <div class="hero-bg-animation" id="heroBg"></div>
+        <div class="hero-content">
+            <p class="hero-greeting">Hello, I'm</p>
+            <h1 class="hero-name">Pradeep Kalluri</h1>
+            <div class="hero-title-wrapper">
+                <span class="hero-title" id="typedTitle"></span>
+                <span class="cursor-blink">|</span>
+            </div>
+            <p class="hero-description">
+                Building scalable cloud data platforms and production-grade pipelines at
+                <span class="highlight">NatWest Bank</span>, London.
+            </p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="71000" data-suffix="K+">0</span>
+                    <span class="stat-label">Article Views</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="4" data-suffix="+">0</span>
+                    <span class="stat-label">Merged PRs</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="3" data-suffix="+">0</span>
+                    <span class="stat-label">Years Exp</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="332000" data-suffix="K+">0</span>
+                    <span class="stat-label">Orders Processed</span>
+                </div>
+            </div>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                <a href="assets/Pradeep_Kalluri_Resume.pdf" download class="btn btn-download" id="downloadResume">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                        <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+                        <polyline points="7 10 12 15 17 10" />
+                        <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                    Download CV
+                </a>
+            </div>
+            <div class="hero-social">
+                <a href="https://github.com/kalluripradeep" target="_blank" rel="noopener" aria-label="GitHub"
+                    class="social-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                    </svg>
+                </a>
+                <a href="https://linkedin.com/in/pradeepkalluri" target="_blank" rel="noopener" aria-label="LinkedIn"
+                    class="social-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                    </svg>
+                </a>
+                <a href="https://medium.com/@kalluripradeep99" target="_blank" rel="noopener" aria-label="Medium"
+                    class="social-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zm7.42 0c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z" />
+                    </svg>
+                </a>
+                <a href="https://dev.to/pradeep_kaalluri" target="_blank" rel="noopener" aria-label="Dev.to"
+                    class="social-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M7.42 10.05c-.18-.16-.46-.23-.84-.23H6v4.36h.58c.37 0 .65-.08.84-.23.2-.16.3-.46.3-.91v-2.06c0-.45-.1-.76-.3-.93zm.71 2.06v2.06c0 .87-.28 1.52-.84 1.97-.56.44-1.27.66-2.14.66H3.6V7.2h2.55c.87 0 1.58.22 2.14.66.56.44.84 1.1.84 1.97v2.28zm6.13-4.91h-4.1v9.6h4.1v-1.68h-2.42v-2.28h2.42v-1.68h-2.42V8.88h2.42V7.2zm6.52 7.92V7.2h-1.68v6.72L16.84 7.2h-1.92v9.6h1.68V10.2l2.28 6.6h1.92z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <div class="parallax-divider"></div>
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title reveal" data-reveal="fade">About Me</h2>
+            <div class="about-grid reveal" data-reveal="fade">
+                <div class="about-text reveal" data-reveal="slide-left" data-delay="200">
+                    <p class="about-intro">I'm a <span class="highlight">Data Engineer</span> with hands-on experience
+                        designing, developing, and deploying scalable data pipelines for analytics and business
+                        intelligence across enterprise organizations.</p>
+                    <p>Currently at <strong>NatWest Bank</strong>, I work across modern data platforms building reliable
+                        data flows using Kafka, PySpark, Snowflake, and Airflow.</p>
+                    <p>With experience spanning financial services and consulting, I've delivered data engineering
+                        solutions across cloud data platforms, real-time streaming systems, and advanced analytics
+                        environments.</p>
+                    <div class="about-highlights">
+                        <div class="highlight-card">
+                            <div class="highlight-icon">☁️</div>
+                            <h4>Cloud Platforms</h4>
+                            <p>Azure Databricks, AWS, Snowflake, Microsoft Fabric</p>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-icon">⚡</div>
+                            <h4>Data Pipelines</h4>
+                            <p>Kafka, PySpark, Airflow orchestration</p>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-icon">🔧</div>
+                            <h4>ETL/ELT Solutions</h4>
+                            <p>Python, SQL, dbt, Azure Data Factory</p>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-icon">📊</div>
+                            <h4>Analytics & BI</h4>
+                            <p>Tableau, Power BI, SAP BW integration</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-info reveal" data-reveal="slide-right" data-delay="400" data-stagger>
+                    <div class="info-card glass-card">
+                        <h3>🎓 Education</h3>
+                        <div class="education-item">
+                            <h4>MBA — Master in Business Administration</h4>
+                            <p>York St John University, London, UK</p>
+                            <span class="date-badge">2023 – 2024</span>
+                        </div>
+                        <div class="education-item">
+                            <h4>Bachelor of Internet & Communication Technology</h4>
+                            <p>Tor Vergata University, Rome, Italy</p>
+                            <span class="date-badge">2020 – 2023</span>
+                        </div>
+                    </div>
+                    <div class="info-card glass-card">
+                        <h3>📍 Location</h3>
+                        <p>London, United Kingdom</p>
+                    </div>
+                    <div class="info-card glass-card">
+                        <h3>🚀 Currently</h3>
+                        <ul class="currently-list">
+                            <li>Building production data pipelines at NatWest Bank</li>
+                            <li>Writing about data engineering on Medium (71K+ views)</li>
+                            <li>Contributing to Apache Airflow & dbt-core</li>
+                            <li>Speaking at data engineering meetups</li>
+                            <li>Pursuing UK Global Talent Visa in Digital Technology</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== EXPERIENCE SECTION ===== -->
+    <div class="parallax-divider"></div>
+    <section id="experience" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title reveal" data-reveal="fade">Experience</h2>
+            <div class="timeline reveal" data-reveal="slide-left" data-stagger="slide-left">
+                <!-- NatWest Bank -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content glass-card">
+                        <img src="assets/logos/natwest.png" alt="NatWest" class="company-logo" loading="lazy">
+                        <div class="timeline-header">
+                            <h3>Data Engineer</h3>
+                            <span class="company">NatWest Bank</span>
+                            <div class="timeline-meta">
+                                <span class="date-badge">Sep 2025 – Present</span>
+                                <span class="location-badge">Greater London, UK</span>
+                            </div>
+                        </div>
+                        <p class="timeline-desc">Building and maintaining production data platforms that process
+                            millions of transactions daily, supporting analytics and regulatory reporting.</p>
+                        <ul class="timeline-details">
+                            <li>Design and implement real-time data ingestion pipelines using Kafka and Amazon S3</li>
+                            <li>Develop distributed data processing workflows with PySpark for transformation and
+                                validation</li>
+                            <li>Build curated data models in Snowflake supporting downstream analytics and reporting
+                            </li>
+                            <li>Orchestrate end-to-end pipelines using Apache Airflow DAGs with dependency management
+                            </li>
+                            <li>Optimize SQL and PySpark workloads for performance and cost-efficiency</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tag">Kafka</span>
+                            <span class="tag">PySpark</span>
+                            <span class="tag">Amazon S3</span>
+                            <span class="tag">Snowflake</span>
+                            <span class="tag">Airflow</span>
+                            <span class="tag">Tableau</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Accenture -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content glass-card">
+                        <img src="assets/logos/accenture.png" alt="Accenture" class="company-logo" loading="lazy">
+                        <div class="timeline-header">
+                            <h3>Data Engineer</h3>
+                            <span class="company">Accenture</span>
+                            <div class="timeline-meta">
+                                <span class="date-badge">Jul 2023 – Aug 2025</span>
+                            </div>
+                        </div>
+                        <p class="timeline-desc">Delivered large-scale cloud data engineering solutions for enterprise
+                            clients across multiple industries, working with both Azure and AWS cloud platforms.</p>
+                        <ul class="timeline-details">
+                            <li>Designed and implemented scalable ETL/ELT pipelines using Azure Databricks, ADF, and
+                                Snowflake</li>
+                            <li>Developed PySpark workflows for distributed data processing and transformation</li>
+                            <li>Built reusable transformation layers with dbt ensuring consistent business logic</li>
+                            <li>Automated pipeline deployments using CI/CD (GitHub Actions, Terraform)</li>
+                            <li>Leveraged Microsoft Fabric for unified analytics workflows and lakehouse architecture
+                            </li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tag">Azure Databricks</span>
+                            <span class="tag">Snowflake</span>
+                            <span class="tag">dbt</span>
+                            <span class="tag">Microsoft Fabric</span>
+                            <span class="tag">Terraform</span>
+                            <span class="tag">PySpark</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dpoint Group -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content glass-card">
+                        <img src="assets/logos/dpoint.png" alt="Dpoint Group" class="company-logo" loading="lazy">
+                        <div class="timeline-header">
+                            <h3>Data Engineer</h3>
+                            <span class="company">Dpoint Group</span>
+                            <div class="timeline-meta">
+                                <span class="date-badge">May 2022 – Jun 2023</span>
+                                <span class="location-badge">Barcelona, Spain</span>
+                            </div>
+                        </div>
+                        <p class="timeline-desc">Contributed to business intelligence and analytics initiatives,
+                            building ETL pipelines and reporting solutions that supported operational decision-making.
+                        </p>
+                        <ul class="timeline-details">
+                            <li>Developed and maintained ETL processes using SSIS to extract data from SAP BW</li>
+                            <li>Created interactive Power BI dashboards for executive insights and KPI monitoring</li>
+                            <li>Automated recurring reporting workflows using Python and Excel VBA</li>
+                            <li>Supported migration of on-premise ETL processes to Azure Data Factory</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tag">SSIS</span>
+                            <span class="tag">SAP BW</span>
+                            <span class="tag">Power BI</span>
+                            <span class="tag">Azure Data Factory</span>
+                            <span class="tag">Python</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SKILLS SECTION ===== -->
+    <div class="parallax-divider"></div>
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title reveal" data-reveal="fade">Technical Skills</h2>
+            <div class="skill-filters reveal" data-reveal="scale-up">
+                <button class="skill-filter-btn active" data-skill-filter="all">All</button>
+                <button class="skill-filter-btn" data-skill-filter="programming">Programming</button>
+                <button class="skill-filter-btn" data-skill-filter="cloud">Cloud</button>
+                <button class="skill-filter-btn" data-skill-filter="dataeng">Data Engineering</button>
+                <button class="skill-filter-btn" data-skill-filter="databases">Databases</button>
+                <button class="skill-filter-btn" data-skill-filter="devops">DevOps</button>
+                <button class="skill-filter-btn" data-skill-filter="bi">BI Tools</button>
+            </div>
+            <div class="skill-cards-grid reveal" id="skillCardsGrid" data-reveal="scale-up" data-stagger="scale-up">
+                <!-- Programming -->
+                <div class="skill-card glass-card" data-skill-cat="programming">
+                    <div class="skill-ring-wrapper">
+                        <svg class="skill-ring" viewBox="0 0 100 100">
+                            <circle class="skill-ring-bg" cx="50" cy="50" r="42" />
+                            <circle class="skill-ring-fill" cx="50" cy="50" r="42" data-percent="95" />
+                        </svg>
+                        <i class="devicon-python-plain skill-logo"></i>
+                    </div>
+                    <h4>Python</h4>
+                    <p class="skill-sub">PySpark, Pandas</p>
+                </div>
+                <div class="skill-card glass-card" data-skill-cat="programming">
+                    <div class="skill-ring-wrapper">
+                        <svg class="skill-ring" viewBox="0 0 100 100">
+                            <circle class="skill-ring-bg" cx="50" cy="50" r="42" />
+                            <circle class="skill-ring-fill" cx="50" cy="50" r="42" data-percent="95" />
+                        </svg>
+                        <i class="devicon-azuresqldatabase-plain skill-logo"></i>
+                    </div>
+                    <h4>SQL</h4>
+                    <p class="skill-sub">T-SQL, PL/SQL</p>
+                </div>
+                <div class="skill-card glass-card" data-skill-cat="programming">
+                    <div class="skill-ring-wrapper">
+                        <svg class="skill-ring" viewBox="0 0 100 100">
+                            <circle class="skill-ring-bg" cx="50" cy="50" r="42" />
+                            <circle class="skill-ring-fill" cx="50" cy="50" r="42" data-percent="75" />
+                        </svg>
+                        <i class="devicon-bash-plain skill-logo"></i>
+                    </div>
+                    <h4>Shell</h4>
+                    <p class="skill-sub">Bash Scripting</p>
+                </div>
+                <!-- Cloud -->
+                <div class="skill-card glass-card" data-skill-cat="cloud">
+                    <div class="skill-ring-wrapper">
+                        <svg class="skill-ring" viewBox="0 0 100 100">
+                            <circle class="skill-ring-bg" cx="50" cy="50" r="42" />
+                            <circle class="skill-ring-fill" cx="50" cy="50" r="42" data-percent="90" />
+                        </svg>
+                        <i class="devicon-amazonwebservices-plain-wordmark skill-logo"></i>
+                    </div>
+                    <h4>AWS</h4>
+                    <p class="skill-sub">S3, Glue, Lambda</p>
+                </div>
+                <div class="skill-card glass-card" data-skill-cat="cloud">
+                    <div class="skill-ring-wrapper">
+                        <svg class="skill-ring" viewBox="0 0 100 100">
+                            <circle class="skill-ring-bg" cx="50" cy="50" r="42" />
+                            <circle class="skill-ring-fill" cx="50" cy="50" r="42" data-percent="90" />
+                        </svg>
+                        <i class="devicon-azure-plain skill-logo"></i>
+                    </div>
+                    <h4>Azure</h4>
+                    <p class="skill-sub">Databricks, ADF</p>
+                </div>
+                <div class="skill-card glass-card" data-skill-cat="cloud">
+                    <div class="skill-ring-wrapper">
+                        <svg class="skill-ring" viewBox="0 0 100 100">
+                            <circle class="skill-ring-bg" cx="50" cy="50" r="42" />
+                            <circle class="skill-ring-fill" cx="50" cy="50" r="42" data-percent="85" />
+                        </svg>
+                        <svg class="skill-logo-svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                        </svg>
+                    </div>
+                    <h4>Fabric</h4>
+                    <p class="skill-sub">Microsoft Fabric</p>
+                </div>
+                <!-- Data Engineering -->
+                <div class="skill-card glass-card" data-skill-cat="dataeng">
+                    <div class="skill-ring-wrapper">
+                        <svg class="skill-ring" viewBox="0 0 100 100">
+                            <circle class="skill-ring-bg" cx="50" cy="50" r="42" />
+                            <circle class="skill-ring-fill" cx="50" cy="50" r="42" data-percent="90" />
+                        </svg>
+                        <i class="devicon-apachekafka-original skill-logo"></i>
+                    </div>
+                    <h4>Kafka</h4>
+                    <p class="skill-sub">Streaming & Events</p>
+                </div>
+                <div class="skill-card glass-card" data-skill-cat="dataeng">
+                    <div class="skill-ring-wrapper">
+                        <svg class="skill-ring" viewBox="0 0 100 100">
+                            <circle class="skill-ring-bg" cx="50" cy="50" r="42" />
+                            <circle class="skill-ring-fill" cx="50" cy="50" r="42" data-percent="90" />
+                        </svg>
+                        <i class="devicon-apacheairflow-plain skill-logo"></i>
+                    </div>
+                    <h4>Airflow</h4>
+                    <p class="skill-sub">DAG Orchestration</p>
+                </div>
+                <div class="skill-card glass-card" data-skill-cat="dataeng">
+                    <div class="skill-ring-wrapper">
+                        <svg class="skill-ring" viewBox="0 0 100 100">
+                            <circle class="skill-ring-bg" cx="50" cy="50" r="42" />
+                            <circle class="skill-ring-fill" cx="50" cy="50" r="42" data-percent="90" />
+                        </svg>
+                        <svg class="skill-logo-svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z" />
+                        </svg>
+                    </div>
+                    <h4>Snowflake</h4>
+                    <p class="skill-sub">Cloud Data Warehouse</p>
+                </div>
+                <div class="skill-card glass-card" data-skill-cat="dataeng">
+                    <div class="skill-ring-wrapper">
+                        <svg class="skill-ring" viewBox="0 0 100 100">
+                            <circle class="skill-ring-bg" cx="50" cy="50" r="42" />
+                            <circle class="skill-ring-fill" cx="50" cy="50" r="42" data-percent="90" />
+                        </svg>
+                        <i class="devicon-apachespark-plain skill-logo"></i>
+                    </div>
+                    <h4>PySpark</h4>
+                    <p class="skill-sub">Distributed Processing</p>
+                </div>
+                <div class="skill-card glass-card" data-skill-cat="dataeng">
+                    <div class="skill-ring-wrapper">
+                        <svg class="skill-ring" viewBox="0 0 100 100">
+                            <circle class="skill-ring-bg" cx="50" cy="50" r="42" />
+                            <circle class="skill-ring-fill" cx="50" cy="50" r="42" data-percent="85" />
+                        </svg>
+                        <svg class="skill-logo-svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 2L3 7v10l9 5 9-5V7l-9-5zm0 2.18l6.5 3.64v7.36L12 18.82l-6.5-3.64V7.82L12 4.18z" />
+                        </svg>
+                    </div>
+                    <h4>dbt</h4>
+                    <p class="skill-sub">Transform Layer</p>
+                </div>
+                <!-- Databases -->
+                <div class="skill-card glass-card" data-skill-cat="databases">
+                    <div class="skill-ring-wrapper">
+                        <svg class="skill-ring" viewBox="0 0 100 100">
+                            <circle class="skill-ring-bg" cx="50" cy="50" r="42" />
+                            <circle class="skill-ring-fill" cx="50" cy="50" r="42" data-percent="85" />
+                        </svg>
+                        <i class="devicon-postgresql-plain skill-logo"></i>
+                    </div>
+                    <h4>PostgreSQL</h4>
+                    <p class="skill-sub">Relational DB</p>
+                </div>
+                <div class="skill-card glass-card" data-skill-cat="databases">
+                    <div class="skill-ring-wrapper">
+                        <svg class="skill-ring" viewBox="0 0 100 100">
+                            <circle class="skill-ring-bg" cx="50" cy="50" r="42" />
+                            <circle class="skill-ring-fill" cx="50" cy="50" r="42" data-percent="85" />
+                        </svg>
+                        <i class="devicon-mysql-plain skill-logo"></i>
+                    </div>
+                    <h4>MySQL</h4>
+                    <p class="skill-sub">Relational DB</p>
+                </div>
+                <div class="skill-card glass-card" data-skill-cat="databases">
+                    <div class="skill-ring-wrapper">
+                        <svg class="skill-ring" viewBox="0 0 100 100">
+                            <circle class="skill-ring-bg" cx="50" cy="50" r="42" />
+                            <circle class="skill-ring-fill" cx="50" cy="50" r="42" data-percent="80" />
+                        </svg>
+                        <i class="devicon-redis-plain skill-logo"></i>
+                    </div>
+                    <h4>Redshift</h4>
+                    <p class="skill-sub">Azure SQL</p>
+                </div>
+                <!-- DevOps -->
+                <div class="skill-card glass-card" data-skill-cat="devops">
+                    <div class="skill-ring-wrapper">
+                        <svg class="skill-ring" viewBox="0 0 100 100">
+                            <circle class="skill-ring-bg" cx="50" cy="50" r="42" />
+                            <circle class="skill-ring-fill" cx="50" cy="50" r="42" data-percent="85" />
+                        </svg>
+                        <i class="devicon-docker-plain skill-logo"></i>
+                    </div>
+                    <h4>Docker</h4>
+                    <p class="skill-sub">Containerization</p>
+                </div>
+                <div class="skill-card glass-card" data-skill-cat="devops">
+                    <div class="skill-ring-wrapper">
+                        <svg class="skill-ring" viewBox="0 0 100 100">
+                            <circle class="skill-ring-bg" cx="50" cy="50" r="42" />
+                            <circle class="skill-ring-fill" cx="50" cy="50" r="42" data-percent="80" />
+                        </svg>
+                        <i class="devicon-terraform-plain skill-logo"></i>
+                    </div>
+                    <h4>Terraform</h4>
+                    <p class="skill-sub">IaC</p>
+                </div>
+                <div class="skill-card glass-card" data-skill-cat="devops">
+                    <div class="skill-ring-wrapper">
+                        <svg class="skill-ring" viewBox="0 0 100 100">
+                            <circle class="skill-ring-bg" cx="50" cy="50" r="42" />
+                            <circle class="skill-ring-fill" cx="50" cy="50" r="42" data-percent="85" />
+                        </svg>
+                        <i class="devicon-githubactions-plain skill-logo"></i>
+                    </div>
+                    <h4>CI/CD</h4>
+                    <p class="skill-sub">GitHub Actions</p>
+                </div>
+                <!-- BI Tools -->
+                <div class="skill-card glass-card" data-skill-cat="bi">
+                    <div class="skill-ring-wrapper">
+                        <svg class="skill-ring" viewBox="0 0 100 100">
+                            <circle class="skill-ring-bg" cx="50" cy="50" r="42" />
+                            <circle class="skill-ring-fill" cx="50" cy="50" r="42" data-percent="85" />
+                        </svg>
+                        <svg class="skill-logo-svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M3 3v18h18V3H3zm16 16H5V5h14v14zm-2-4H7v-2h10v2zm-4-4H7V9h6v2z" />
+                        </svg>
+                    </div>
+                    <h4>Tableau</h4>
+                    <p class="skill-sub">Data Visualization</p>
+                </div>
+                <div class="skill-card glass-card" data-skill-cat="bi">
+                    <div class="skill-ring-wrapper">
+                        <svg class="skill-ring" viewBox="0 0 100 100">
+                            <circle class="skill-ring-bg" cx="50" cy="50" r="42" />
+                            <circle class="skill-ring-fill" cx="50" cy="50" r="42" data-percent="85" />
+                        </svg>
+                        <svg class="skill-logo-svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M10 3H4a1 1 0 00-1 1v6a1 1 0 001 1h6a1 1 0 001-1V4a1 1 0 00-1-1zm10 0h-6a1 1 0 00-1 1v6a1 1 0 001 1h6a1 1 0 001-1V4a1 1 0 00-1-1zM10 13H4a1 1 0 00-1 1v6a1 1 0 001 1h6a1 1 0 001-1v-6a1 1 0 00-1-1zm10 0h-6a1 1 0 00-1 1v6a1 1 0 001 1h6a1 1 0 001-1v-6a1 1 0 00-1-1z" />
+                        </svg>
+                    </div>
+                    <h4>Power BI</h4>
+                    <p class="skill-sub">Dashboards & KPIs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROJECTS SECTION ===== -->
+    <div class="parallax-divider"></div>
+    <section id="projects" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title reveal" data-reveal="fade">Projects</h2>
+            <div class="project-filters reveal" data-reveal="flip-up">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="production">Production</button>
+                <button class="filter-btn" data-filter="personal">Personal</button>
+            </div>
+            <div class="projects-grid reveal" data-reveal="flip-up" data-stagger>
+                <!-- Production Projects -->
+                <div class="project-card glass-card" data-category="production" data-case-study
+                    data-cs-title="Real-Time Data Pipeline Platform" data-cs-org="NatWest Bank"
+                    data-cs-problem="Processing millions of daily banking transactions required high-throughput, fault-tolerant pipelines with sub-minute freshness SLAs and automated recovery from failures."
+                    data-cs-solution="Designed event-driven architecture with Kafka for real-time ingestion, PySpark for distributed processing, and Snowflake as the analytics warehouse. Built 40+ Airflow DAGs with automated alerting and self-healing capabilities."
+                    data-cs-impact="10K+ events/sec throughput|40+ orchestrated DAGs|Recovery time: 6h → 30min|Zero data loss in production"
+                    data-cs-arch="Kafka → S3 (raw) → PySpark (transform) → Snowflake (warehouse) → Airflow (orchestration) → dbt (modeling)"
+                    data-cs-tech="Kafka,PySpark,Snowflake,Airflow,S3,dbt,Docker,Terraform">
+                    <div class="project-badge production">Production</div>
+                    <h3>Real-Time Data Pipeline Platform</h3>
+                    <p class="project-org">NatWest Bank</p>
+                    <p class="project-desc">Building production-grade data pipelines processing millions of transactions
+                        daily with real-time streaming and automated quality frameworks.</p>
+                    <div class="project-metrics">
+                        <div class="metric"><strong>10K+</strong> events/sec</div>
+                        <div class="metric"><strong>40+</strong> DAGs</div>
+                        <div class="metric"><strong>6h → 30min</strong> recovery</div>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tag">Kafka</span>
+                        <span class="tag">PySpark</span>
+                        <span class="tag">Snowflake</span>
+                        <span class="tag">Airflow</span>
+                        <span class="tag">S3</span>
+                    </div>
+                    <span class="cs-hint">Click for case study →</span>
+                </div>
+                <div class="project-card glass-card" data-category="production" data-case-study
+                    data-cs-title="Enterprise Cloud Data Platform" data-cs-org="Accenture"
+                    data-cs-problem="Fortune 500 clients needed unified cloud data platforms that could handle diverse data sources, scale elastically, and enable self-service analytics for 1000+ business users."
+                    data-cs-solution="Architected data mesh platforms on Azure with Databricks for processing, Snowflake for warehousing, Fabric for BI, and Terraform for IaC. Implemented CI/CD with dbt for transformation layer."
+                    data-cs-impact="1000+ active users|70% faster deployments|Multi-cloud architecture|Self-service data access"
+                    data-cs-arch="Azure Data Lake → Databricks (ETL) → Snowflake (warehouse) → dbt (transform) → Fabric (BI) → Terraform (IaC)"
+                    data-cs-tech="Azure Databricks,Snowflake,Microsoft Fabric,dbt,Terraform,CI/CD">
+                    <div class="project-badge production">Production</div>
+                    <h3>Enterprise Cloud Data Platform</h3>
+                    <p class="project-org">Accenture</p>
+                    <p class="project-desc">Delivered large-scale cloud platforms for Fortune 500 clients using Azure
+                        Databricks, Snowflake, and Microsoft Fabric with data mesh architecture.</p>
+                    <div class="project-metrics">
+                        <div class="metric"><strong>1000+</strong> users</div>
+                        <div class="metric"><strong>70%</strong> faster deploy</div>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tag">Azure Databricks</span>
+                        <span class="tag">Snowflake</span>
+                        <span class="tag">Fabric</span>
+                        <span class="tag">dbt</span>
+                        <span class="tag">Terraform</span>
+                    </div>
+                    <span class="cs-hint">Click for case study →</span>
+                </div>
+                <div class="project-card glass-card" data-category="production" data-case-study
+                    data-cs-title="Business Intelligence Platform" data-cs-org="Dpoint Group"
+                    data-cs-problem="Manufacturing and logistics operations relied on manual Excel-based reporting, causing delays and errors in executive decision-making across multiple business units."
+                    data-cs-solution="Built automated BI platform with SSIS for ETL, Power BI dashboards for real-time KPI monitoring, and Azure Data Factory for cloud migration of legacy SAP BW processes."
+                    data-cs-impact="30+ reports automated|Reporting time: Days → Hours|Executive dashboard adoption|Legacy system migration"
+                    data-cs-arch="SAP BW → SSIS (ETL) → Azure Data Factory (cloud) → Power BI (dashboards)"
+                    data-cs-tech="SSIS,Power BI,SAP BW,Azure Data Factory,Python,Excel VBA">
+                    <div class="project-badge production">Production</div>
+                    <h3>Business Intelligence Platform</h3>
+                    <p class="project-org">Dpoint Group</p>
+                    <p class="project-desc">Developed BI and analytics solutions for manufacturing and logistics
+                        operations, automating 30+ manual reporting processes.</p>
+                    <div class="project-metrics">
+                        <div class="metric"><strong>30+</strong> reports automated</div>
+                        <div class="metric"><strong>Days → Hours</strong> time saved</div>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tag">SSIS</span>
+                        <span class="tag">Power BI</span>
+                        <span class="tag">SAP BW</span>
+                        <span class="tag">Azure Data Factory</span>
+                    </div>
+                    <span class="cs-hint">Click for case study →</span>
+                </div>
+                <!-- Personal Projects -->
+                <div class="project-card glass-card" data-category="personal" data-case-study
+                    data-cs-title="Real-Time Data Quality Monitor" data-cs-org="Open Source"
+                    data-cs-problem="Data pipelines often silently pass bad data downstream. Manual QA catches issues hours or days later, causing cascading failures and broken dashboards."
+                    data-cs-solution="Built ML-powered monitoring using Isolation Forest for anomaly detection on streaming data. Kafka handles ingestion, Spark Streaming processes in real-time, and PostgreSQL stores quality metrics with alerting."
+                    data-cs-impact="332K+ orders monitored|93% data quality score|<10ms detection latency|Automated anomaly alerts"
+                    data-cs-arch="Kafka (ingest) → Spark Streaming (process) → Isolation Forest (ML detect) → PostgreSQL (store) → Alerts"
+                    data-cs-tech="Kafka,Spark Streaming,scikit-learn,PostgreSQL,Python,Docker"
+                    data-cs-github="https://github.com/kalluripradeep/realtime-data-quality-monitor">
+                    <div class="project-badge personal">Open Source</div>
+                    <h3>Real-Time Data Quality Monitor</h3>
+                    <p class="project-status">✅ Production-Ready</p>
+                    <p class="project-desc">ML-powered real-time data quality monitoring system detecting anomalies in
+                        streaming data with sub-10ms latency using Isolation Forest.</p>
+                    <div class="project-metrics">
+                        <div class="metric"><strong>332K+</strong> orders</div>
+                        <div class="metric"><strong>93%</strong> quality</div>
+                        <div class="metric"><strong>&lt;10ms</strong> latency</div>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tag">Kafka</span>
+                        <span class="tag">Spark Streaming</span>
+                        <span class="tag">scikit-learn</span>
+                        <span class="tag">PostgreSQL</span>
+                    </div>
+                    <span class="cs-hint">Click for case study →</span>
+                </div>
+                <div class="project-card glass-card" data-category="personal" data-case-study
+                    data-cs-title="Modern ETL / Data Platform" data-cs-org="Open Source"
+                    data-cs-problem="Small and mid-size companies pay £100K+ annually for commercial ETL tools. Most only use a fraction of the features, making it an inefficient investment."
+                    data-cs-solution="Built a fully open-source modern data platform combining Airflow, Kafka, dbt, Spark, and Docker. Complete with CI/CD, monitoring, and comprehensive documentation."
+                    data-cs-impact="1K+ orders processed|£100K+ potential annual savings|Full Docker deployment|Production-grade monitoring"
+                    data-cs-arch="Kafka (ingest) → Airflow (orchestrate) → Spark (process) → dbt (transform) → Docker (deploy)"
+                    data-cs-tech="Airflow,Kafka,dbt,Spark,Docker,PostgreSQL"
+                    data-cs-github="https://github.com/kalluripradeep/modern-etl-stack">
+                    <div class="project-badge personal">Open Source</div>
+                    <h3>Modern ETL / Data Platform</h3>
+                    <p class="project-status">✅ Open Source</p>
+                    <p class="project-desc">A full modern data engineering platform built from scratch. Cost-effective
+                        alternative to commercial tools, potentially saving companies £100K+ annually.</p>
+                    <div class="project-metrics">
+                        <div class="metric"><strong>1K+</strong> orders</div>
+                        <div class="metric"><strong>£100K+</strong> savings</div>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tag">Airflow</span>
+                        <span class="tag">Kafka</span>
+                        <span class="tag">dbt</span>
+                        <span class="tag">Spark</span>
+                        <span class="tag">Docker</span>
+                    </div>
+                    <span class="cs-hint">Click for case study →</span>
+                </div>
+                <div class="project-card glass-card" data-category="personal" data-case-study
+                    data-cs-title="E-commerce Data Pipeline" data-cs-org="Open Source"
+                    data-cs-problem="E-commerce businesses need reliable, tested data pipelines but often lack end-to-end reference implementations that demonstrate best practices."
+                    data-cs-solution="Created a comprehensive, well-documented pipeline covering ingestion, transformation, testing, and monitoring — a blueprint for modern data engineering."
+                    data-cs-impact="End-to-end pipeline|Comprehensive testing|Documented best practices|Reproducible architecture"
+                    data-cs-arch="Source APIs → PySpark (ingest) → Airflow (orchestrate) → dbt (transform) → Docker (containerize)"
+                    data-cs-tech="PySpark,Airflow,dbt,Docker,PostgreSQL,Python"
+                    data-cs-github="https://github.com/kalluripradeep/ecommerce-data-pipeline">
+                    <div class="project-badge personal">Open Source</div>
+                    <h3>E-commerce Data Pipeline</h3>
+                    <p class="project-desc">End-to-end data pipeline demonstrating modern data engineering practices
+                        with PySpark, Airflow, dbt, and comprehensive testing.</p>
+                    <div class="tech-tags">
+                        <span class="tag">PySpark</span>
+                        <span class="tag">Airflow</span>
+                        <span class="tag">dbt</span>
+                        <span class="tag">Docker</span>
+                    </div>
+                    <span class="cs-hint">Click for case study →</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CERTIFICATIONS SECTION ===== -->
+    <section id="certifications" class="section">
+        <div class="container">
+            <h2 class="section-title reveal" data-reveal="fade">Certifications</h2>
+            <div class="certs-grid reveal" data-reveal="zoom-in" data-stagger="scale-up">
+                <div class="cert-card glass-card">
+                    <div class="cert-icon">🏅</div>
+                    <h3>Microsoft Fabric Data Engineer Associate</h3>
+                    <p class="cert-issuer">Microsoft</p>
+                    <span class="date-badge">January 2026</span>
+                    <a href="https://learn.microsoft.com/api/credentials/share/en-us/pradeepkalluri-0755/AB21F6AD929986B8?sharingId"
+                        target="_blank" rel="noopener" class="cert-link">Verify Credential →</a>
+                </div>
+                <div class="cert-card glass-card">
+                    <div class="cert-icon">❄️</div>
+                    <h3>SnowPro Core (COF-C03)</h3>
+                    <p class="cert-issuer">Snowflake</p>
+                    <p class="cert-score">Score: <strong>923 / 1000</strong></p>
+                    <span class="date-badge">February 2026</span>
+                    <a href="https://achieve.snowflake.com/babf58c4-26e3-4804-8574-7a0d0b924014#acc.EJ1CpPmg"
+                        target="_blank" rel="noopener" class="cert-link">Verify Credential →</a>
+                </div>
+                <div class="cert-card glass-card in-progress">
+                    <div class="cert-icon">📚</div>
+                    <h3>AWS Solutions Architect</h3>
+                    <p class="cert-issuer">AWS</p>
+                    <span class="date-badge">In Progress</span>
+                </div>
+                <div class="cert-card glass-card in-progress">
+                    <div class="cert-icon">📚</div>
+                    <h3>Azure Data Engineer Associate</h3>
+                    <p class="cert-issuer">Microsoft</p>
+                    <span class="date-badge">In Progress</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WRITING & SPEAKING SECTION ===== -->
+    <section id="writing" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title reveal" data-reveal="fade">Writing & Speaking</h2>
+            <div class="writing-speaking-grid reveal" data-reveal="fade">
+                <div class="writing-col">
+                    <h3 class="subsection-title">📝 Technical Writing</h3>
+                    <p class="subsection-stat">71,000+ views across platforms</p>
+                    <div id="mediumFeed" class="article-list">
+                        <!-- Medium articles will load here dynamically -->
+                        <div class="medium-loading">Loading latest articles...</div>
+                    </div>
+                    <div class="article-list article-list-static" style="display:none">
+                        <a href="https://thenewstack.io/author/pradeep-kalluri/" target="_blank" rel="noopener"
+                            class="article-card glass-card">
+                            <span class="article-badge">The New Stack ⭐</span>
+                            <h4>The Weekend Our Pipeline Processed the Same Data 47 Times</h4>
+                            <span class="article-date">January 2026</span>
+                        </a>
+                        <a href="https://medium.com/apache-airflow/a-beginners-guide-to-contributing-to-apache-airflow-065fc7081dbc"
+                            target="_blank" rel="noopener" class="article-card glass-card">
+                            <span class="article-badge">Apache Airflow Official</span>
+                            <h4>A Beginner's Guide to Contributing to Apache Airflow</h4>
+                            <span class="article-date">February 2026</span>
+                        </a>
+                        <a href="https://medium.com/@kalluripradeep99" target="_blank" rel="noopener"
+                            class="article-card glass-card">
+                            <h4>Why 71,000 Data Engineers Read My Article</h4>
+                            <span class="article-date">December 2025</span>
+                        </a>
+                        <a href="https://medium.com/@kalluripradeep99" target="_blank" rel="noopener"
+                            class="article-card glass-card">
+                            <h4>5 Data Pipeline Mistakes That Cost Me Weeks</h4>
+                            <span class="article-date">December 2025</span>
+                        </a>
+                        <a href="https://medium.com/@kalluripradeep99" target="_blank" rel="noopener"
+                            class="article-card glass-card">
+                            <h4>Data Quality at Scale</h4>
+                            <span class="article-meta">71,000 views!</span>
+                            <span class="article-date">November 2025</span>
+                        </a>
+                        <a href="https://medium.com/@kalluripradeep99" target="_blank" rel="noopener"
+                            class="article-card glass-card">
+                            <h4>From Raw to Refined: Data Pipeline Architecture</h4>
+                            <span class="article-date">November 2025</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="speaking-col">
+                    <h3 class="subsection-title">🎤 Speaking Engagements</h3>
+                    <div class="speaking-card glass-card completed">
+                        <span class="speaking-status">✅ Completed</span>
+                        <h4>Oxford Microsoft Data Platform Group</h4>
+                        <p class="speaking-topic">"From Raw to Refined: Building Production Data Pipelines That Scale"
+                        </p>
+                        <span class="date-badge">January 21, 2026</span>
+                        <p class="speaking-detail">50+ registrations from industry leaders. Received positive feedback
+                            from Microsoft Senior Cloud Solution Architect. Invited back for dedicated Apache Airflow
+                            session.</p>
+                    </div>
+                    <div class="speaking-card glass-card upcoming">
+                        <span class="speaking-status">🔜 Upcoming</span>
+                        <h4>Oxford Microsoft Data Platform Group</h4>
+                        <p class="speaking-topic">Apache Airflow Deep Dive</p>
+                        <span class="date-badge">Invited back</span>
+                    </div>
+                    <div class="speaking-proposals glass-card">
+                        <h4>📋 Conference Proposals</h4>
+                        <p>13 proposals submitted to data engineering conferences across Europe</p>
+                    </div>
+                    <div class="mentoring-card glass-card">
+                        <h4>🧑‍🏫 Mentoring</h4>
+                        <p>Active on <a href="https://topmate.io/pradeep_kalluri/" target="_blank"
+                                rel="noopener">Topmate</a> — "The Career Launcher" service helping aspiring data
+                            engineers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== OPEN SOURCE SECTION ===== -->
+    <section id="opensource" class="section">
+        <div class="container">
+            <h2 class="section-title reveal" data-reveal="fade">Open Source Contributions</h2>
+            <div class="opensource-grid reveal" data-reveal="rotate-in" data-stagger>
+                <!-- Apache Airflow -->
+                <div class="os-card glass-card">
+                    <div class="os-header">
+                        <h3>Apache Airflow</h3>
+                        <span class="os-stat">3 Merged PRs + 5+ Reviews</span>
+                    </div>
+                    <div class="pr-list">
+                        <a href="https://github.com/apache/airflow/pull/61005" target="_blank" rel="noopener"
+                            class="pr-item">
+                            <span class="pr-status merged">✅ MERGED</span>
+                            <span class="pr-title">Bug fix contribution</span>
+                            <span class="pr-number">#61005</span>
+                        </a>
+                        <a href="https://github.com/apache/airflow/pull/59938" target="_blank" rel="noopener"
+                            class="pr-item">
+                            <span class="pr-status merged">✅ MERGED</span>
+                            <span class="pr-title">Pool name validation fix</span>
+                            <span class="pr-number">#59938</span>
+                        </a>
+                        <a href="https://github.com/apache/airflow/pull/58587" target="_blank" rel="noopener"
+                            class="pr-item">
+                            <span class="pr-status merged">✅ MERGED</span>
+                            <span class="pr-title">Data masking documentation enhancement</span>
+                            <span class="pr-number">#58587</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- dbt-core -->
+                <div class="os-card glass-card">
+                    <div class="os-header">
+                        <h3>dbt-core</h3>
+                        <span class="os-stat">1 Merged + 2 Active</span>
+                    </div>
+                    <div class="pr-list">
+                        <a href="https://github.com/dbt-labs/dbt-core/pull/12388" target="_blank" rel="noopener"
+                            class="pr-item">
+                            <span class="pr-status merged">✅ MERGED</span>
+                            <span class="pr-title">Fixed @requires.catalogs decorator for compile</span>
+                            <span class="pr-number">#12388</span>
+                        </a>
+                        <a href="https://github.com/dbt-labs/dbt-core/pull/12232" target="_blank" rel="noopener"
+                            class="pr-item">
+                            <span class="pr-status review">🟡 Under Review</span>
+                            <span class="pr-title">dbt init UX fix</span>
+                            <span class="pr-number">#12232</span>
+                        </a>
+                        <a href="https://github.com/dbt-labs/dbt-core/pull/12502" target="_blank" rel="noopener"
+                            class="pr-item">
+                            <span class="pr-status review">🟡 Under Review</span>
+                            <span class="pr-title">Debug compilation error fix</span>
+                            <span class="pr-number">#12502</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Confluent Kafka -->
+                <div class="os-card glass-card">
+                    <div class="os-header">
+                        <h3>Confluent Kafka Python</h3>
+                        <span class="os-stat">1 Submitted</span>
+                    </div>
+                    <div class="pr-list">
+                        <div class="pr-item">
+                            <span class="pr-status submitted">🟢 Submitted</span>
+                            <span class="pr-title">SSL configuration enhancement</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS SECTION ===== -->
+    <div class="parallax-divider"></div>
+    <section id="testimonials" class="section">
+        <div class="container">
+            <h2 class="section-title reveal" data-reveal="fade">What People Say</h2>
+            <div class="testimonial-carousel reveal" data-reveal="scale-up" id="testimonialCarousel">
+                <div class="testimonial-track" id="testimonialTrack">
+                    <div class="testimonial-card glass-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"Pradeep delivered an exceptional presentation on production data
+                            pipelines. His deep technical knowledge and ability to explain complex concepts clearly made
+                            a lasting impression on our audience."</p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>Microsoft Senior Cloud Solution Architect</h4>
+                                <p>Oxford Microsoft Data Platform Group</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card glass-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"An outstanding data engineer who combines strong technical skills
+                            with excellent communication. His article on data quality reached 71,000+ engineers for a
+                            reason — he writes with clarity and real-world experience that resonates with
+                            practitioners."</p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>Data Engineering Community</h4>
+                                <p>Reddit r/dataengineering</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card glass-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"Pradeep's contributions to Apache Airflow demonstrate deep
+                            understanding of the codebase. His PRs are well-documented, thoroughly tested, and address
+                            real user pain points. A valuable contributor to the open source community."</p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>Apache Airflow Maintainers</h4>
+                                <p>Open Source Community</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card glass-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"Pradeep's mentoring sessions on Topmate dramatically accelerated my
+                            career transition into data engineering. His practical approach and willingness to share
+                            real-world examples set him apart from other mentors."</p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>Aspiring Data Engineer</h4>
+                                <p>Topmate Mentee</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-controls">
+                    <button class="testimonial-btn" id="prevTestimonial" aria-label="Previous">←</button>
+                    <div class="testimonial-dots" id="testimonialDots"></div>
+                    <button class="testimonial-btn" id="nextTestimonial" aria-label="Next">→</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GITHUB ACTIVITY SECTION ===== -->
+    <div class="parallax-divider"></div>
+    <section id="github-activity" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title reveal" data-reveal="fade">GitHub Activity</h2>
+            <div class="github-activity-wrapper reveal" data-reveal="fade">
+                <div class="github-stats-row" id="githubStats">
+                    <div class="github-stat glass-card">
+                        <span class="github-stat-number" id="ghRepos">--</span>
+                        <span class="github-stat-label">Public Repos</span>
+                    </div>
+                    <div class="github-stat glass-card">
+                        <span class="github-stat-number" id="ghFollowers">--</span>
+                        <span class="github-stat-label">Followers</span>
+                    </div>
+                    <div class="github-stat glass-card">
+                        <span class="github-stat-number" id="ghFollowing">--</span>
+                        <span class="github-stat-label">Following</span>
+                    </div>
+                </div>
+                <div class="github-graph-container glass-card">
+                    <h3>Contribution Graph</h3>
+                    <p class="github-graph-subtitle">Last 52 weeks of activity</p>
+                    <div class="github-graph" id="githubGraph"></div>
+                    <div class="github-graph-legend">
+                        <span>Less</span>
+                        <div class="legend-squares">
+                            <div class="legend-sq" style="background: rgba(0,212,255,0.05)"></div>
+                            <div class="legend-sq" style="background: rgba(0,212,255,0.2)"></div>
+                            <div class="legend-sq" style="background: rgba(0,212,255,0.4)"></div>
+                            <div class="legend-sq" style="background: rgba(0,212,255,0.7)"></div>
+                            <div class="legend-sq" style="background: rgba(0,212,255,1)"></div>
+                        </div>
+                        <span>More</span>
+                    </div>
+                </div>
+                <a href="https://github.com/kalluripradeep" target="_blank" rel="noopener" class="btn btn-primary"
+                    style="margin-top: 24px;">View Full Profile on GitHub →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <div class="parallax-divider"></div>
+    <section id="contact" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title reveal" data-reveal="fade">Get in Touch</h2>
+            <p class="section-subtitle reveal" data-reveal="fade" data-delay="200">Passionate about building reliable,
+                scalable data platforms that empower
+                data-driven decision making.</p>
+            <div class="contact-grid reveal" data-reveal="scale-up" data-stagger>
+                <div class="contact-info">
+                    <a href="mailto:kalluripradeep99@gmail.com" class="contact-card glass-card"
+                        data-copy="kalluripradeep99@gmail.com">
+                        <div class="contact-icon">📧</div>
+                        <h4>Email</h4>
+                        <p>kalluripradeep99@gmail.com</p>
+                        <span class="copy-hint">Click to copy</span>
+                    </a>
+                    <a href="https://linkedin.com/in/pradeepkalluri" target="_blank" rel="noopener"
+                        class="contact-card glass-card">
+                        <div class="contact-icon">💼</div>
+                        <h4>LinkedIn</h4>
+                        <p>linkedin.com/in/pradeepkalluri</p>
+                    </a>
+                    <a href="https://github.com/kalluripradeep" target="_blank" rel="noopener"
+                        class="contact-card glass-card">
+                        <div class="contact-icon">🐙</div>
+                        <h4>GitHub</h4>
+                        <p>github.com/kalluripradeep</p>
+                    </a>
+                    <a href="https://medium.com/@kalluripradeep99" target="_blank" rel="noopener"
+                        class="contact-card glass-card">
+                        <div class="contact-icon">✍️</div>
+                        <h4>Medium</h4>
+                        <p>@kalluripradeep99</p>
+                    </a>
+                    <a href="https://dev.to/pradeep_kaalluri" target="_blank" rel="noopener"
+                        class="contact-card glass-card">
+                        <div class="contact-icon">👨‍💻</div>
+                        <h4>Dev.to</h4>
+                        <p>pradeep_kaalluri</p>
+                    </a>
+                    <a href="https://topmate.io/pradeep_kalluri/" target="_blank" rel="noopener"
+                        class="contact-card glass-card">
+                        <div class="contact-icon">🧑‍🏫</div>
+                        <h4>Topmate</h4>
+                        <p>Mentoring & Career Guidance</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-name">Pradeep Kalluri</p>
+                <p class="footer-tagline">Data Engineer | Cloud Platforms | DataOps</p>
+                <p class="footer-location">📍 London, United Kingdom</p>
+                <div class="footer-social">
+                    <a href="https://github.com/kalluripradeep" target="_blank" rel="noopener" aria-label="GitHub"><svg
+                            viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                        </svg></a>
+                    <a href="https://linkedin.com/in/pradeepkalluri" target="_blank" rel="noopener"
+                        aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg></a>
+                    <a href="https://medium.com/@kalluripradeep99" target="_blank" rel="noopener"
+                        aria-label="Medium"><svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zm7.42 0c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z" />
+                        </svg></a>
+                    <a href="mailto:kalluripradeep99@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                        </svg></a>
+                </div>
+                <p class="footer-copy">© 2026 Pradeep Kalluri. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+
+    <!-- ===== TOAST NOTIFICATION ===== -->
+    <div id="toast" class="toast">
+        <span class="toast-icon">✓</span>
+        <span class="toast-message">Email copied to clipboard!</span>
+    </div>
+
+    <!-- ===== RESUME PREVIEW MODAL ===== -->
+    <div id="resumeModal" class="resume-modal-overlay">
+        <div class="resume-modal">
+            <button class="resume-modal-close" id="resumeModalClose">✕</button>
+            <div class="resume-preview">
+                <div class="resume-header-section">
+                    <h2>Pradeep Kalluri</h2>
+                    <p class="resume-title">Data Engineer | Cloud Platforms | DataOps</p>
+                    <p class="resume-contact-line">London, UK • kalluripradeep99@gmail.com •
+                        linkedin.com/in/pradeepkalluri</p>
+                </div>
+                <div class="resume-section">
+                    <h3>Professional Summary</h3>
+                    <p>Data Engineer with 3+ years of experience designing, developing, and deploying scalable data
+                        pipelines for analytics and business intelligence across enterprise organizations. Currently
+                        building production data platforms at NatWest Bank processing millions of transactions daily.
+                    </p>
+                </div>
+                <div class="resume-section">
+                    <h3>Experience</h3>
+                    <div class="resume-exp-item">
+                        <div class="resume-exp-header"><strong>Data Engineer — NatWest Bank</strong><span>Sep 2025 –
+                                Present</span></div>
+                        <p>Real-time data ingestion (Kafka, S3), distributed processing (PySpark), curated data models
+                            (Snowflake), orchestration (Airflow)</p>
+                    </div>
+                    <div class="resume-exp-item">
+                        <div class="resume-exp-header"><strong>Data Engineer — Accenture</strong><span>Jul 2023 – Aug
+                                2025</span></div>
+                        <p>Scalable ETL/ELT pipelines (Azure Databricks, ADF, Snowflake), dbt transformations, CI/CD
+                            automation, Microsoft Fabric</p>
+                    </div>
+                    <div class="resume-exp-item">
+                        <div class="resume-exp-header"><strong>Data Engineer — Dpoint Group</strong><span>May 2022 – Jun
+                                2023</span></div>
+                        <p>ETL processes (SSIS, SAP BW), Power BI dashboards, Azure Data Factory migration</p>
+                    </div>
+                </div>
+                <div class="resume-two-col">
+                    <div class="resume-section">
+                        <h3>Core Skills</h3>
+                        <p>Python, PySpark, SQL, Kafka, Airflow, Snowflake, dbt, Azure Databricks, AWS, Microsoft
+                            Fabric, Docker, Terraform, Tableau, Power BI</p>
+                    </div>
+                    <div class="resume-section">
+                        <h3>Education</h3>
+                        <p><strong>MBA</strong> — York St John University, London (2023–2024)</p>
+                        <p><strong>B.Sc. ICT</strong> — Tor Vergata University, Rome (2020–2023)</p>
+                    </div>
+                </div>
+                <div class="resume-two-col">
+                    <div class="resume-section">
+                        <h3>Certifications</h3>
+                        <p>Microsoft Fabric Data Engineer Associate • SnowPro Core (923/1000)</p>
+                    </div>
+                    <div class="resume-section">
+                        <h3>Open Source</h3>
+                        <p>Apache Airflow (3 merged PRs) • dbt-core (1 merged + 2 active) • Confluent Kafka</p>
+                    </div>
+                </div>
+            </div>
+            <div class="resume-modal-actions">
+                <a href="assets/Pradeep_Kalluri_Resume.pdf" download class="btn btn-primary">⬇ Download PDF</a>
+                <button class="btn btn-secondary" id="resumeModalCloseBtn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== CASE STUDY MODAL ===== -->
+    <div id="caseStudyModal" class="cs-modal-overlay">
+        <div class="cs-modal">
+            <button class="cs-modal-close" id="csModalClose">&times;</button>
+            <div class="cs-modal-header">
+                <span class="cs-modal-badge" id="csModalBadge"></span>
+                <h2 id="csModalTitle"></h2>
+                <p class="cs-modal-org" id="csModalOrg"></p>
+            </div>
+            <div class="cs-modal-body">
+                <div class="cs-section">
+                    <h3>🔍 The Problem</h3>
+                    <p id="csModalProblem"></p>
+                </div>
+                <div class="cs-section">
+                    <h3>💡 The Solution</h3>
+                    <p id="csModalSolution"></p>
+                </div>
+                <div class="cs-section">
+                    <h3>🏗️ Architecture</h3>
+                    <div class="cs-arch-flow" id="csModalArch"></div>
+                </div>
+                <div class="cs-section">
+                    <h3>📊 Impact</h3>
+                    <div class="cs-impact-grid" id="csModalImpact"></div>
+                </div>
+                <div class="cs-section">
+                    <h3>🛠️ Tech Stack</h3>
+                    <div class="cs-tech-tags" id="csModalTech"></div>
+                </div>
+            </div>
+            <div class="cs-modal-actions">
+                <a href="#" id="csModalGithub" class="btn btn-primary" target="_blank" rel="noopener"
+                    style="display:none">View on GitHub →</a>
+                <button class="btn btn-secondary" id="csModalCloseBtn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
