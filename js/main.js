@@ -817,22 +817,39 @@ function initTechBubbles() {
         const h = canvas.height;
         const centerX = w / 2;
         const centerY = h / 2;
-        const radiusX = w * 0.35;
-        const radiusY = h * 0.35;
+        const radiusX = w * 0.38;
+        const radiusY = h * 0.38;
+
+        // Keep-out zone: the center area where hero text lives
+        const keepOutX = w * 0.20;
+        const keepOutY = h * 0.18;
 
         techNodes.forEach((tech, i) => {
             const angle = (i / techNodes.length) * Math.PI * 2 - Math.PI / 2;
-            const jitter = (Math.random() - 0.5) * 40;
+            const jitter = (Math.random() - 0.5) * 30;
+
+            let tx = centerX + Math.cos(angle) * radiusX + jitter;
+            let ty = centerY + Math.sin(angle) * radiusY + jitter;
+
+            // Push nodes out if they land inside the keep-out zone
+            const dx = tx - centerX;
+            const dy = ty - centerY;
+            if (Math.abs(dx) < keepOutX && Math.abs(dy) < keepOutY) {
+                const pushDir = Math.abs(dx / keepOutX) > Math.abs(dy / keepOutY) ? 'x' : 'y';
+                if (pushDir === 'x') {
+                    tx = centerX + (dx >= 0 ? keepOutX : -keepOutX) + jitter;
+                } else {
+                    ty = centerY + (dy >= 0 ? keepOutY : -keepOutY) + jitter;
+                }
+            }
 
             if (nodes[i]) {
-                nodes[i].tx = centerX + Math.cos(angle) * radiusX + jitter;
-                nodes[i].ty = centerY + Math.sin(angle) * radiusY + jitter;
+                nodes[i].tx = tx;
+                nodes[i].ty = ty;
             } else {
                 nodes.push({
-                    x: centerX + Math.cos(angle) * radiusX + jitter,
-                    y: centerY + Math.sin(angle) * radiusY + jitter,
-                    tx: centerX + Math.cos(angle) * radiusX + jitter,
-                    ty: centerY + Math.sin(angle) * radiusY + jitter,
+                    x: tx, y: ty,
+                    tx: tx, ty: ty,
                     vx: 0, vy: 0,
                     name: tech.name,
                     cat: tech.cat,
