@@ -556,10 +556,9 @@ async function initGitHubActivity() {
             if (followingEl) followingEl.textContent = data.following;
         }
     } catch (e) {
-        // Use fallback
-        if (reposEl) reposEl.textContent = '15+';
-        if (followersEl) followersEl.textContent = '50+';
-        if (followingEl) followingEl.textContent = '30+';
+        if (reposEl) reposEl.textContent = '20+';
+        if (followersEl) followersEl.textContent = '5';
+        if (followingEl) followingEl.textContent = '10+';
     }
 
     // Generate contribution graph with realistic pattern
