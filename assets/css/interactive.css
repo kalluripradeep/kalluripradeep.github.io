@@ -1,0 +1,276 @@
+/* ============================================================
+   PORTFOLIO INTERACTIVE STYLES
+   ============================================================ */
+
+/* ---- Reading Progress Bar ---- */
+#reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, #10b981, #2563eb, #7c3aed);
+  z-index: 9999;
+  transition: width 0.1s linear;
+  border-radius: 0 2px 2px 0;
+}
+
+/* ---- Back to Top Button ---- */
+#back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 46px;
+  height: 46px;
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.45);
+  opacity: 0;
+  transform: translateY(12px) scale(0.85);
+  transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.2s ease;
+  z-index: 1000;
+}
+
+#back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+#back-to-top:hover {
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.65);
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* ---- Scroll Reveal ---- */
+.sr-hidden {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.sr-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---- Typing Animation ---- */
+.hero-role {
+  font-size: 1.25em;
+  font-weight: 600;
+  color: #2563eb;
+  margin: -10px 0 24px;
+  letter-spacing: 0.01em;
+  min-height: 1.6em;
+}
+
+#typing-text {
+  border-right: 2px solid #2563eb;
+  padding-right: 3px;
+  animation: blink-cursor 0.75s step-end infinite;
+}
+
+@keyframes blink-cursor {
+  0%, 100% { border-color: #2563eb; }
+  50%       { border-color: transparent; }
+}
+
+/* ---- Dark Mode Toggle ---- */
+#dark-mode-toggle {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 4px 10px;
+  margin-right: 12px;
+  vertical-align: middle;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+#dark-mode-toggle:hover {
+  background: rgba(255, 255, 255, 0.28);
+  transform: scale(1.08);
+}
+
+/* ---- Active Nav Link ---- */
+.site-nav .nav-active {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.8) !important;
+  padding-bottom: 2px;
+}
+
+/* ---- Header Particles Canvas ---- */
+#particles-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Keep header content above canvas */
+.site-header .wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---- Tech Stack Pill Badges ---- */
+.tech-stack-row {
+  line-height: 2.4;
+}
+
+.tech-tag-group {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  margin-left: 4px;
+}
+
+.tech-tag {
+  display: inline-block;
+  background: linear-gradient(135deg, #eff6ff, #dbeafe);
+  color: #1e40af;
+  border: 1px solid #bfdbfe;
+  border-radius: 14px;
+  padding: 2px 10px;
+  font-size: 0.82em;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  cursor: default;
+}
+
+.tech-tag:hover {
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(37, 99, 235, 0.25);
+}
+
+/* ---- Section Heading Glow on Hover ---- */
+.section-glow {
+  transition: color 0.2s ease;
+}
+
+.section-glow:hover {
+  color: #2563eb;
+}
+
+/* ---- Animated Stat Numbers ---- */
+[data-count] {
+  font-weight: 700;
+  color: #1e3a8a;
+  font-size: 1.1em;
+}
+
+/* ============================================================
+   DARK MODE
+   ============================================================ */
+body.dark-mode {
+  background-color: #0f172a !important;
+  color: #cbd5e1 !important;
+}
+
+body.dark-mode .page-content .wrapper,
+body.dark-mode .page-content {
+  background: #1e293b !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
+  color: #cbd5e1 !important;
+}
+
+body.dark-mode h1 {
+  color: #93c5fd !important;
+  border-bottom-color: #3b82f6 !important;
+}
+
+body.dark-mode h2 {
+  color: #7dd3fc !important;
+  border-left-color: #3b82f6 !important;
+}
+
+body.dark-mode h3 {
+  color: #bae6fd !important;
+}
+
+body.dark-mode p,
+body.dark-mode li,
+body.dark-mode strong {
+  color: #cbd5e1 !important;
+}
+
+body.dark-mode a {
+  color: #60a5fa !important;
+}
+
+body.dark-mode a:hover {
+  color: #93c5fd !important;
+}
+
+body.dark-mode code {
+  background-color: #334155 !important;
+  color: #fca5a5 !important;
+}
+
+body.dark-mode pre {
+  background-color: #0f172a !important;
+  border: 1px solid #334155;
+}
+
+body.dark-mode hr {
+  border-top-color: #334155 !important;
+}
+
+body.dark-mode .tech-tag {
+  background: linear-gradient(135deg, #1e3a5f, #1e3a8a) !important;
+  color: #93c5fd !important;
+  border-color: #3b82f6 !important;
+}
+
+body.dark-mode .tech-tag:hover {
+  background: linear-gradient(135deg, #1e40af, #1d4ed8) !important;
+}
+
+body.dark-mode .hero-role {
+  color: #60a5fa !important;
+}
+
+body.dark-mode #typing-text {
+  border-right-color: #60a5fa !important;
+}
+
+body.dark-mode [data-count] {
+  color: #93c5fd !important;
+}
+
+body.dark-mode ul li::before {
+  color: #34d399 !important;
+}
+
+/* ============================================================
+   RESPONSIVE TWEAKS
+   ============================================================ */
+@media screen and (max-width: 600px) {
+  #back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .hero-role {
+    font-size: 1.05em;
+  }
+
+  .tech-tag {
+    font-size: 0.78em;
+    padding: 2px 8px;
+  }
+}
