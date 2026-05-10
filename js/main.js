@@ -498,7 +498,8 @@ function initTestimonials() {
 
     function goTo(index) {
         currentIndex = ((index % count) + count) % count;
-        track.style.transform = 'translateX(-' + (currentIndex * 100) + '%)';
+        // Move by 1/count of the track's width for each index
+        track.style.transform = 'translateX(-' + (currentIndex * (100 / count)) + '%)';
 
         dotsContainer.querySelectorAll('.testimonial-dot').forEach((d, i) => {
             d.classList.toggle('active', i === currentIndex);

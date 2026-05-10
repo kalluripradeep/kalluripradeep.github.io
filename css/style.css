@@ -2159,18 +2159,21 @@ a.pr-item:hover {
 
 /* ===== LIGHT THEME ===== */
 [data-theme="light"] {
-    --bg-primary: #f5f5fa;
-    --bg-secondary: #eeeef5;
-    --bg-card: rgba(255, 255, 255, 0.7);
-    --bg-glass: rgba(255, 255, 255, 0.6);
-    --bg-glass-hover: rgba(255, 255, 255, 0.8);
-    --border-glass: rgba(0, 0, 0, 0.08);
-    --border-glass-hover: rgba(0, 0, 0, 0.15);
-    --text-primary: #1a1a2e;
-    --text-secondary: #4a4a6a;
-    --text-muted: #7a7a9a;
-    --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.08);
-    --shadow-glow: 0 0 30px rgba(0, 212, 255, 0.1);
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --bg-card: rgba(255, 255, 255, 0.8);
+    --bg-glass: rgba(255, 255, 255, 0.7);
+    --bg-glass-hover: rgba(255, 255, 255, 0.9);
+    --border-glass: rgba(0, 0, 0, 0.06);
+    --border-glass-hover: rgba(0, 0, 0, 0.12);
+    --text-primary: #0f172a;
+    --text-secondary: #334155;
+    --text-muted: #64748b;
+    --shadow-card: 0 20px 50px rgba(0, 0, 0, 0.05);
+    --shadow-glow: 0 0 30px rgba(0, 212, 255, 0.08);
+    --accent-blue: #0ea5e9;
+    --accent-purple: #8b5cf6;
+    --accent-pink: #ec4899;
 }
 
 [data-theme="light"] .navbar.scrolled {
@@ -2178,7 +2181,7 @@ a.pr-item:hover {
 }
 
 [data-theme="light"] .hero-name {
-    background: linear-gradient(135deg, #1a1a2e 0%, #2d2d5e 50%, #4a4a8a 100%);
+    background: linear-gradient(135deg, #0ea5e9 0%, #8b5cf6 100%);
     -webkit-background-clip: text;
     background-clip: text;
 }
