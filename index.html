@@ -40,13 +40,20 @@
     <!-- ===== PRELOADER ===== -->
     <div id="preloader" class="preloader">
         <div class="preloader-inner">
-            <span class="preloader-logo">PK<span class="preloader-dot">.</span></span>
-            <div class="preloader-spinner"></div>
+            <div class="preloader-logo-wrap">
+                <span class="preloader-p">P</span><span class="preloader-k">K</span><span class="preloader-dot">.</span>
+            </div>
+            <div class="preloader-bar-wrap">
+                <div class="preloader-bar" id="preloaderBar"></div>
+            </div>
+            <span class="preloader-counter" id="preloaderCounter">0%</span>
         </div>
+        <div class="preloader-scanline" id="preloaderScanline"></div>
     </div>
 
-    <!-- ===== CURSOR GLOW ===== -->
-    <div id="cursorGlow" class="cursor-glow"></div>
+    <!-- ===== MAGNETIC CURSOR ===== -->
+    <div id="cursorDot" class="cursor-dot"></div>
+    <div id="cursorRing" class="cursor-ring"></div>
 
     <!-- ===== NAVIGATION ===== -->
     <nav id="navbar" class="navbar">
@@ -90,6 +97,11 @@
     <!-- ===== HERO SECTION ===== -->
     <section id="hero" class="hero">
         <canvas id="pipelineCanvas" class="pipeline-canvas"></canvas>
+        <div class="aurora-wrap" aria-hidden="true">
+            <div class="aurora-blob"></div>
+            <div class="aurora-blob"></div>
+            <div class="aurora-blob"></div>
+        </div>
         <div class="hero-bg-animation" id="heroBg"></div>
         <div class="hero-content">
             <p class="hero-greeting">Hello, I'm</p>
@@ -170,68 +182,66 @@
     <section id="about" class="section">
         <div class="container">
             <h2 class="section-title reveal" data-reveal="fade">About Me</h2>
-            <div class="about-grid reveal" data-reveal="fade">
-                <div class="about-text reveal" data-reveal="slide-left" data-delay="200">
-                    <p class="about-intro">I'm a <span class="highlight">Data Engineer</span> with hands-on experience
-                        designing, developing, and deploying scalable data pipelines for analytics and business
-                        intelligence across enterprise organizations.</p>
-                    <p>Currently at <strong>NatWest Bank</strong>, I work across modern data platforms building reliable
-                        data flows using Kafka, PySpark, Snowflake, and Airflow.</p>
-                    <p>With experience spanning financial services and consulting, I've delivered data engineering
-                        solutions across cloud data platforms, real-time streaming systems, and advanced analytics
-                        environments.</p>
-                    <div class="about-highlights">
-                        <div class="highlight-card">
-                            <div class="highlight-icon">☁️</div>
-                            <h4>Cloud Platforms</h4>
-                            <p>Azure Databricks, AWS, Snowflake, Microsoft Fabric</p>
-                        </div>
-                        <div class="highlight-card">
-                            <div class="highlight-icon">⚡</div>
-                            <h4>Data Pipelines</h4>
-                            <p>Kafka, PySpark, Airflow orchestration</p>
-                        </div>
-                        <div class="highlight-card">
-                            <div class="highlight-icon">🔧</div>
-                            <h4>ETL/ELT Solutions</h4>
-                            <p>Python, SQL, dbt, Azure Data Factory</p>
-                        </div>
-                        <div class="highlight-card">
-                            <div class="highlight-icon">📊</div>
-                            <h4>Analytics & BI</h4>
-                            <p>Tableau, Power BI, SAP BW integration</p>
-                        </div>
+            <div class="bento-grid reveal" data-reveal="fade" data-delay="100">
+
+                <!-- Bio card — tall left column -->
+                <div class="bento-card bento-bio">
+                    <div class="bento-label">Who I am</div>
+                    <h3>Data Engineer &amp; Cloud Architect</h3>
+                    <p>I design and build <span class="highlight">scalable cloud data platforms</span> and production-grade pipelines for enterprise analytics — currently at <strong>NatWest Bank</strong>, London.</p>
+                    <p>My work spans real-time streaming, batch ETL, data modelling, and open-source contribution across the modern data stack.</p>
+                    <p>With a background in financial services and consulting, I've shipped data engineering solutions that power business intelligence at scale — handling millions of events daily across cloud-native environments.</p>
+                    <div class="bento-tech-pills">
+                        <span class="bento-pill">Kafka</span>
+                        <span class="bento-pill">PySpark</span>
+                        <span class="bento-pill">Airflow</span>
+                        <span class="bento-pill">Snowflake</span>
+                        <span class="bento-pill">dbt</span>
+                        <span class="bento-pill">Azure Databricks</span>
+                        <span class="bento-pill">Python</span>
+                        <span class="bento-pill">SQL</span>
+                        <span class="bento-pill">AWS</span>
+                        <span class="bento-pill">Tableau</span>
                     </div>
                 </div>
-                <div class="about-info reveal" data-reveal="slide-right" data-delay="400" data-stagger>
-                    <div class="info-card glass-card">
-                        <h3>🎓 Education</h3>
-                        <div class="education-item">
-                            <h4>MBA — Master in Business Administration</h4>
-                            <p>York St John University, London, UK</p>
-                            <span class="date-badge">2023 – 2024</span>
-                        </div>
-                        <div class="education-item">
-                            <h4>Bachelor of Internet & Communication Technology</h4>
-                            <p>Tor Vergata University, Rome, Italy</p>
-                            <span class="date-badge">2020 – 2023</span>
-                        </div>
+
+                <!-- Location card -->
+                <div class="bento-card bento-location">
+                    <div class="bento-label">Location</div>
+                    <span class="bento-location-icon">📍</span>
+                    <h4>London, UK</h4>
+                    <p style="margin-top:8px; font-size:0.82rem;">
+                        <span class="bento-status-dot"></span>Open to global opportunities
+                    </p>
+                </div>
+
+                <!-- Currently card — tall right column -->
+                <div class="bento-card bento-currently">
+                    <div class="bento-label">Currently</div>
+                    <ul>
+                        <li>Building production data pipelines at NatWest Bank</li>
+                        <li>Writing about data engineering on Medium — 71K+ views</li>
+                        <li>Contributing to Apache Airflow &amp; dbt-core open source</li>
+                        <li>Speaking at data engineering meetups in London</li>
+                        <li>Pursuing UK Global Talent Visa in Digital Technology</li>
+                    </ul>
+                </div>
+
+                <!-- Education card -->
+                <div class="bento-card bento-education">
+                    <div class="bento-label">Education</div>
+                    <div class="bento-edu-item">
+                        <h4>MBA — Business Administration</h4>
+                        <div class="edu-school">York St John University, London</div>
+                        <div class="edu-year">2023 – 2024</div>
                     </div>
-                    <div class="info-card glass-card">
-                        <h3>📍 Location</h3>
-                        <p>London, United Kingdom</p>
-                    </div>
-                    <div class="info-card glass-card">
-                        <h3>🚀 Currently</h3>
-                        <ul class="currently-list">
-                            <li>Building production data pipelines at NatWest Bank</li>
-                            <li>Writing about data engineering on Medium (71K+ views)</li>
-                            <li>Contributing to Apache Airflow & dbt-core</li>
-                            <li>Speaking at data engineering meetups</li>
-                            <li>Pursuing UK Global Talent Visa in Digital Technology</li>
-                        </ul>
+                    <div class="bento-edu-item">
+                        <h4>BSc Internet &amp; Communication Technology</h4>
+                        <div class="edu-school">Tor Vergata University, Rome</div>
+                        <div class="edu-year">2020 – 2023</div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>

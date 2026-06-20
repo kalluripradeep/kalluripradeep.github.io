@@ -678,53 +678,156 @@ initGitHubActivity();
 
 
 // ================================================================
-// ===== ENHANCEMENT: PAGE PRELOADER =====
+// ===== UPGRADE 1: CINEMATIC PRELOADER =====
 // ================================================================
 window.addEventListener('load', () => {
     const preloader = document.getElementById('preloader');
-    if (preloader) {
-        setTimeout(() => {
-            preloader.classList.add('hidden');
-            setTimeout(() => preloader.remove(), 600);
-        }, 1200);
-    }
+    const bar = document.getElementById('preloaderBar');
+    const counter = document.getElementById('preloaderCounter');
+    if (!preloader) return;
+
+    let progress = 0;
+    const interval = setInterval(() => {
+        progress += Math.random() * 18 + 4;
+        if (progress >= 100) {
+            progress = 100;
+            clearInterval(interval);
+            if (bar) bar.style.width = '100%';
+            if (counter) counter.textContent = '100%';
+            setTimeout(() => {
+                preloader.classList.add('scanning');
+                setTimeout(() => {
+                    preloader.classList.add('hidden');
+                    setTimeout(() => preloader.remove(), 600);
+                }, 700);
+            }, 300);
+            return;
+        }
+        if (bar) bar.style.width = Math.min(progress, 100) + '%';
+        if (counter) counter.textContent = Math.floor(Math.min(progress, 100)) + '%';
+    }, 80);
 });
 
 
 // ================================================================
-// ===== ENHANCEMENT: CURSOR GLOW TRAIL =====
+// ===== UPGRADE 2: MAGNETIC CURSOR =====
 // ================================================================
-function initCursorGlow() {
-    const glow = document.getElementById('cursorGlow');
-    if (!glow || window.innerWidth < 768) return;
+function initMagneticCursor() {
+    if (window.innerWidth < 768) return;
+
+    const dot = document.getElementById('cursorDot');
+    const ring = document.getElementById('cursorRing');
+    if (!dot || !ring) return;
+
+    document.body.classList.add('has-custom-cursor');
 
     let mouseX = 0, mouseY = 0;
-    let glowX = 0, glowY = 0;
+    let ringX = 0, ringY = 0;
 
     document.addEventListener('mousemove', (e) => {
         mouseX = e.clientX;
         mouseY = e.clientY;
-        if (!glow.classList.contains('active')) {
-            glow.classList.add('active');
-        }
+        dot.style.left = mouseX + 'px';
+        dot.style.top  = mouseY + 'px';
+        dot.classList.add('active');
+        ring.classList.add('active');
     });
 
     document.addEventListener('mouseleave', () => {
-        glow.classList.remove('active');
+        dot.classList.remove('active');
+        ring.classList.remove('active');
     });
 
-    function animateGlow() {
-        glowX += (mouseX - glowX) * 0.12;
-        glowY += (mouseY - glowY) * 0.12;
-        glow.style.left = glowX + 'px';
-        glow.style.top = glowY + 'px';
-        requestAnimationFrame(animateGlow);
-    }
+    document.addEventListener('mousedown', () => ring.classList.add('clicking'));
+    document.addEventListener('mouseup',   () => ring.classList.remove('clicking'));
 
-    animateGlow();
+    function animateRing() {
+        ringX += (mouseX - ringX) * 0.1;
+        ringY += (mouseY - ringY) * 0.1;
+        ring.style.left = ringX + 'px';
+        ring.style.top  = ringY + 'px';
+        requestAnimationFrame(animateRing);
+    }
+    animateRing();
+
+    const hoverTargets = document.querySelectorAll('a, button, .btn, .glass-card, .bento-card, .project-card, .social-icon');
+    hoverTargets.forEach(el => {
+        el.addEventListener('mouseenter', () => ring.classList.add('hovering'));
+        el.addEventListener('mouseleave', () => ring.classList.remove('hovering'));
+    });
 }
 
-initCursorGlow();
+initMagneticCursor();
+
+
+// ================================================================
+// ===== UPGRADE 5: TEXT SPLIT REVEAL =====
+// ================================================================
+function initTextSplitReveal() {
+    const titles = document.querySelectorAll('.section-title');
+
+    titles.forEach(el => {
+        const text = el.textContent;
+        el.textContent = '';
+        el.classList.add('split-ready');
+
+        text.split('').forEach(char => {
+            const wrap = document.createElement('span');
+            wrap.className = 'char-wrap';
+            const inner = document.createElement('span');
+            inner.className = 'char' + (char === ' ' ? ' is-space' : '');
+            inner.textContent = char === ' ' ? ' ' : char;
+            wrap.appendChild(inner);
+            el.appendChild(wrap);
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const chars = entry.target.querySelectorAll('.char');
+                    chars.forEach((c, i) => {
+                        c.style.transitionDelay = (i * 0.025) + 's';
+                    });
+                    entry.target.classList.add('chars-revealed');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        observer.observe(el);
+    });
+}
+
+initTextSplitReveal();
+
+
+// ================================================================
+// ===== UPGRADE 6: MAGNETIC BUTTONS =====
+// ================================================================
+function initMagneticButtons() {
+    if (window.innerWidth < 768) return;
+
+    const magnets = document.querySelectorAll('.btn, .social-icon, .nav-logo');
+
+    magnets.forEach(el => {
+        el.classList.add('btn-magnetic');
+
+        el.addEventListener('mousemove', (e) => {
+            const rect = el.getBoundingClientRect();
+            const cx = rect.left + rect.width / 2;
+            const cy = rect.top + rect.height / 2;
+            const dx = (e.clientX - cx) * 0.28;
+            const dy = (e.clientY - cy) * 0.28;
+            el.style.transform = `translate(${dx}px, ${dy}px)`;
+        });
+
+        el.addEventListener('mouseleave', () => {
+            el.style.transform = '';
+        });
+    });
+}
+
+initMagneticButtons();
 
 
 // ================================================================
