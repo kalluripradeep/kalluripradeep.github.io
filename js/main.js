@@ -540,14 +540,12 @@ initTestimonials();
 // ===== ENHANCEMENT #2: GITHUB ACTIVITY GRAPH =====
 // ================================================================
 async function initGitHubActivity() {
-    const graphEl = document.getElementById('githubGraph');
     const reposEl = document.getElementById('ghRepos');
     const followersEl = document.getElementById('ghFollowers');
     const followingEl = document.getElementById('ghFollowing');
+    if (!reposEl && !followersEl && !followingEl) return;
 
-    if (!graphEl) return;
-
-    // Fetch GitHub user data
+    // Live profile stats from the public GitHub API
     try {
         const response = await fetch('https://api.github.com/users/kalluripradeep');
         if (response.ok) {
@@ -557,71 +555,10 @@ async function initGitHubActivity() {
             if (followingEl) followingEl.textContent = data.following;
         }
     } catch (e) {
-        if (reposEl) reposEl.textContent = '20+';
-        if (followersEl) followersEl.textContent = '5';
-        if (followingEl) followingEl.textContent = '10+';
+        // API unavailable (rate limit / offline): leave the "--" placeholders
     }
-
-    // Generate contribution graph with realistic pattern
-    const contributionData = [];
-    for (let week = 0; week < 52; week++) {
-        for (let day = 0; day < 7; day++) {
-            const isWeekend = day === 0 || day === 6;
-            let base = isWeekend ? 0.15 : 0.45;
-
-            // Activity bursts for realism
-            if (week > 35 && week < 45) base *= 1.8;
-            if (week > 10 && week < 18) base *= 1.5;
-            if (week > 25 && week < 30) base *= 1.3;
-
-            const rand = Math.random();
-            if (rand > base) {
-                contributionData.push(0);
-            } else if (rand > base * 0.5) {
-                contributionData.push(1);
-            } else if (rand > base * 0.25) {
-                contributionData.push(2);
-            } else if (rand > base * 0.1) {
-                contributionData.push(3);
-            } else {
-                contributionData.push(4);
-            }
-        }
-    }
-
-    // Render (column-major: each column = 1 week)
-    const fragment = document.createDocumentFragment();
-    for (let i = 0; i < contributionData.length; i++) {
-        const cell = document.createElement('div');
-        cell.classList.add('gh-cell');
-        const level = contributionData[i];
-        if (level > 0) cell.classList.add('l' + level);
-        cell.style.opacity = '0';
-        cell.style.transform = 'scale(0)';
-        fragment.appendChild(cell);
-    }
-
-    graphEl.appendChild(fragment);
-
-    // Animate cells in with stagger
-    const graphObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const cells = graphEl.querySelectorAll('.gh-cell');
-                cells.forEach((cell, i) => {
-                    setTimeout(() => {
-                        cell.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-                        cell.style.opacity = '1';
-                        cell.style.transform = 'scale(1)';
-                    }, i * 2);
-                });
-                graphObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.2 });
-
-    graphObserver.observe(graphEl);
 }
+
 
 // ================================================================
 // ===== SKILL CARD FILTERS & RING ANIMATION =====
