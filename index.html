@@ -31,6 +31,7 @@
       "@type": "Person",
       "name": "Pradeep Kalluri",
       "jobTitle": "Data Engineer",
+      "worksFor": { "@type": "Organization", "name": "NatWest Bank" },
       "url": "https://kalluripradeep.github.io/",
       "email": "mailto:kalluripradeep99@gmail.com",
       "address": { "@type": "PostalAddress", "addressLocality": "London", "addressCountry": "GB" },
@@ -250,10 +251,11 @@
                 <div class="bento-card bento-currently">
                     <div class="bento-label">Currently</div>
                     <ul>
-                        <li>Building production data pipelines at NatWest Bank</li>
-                        <li>Writing about data engineering on Medium — 71K+ views</li>
-                        <li>Contributing to Apache Airflow &amp; dbt-core open source</li>
-                        <li>Speaking at data engineering meetups in London</li>
+                        <li>Building the data platforms behind NatWest's customer-facing banking apps</li>
+                        <li>Contributing to Apache Airflow &amp; dbt-core; editor of the official Airflow Medium publication</li>
+                        <li>Technical writing for 71K+ readers — The New Stack, DZone, HackerNoon</li>
+                        <li>Speaking: Open Source in Finance Forum London, Oxford Data Platform Group</li>
+                        <li>Mentoring startup founders via Plug and Play &amp; TiE, and engineers on Topmate</li>
                     </ul>
                 </div>
 
@@ -291,20 +293,17 @@
                             <h3>Data Engineer</h3>
                             <span class="company">NatWest Bank</span>
                             <div class="timeline-meta">
-                                <span class="date-badge">Sep 2025 – Present</span>
+                                <span class="date-badge">Sep 2024 – Present</span>
                                 <span class="location-badge">Greater London, UK</span>
                             </div>
                         </div>
-                        <p class="timeline-desc">Retail Banking Data Quality and Pipeline Engineering. Building production data platforms processing millions of transactions daily.</p>
+                        <p class="timeline-desc">Cloud data engineering for customer-facing banking products at one of the UK's largest retail and commercial banks (19M+ customers).</p>
                         <ul class="timeline-details">
-                            <li>Design and implement real-time data ingestion pipelines using Kafka and Amazon S3</li>
-                            <li>Develop distributed data processing workflows with PySpark for transformation and
-                                validation</li>
-                            <li>Build curated data models in Snowflake supporting downstream analytics and reporting
-                            </li>
-                            <li>Orchestrate end-to-end pipelines using Apache Airflow DAGs with dependency management
-                            </li>
-                            <li>Optimize SQL and PySpark workloads for performance and cost-efficiency</li>
+                            <li>Designed the data platform behind the NatWest International mobile banking app (100K+ downloads, 4.7★) — multi-region Kafka + S3 ingestion of real-time financial events across 20+ countries</li>
+                            <li>Built the payment, transaction-history and reporting data infrastructure powering Bankline Mobile, NatWest's corporate banking platform for high-value payment approvals</li>
+                            <li>Led the cloud data infrastructure for NatWest Accelerator — engagement analytics across 12 entrepreneur hubs nationwide</li>
+                            <li>Designed curated Snowflake models for payment approvals, 15-month transaction history and multi-jurisdictional regulatory reporting</li>
+                            <li>Orchestrated end-to-end pipelines with Apache Airflow, enforcing data governance aligned with banking regulations</li>
                         </ul>
                         <div class="tech-tags">
                             <span class="tag">Kafka</span>
@@ -325,18 +324,16 @@
                             <h3>Data Engineer</h3>
                             <span class="company">Accenture</span>
                             <div class="timeline-meta">
-                                <span class="date-badge">Jul 2023 – Aug 2025</span>
+                                <span class="date-badge">Jul 2023 – Aug 2024</span>
                             </div>
                         </div>
-                        <p class="timeline-desc">Enterprise Data Platform Modernisation. Delivered large-scale cloud data engineering solutions for Fortune 500 clients across multiple industries.</p>
+                        <p class="timeline-desc">Multi-cloud enterprise data transformation programme managing 100TB+ of data.</p>
                         <ul class="timeline-details">
-                            <li>Designed and implemented scalable ETL/ELT pipelines using Azure Databricks, ADF, and
-                                Snowflake</li>
-                            <li>Developed PySpark workflows for distributed data processing and transformation</li>
-                            <li>Built reusable transformation layers with dbt ensuring consistent business logic</li>
-                            <li>Automated pipeline deployments using CI/CD (GitHub Actions, Terraform)</li>
-                            <li>Leveraged Microsoft Fabric for unified analytics workflows and lakehouse architecture
-                            </li>
+                            <li>Cut ETL processing time 70% (12h → under 4h) via PySpark optimisation, repartitioning and execution tuning in Azure Databricks</li>
+                            <li>Delivered ~$30K/month in cloud cost savings through systematic Databricks and Snowflake workload optimisation</li>
+                            <li>Raised data reliability from 80% to 99.5% with quality frameworks, schema-evolution strategy and version-controlled dbt transformations</li>
+                            <li>Ran production pipelines ingesting 15TB/day at 99.8% uptime; near-real-time analytics contributed to $1M+ annual revenue uplift</li>
+                            <li>Automated provisioning and deployments with GitHub Actions + Terraform; built lakehouse workflows on Microsoft Fabric</li>
                         </ul>
                         <div class="tech-tags">
                             <span class="tag">Azure Databricks</span>
@@ -844,7 +841,7 @@
                         <a href="https://hackernoon.com/real-time-data-quality-monitor-earns-a-54-proof-of-usefulness-score-by-building-an-open-source-data-observability-dashboard"
                             target="_blank" rel="noopener" class="article-card glass-card">
                             <span class="article-badge">HackerNoon ⭐</span>
-                            <h4>Real-Time Data Quality Monitor: A Production ML Approach</h4>
+                            <h4>Real-Time Data Quality Monitor Earns a 54 Proof-of-Usefulness Score</h4>
                             <span class="article-date">March 2026</span>
                         </a>
                         <a href="https://thenewstack.io/the-weekend-our-pipeline-processed-the-same-data-47-times/"
@@ -856,8 +853,8 @@
                         <a href="https://dzone.com/articles/how-i-fixed-silent-production-bug-apache-airflow"
                             target="_blank" rel="noopener" class="article-card glass-card">
                             <span class="article-badge">DZone ⭐</span>
-                            <h4>How I Fixed a Silent Production Bug in Apache Airflow</h4>
-                            <span class="article-date">February 2026</span>
+                            <h4>How I Fixed a Silent Production Bug in Apache Airflow That Affected Thousands of Deployments</h4>
+                            <span class="article-date">April 2026 · 2.6K+ views</span>
                         </a>
                         <a href="https://medium.com/apache-airflow/a-beginners-guide-to-contributing-to-apache-airflow-065fc7081dbc"
                             target="_blank" rel="noopener" class="article-card glass-card">
@@ -865,19 +862,43 @@
                             <h4>A Beginner's Guide to Contributing to Apache Airflow</h4>
                             <span class="article-date">February 2026</span>
                         </a>
+                        <a href="https://hackernoon.com/does-ensemble-ml-3-ml-models-actually-work-i-tested-it-on-332k-orders"
+                            target="_blank" rel="noopener" class="article-card glass-card">
+                            <span class="article-badge">HackerNoon</span>
+                            <h4>Does Ensemble ML Actually Work? I Tested 3 Models on 332K Orders</h4>
+                            <span class="article-date">March 2026</span>
+                        </a>
+                        <a href="https://medium.com/apache-airflow/rewriting-my-apache-airflow-pr-when-your-first-solution-isnt-the-right-one-8c4243ca9daf"
+                            target="_blank" rel="noopener" class="article-card glass-card">
+                            <span class="article-badge">Apache Airflow Official</span>
+                            <h4>Rewriting My Apache Airflow PR: When Your First Solution Isn't the Right One</h4>
+                            <span class="article-date">January 2026</span>
+                        </a>
+                        <p class="subsection-stat" style="margin-top:14px">✦ Editor of the official Apache Airflow Medium publication (appointed by an ASF PMC member)</p>
                     </div>
                 </div>
                 <div class="speaking-col">
                     <h3 class="subsection-title">🎤 Speaking Engagements</h3>
                     <div class="speaking-card glass-card completed">
                         <span class="speaking-status">✅ Completed</span>
-                        <h4>Oxford Microsoft Data Platform Group</h4>
-                        <p class="speaking-topic">Building Production Data Pipelines That Scale</p>
-                        <span class="date-badge">January 2026</span>
+                        <h4>Open Source in Finance Forum, London 2026</h4>
+                        <p class="speaking-topic">Open Source Data Quality Monitoring in Financial Services: A Production ML Approach</p>
+                        <span class="date-badge">June 2026 · Linux Foundation / FINOS</span>
+                        <a href="https://osfflondon2026.sched.com/speaker/kalluripradeep99" target="_blank" rel="noopener" class="cert-link">Session details →</a>
                     </div>
-                    <div class="speaking-proposals glass-card">
-                        <h4>📅 Upcoming</h4>
-                        <p>Invited back to the Oxford Microsoft Data Platform Group for a dedicated Apache Airflow session</p>
+                    <div class="speaking-card glass-card completed">
+                        <span class="speaking-status">✅ Completed</span>
+                        <h4>Oxford Microsoft Data Platform Group</h4>
+                        <p class="speaking-topic">Apache Airflow in Production: DAG Design, Monitoring, Lessons from the Field</p>
+                        <span class="date-badge">May 2026</span>
+                        <a href="https://www.meetup.com/oxford-microsoft-data-platform-group/events/314179634/" target="_blank" rel="noopener" class="cert-link">Event page →</a>
+                    </div>
+                    <div class="speaking-card glass-card completed">
+                        <span class="speaking-status">✅ Completed</span>
+                        <h4>Oxford Microsoft Data Platform Group</h4>
+                        <p class="speaking-topic">From Raw to Refined: Building Production Data Pipelines That Scale</p>
+                        <span class="date-badge">January 2026</span>
+                        <a href="https://www.meetup.com/oxford-microsoft-data-platform-group/events/312486402/" target="_blank" rel="noopener" class="cert-link">Event page →</a>
                     </div>
                     <div class="mentoring-card glass-card">
                         <h4>🧑‍🏫 Mentoring & Community</h4>
@@ -1178,16 +1199,14 @@
                 <div class="resume-section">
                     <h3>Experience</h3>
                     <div class="resume-exp-item">
-                        <div class="resume-exp-header"><strong>Data Engineer — NatWest Bank</strong><span>Sep 2025 –
+                        <div class="resume-exp-header"><strong>Data Engineer — NatWest Bank</strong><span>Sep 2024 –
                                 Present</span></div>
-                        <p>Real-time data ingestion (Kafka, S3), distributed processing (PySpark), curated data models
-                            (Snowflake), orchestration (Airflow)</p>
+                        <p>Data platforms for NatWest International, Bankline Mobile and NatWest Accelerator — Kafka/S3 ingestion across 20+ countries, PySpark, Snowflake, Airflow</p>
                     </div>
                     <div class="resume-exp-item">
                         <div class="resume-exp-header"><strong>Data Engineer — Accenture</strong><span>Jul 2023 – Aug
-                                2025</span></div>
-                        <p>Scalable ETL/ELT pipelines (Azure Databricks, ADF, Snowflake), dbt transformations, CI/CD
-                            automation, Microsoft Fabric</p>
+                                2024</span></div>
+                        <p>100TB+ multi-cloud programme: ETL time −70%, reliability 80→99.5%, ~$30K/mo cloud savings, 15TB/day at 99.8% uptime</p>
                     </div>
                     <div class="resume-exp-item">
                         <div class="resume-exp-header"><strong>Data Engineer — Dpoint Group</strong><span>May 2022 – Jun
@@ -1219,7 +1238,8 @@
                 </div>
             </div>
             <div class="resume-modal-actions">
-                <a href="one-pager.html" target="_blank" rel="noopener" class="btn btn-primary">Open printable one-pager →</a>
+                <a href="assets/Pradeep_Kalluri_Resume.pdf" download class="btn btn-primary">⬇ Download PDF</a>
+                <a href="one-pager.html" target="_blank" rel="noopener" class="btn btn-secondary">Printable one-pager</a>
                 <button class="btn btn-secondary" id="resumeModalCloseBtn">Close</button>
             </div>
         </div>
