@@ -80,6 +80,7 @@ const hamburger = document.getElementById('hamburger');
 const navLinksEl = document.getElementById('navLinks');
 
 hamburger.addEventListener('click', () => {
+    hamburger.setAttribute('aria-expanded', String(!navLinksEl.classList.contains('active')));
     hamburger.classList.toggle('active');
     navLinksEl.classList.toggle('active');
 });
