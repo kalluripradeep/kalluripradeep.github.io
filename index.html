@@ -62,6 +62,7 @@
     </noscript>
     <!-- Apply saved theme before first paint to prevent flash of wrong theme -->
     <script>
+        document.documentElement.classList.add('js');
         (function () {
             try {
                 var t = localStorage.getItem('portfolioTheme');
@@ -724,8 +725,11 @@
                     data-cs-impact="332K+ orders monitored|93% data quality score|<10ms detection latency|Automated anomaly alerts"
                     data-cs-arch="Kafka (ingest) → Spark Streaming (process) → Isolation Forest (ML detect) → PostgreSQL (store) → Alerts"
                     data-cs-tech="Kafka,Spark Streaming,scikit-learn,PostgreSQL,Python,Docker"
+                    data-cs-img="assets/projects/dqm-dashboard-6-dimensions.webp"
                     data-cs-github="https://github.com/kalluripradeep/realtime-data-quality-monitor">
                     <div class="project-badge personal">Open Source</div>
+                    <img src="assets/projects/dqm-thumb.webp" alt="Data quality dashboard showing 6 quality dimensions"
+                        class="project-thumb" loading="lazy" decoding="async" width="640" height="320">
                     <h3>Real-Time Data Quality Monitor</h3>
                     <p class="project-desc">ML-powered real-time data quality monitoring system detecting anomalies in
                         streaming data with sub-10ms latency using Isolation Forest.</p>
@@ -933,6 +937,12 @@
                             <span class="pr-status merged">✅ MERGED</span>
                             <span class="pr-title">Spark: add post_submit_commands to SparkSubmitHook</span>
                             <span class="pr-number">#64391</span>
+                        </a>
+                        <a href="https://github.com/apache/airflow/pull/63053" target="_blank" rel="noopener"
+                            class="pr-item">
+                            <span class="pr-status merged">✅ MERGED</span>
+                            <span class="pr-title">TaskFlow: suppress TYPE_CHECKING-only forward-reference warning</span>
+                            <span class="pr-number">#63053</span>
                         </a>
                         <a href="https://github.com/apache/airflow/pull/63110" target="_blank" rel="noopener"
                             class="pr-item">
@@ -1255,6 +1265,9 @@
                 <p class="cs-modal-org" id="csModalOrg"></p>
             </div>
             <div class="cs-modal-body">
+                <div class="cs-section cs-shot-wrap" style="display:none">
+                    <img id="csModalShot" class="cs-shot" alt="" loading="lazy" decoding="async">
+                </div>
                 <div class="cs-section">
                     <h3>🔍 The Problem</h3>
                     <p id="csModalProblem"></p>

@@ -570,7 +570,7 @@ ul {
 }
 
 /* ===== REVEAL ANIMATIONS ===== */
-.reveal {
+.js .reveal {
     opacity: 0;
     transition: opacity 0.8s cubic-bezier(0.23, 1, 0.32, 1),
         transform 0.8s cubic-bezier(0.23, 1, 0.32, 1),
@@ -584,40 +584,40 @@ ul {
 }
 
 /* Slide from left */
-.reveal[data-reveal="slide-left"] {
+.js .reveal[data-reveal="slide-left"] {
     transform: translateX(-80px);
 }
 
 /* Slide from right */
-.reveal[data-reveal="slide-right"] {
+.js .reveal[data-reveal="slide-right"] {
     transform: translateX(80px);
 }
 
 /* Scale up from center */
-.reveal[data-reveal="scale-up"] {
+.js .reveal[data-reveal="scale-up"] {
     transform: scale(0.85);
     filter: blur(4px);
 }
 
 /* Flip up (3D) */
-.reveal[data-reveal="flip-up"] {
+.js .reveal[data-reveal="flip-up"] {
     transform: perspective(800px) rotateX(15deg) translateY(40px);
     transform-origin: center bottom;
 }
 
 /* Rotate in from below */
-.reveal[data-reveal="rotate-in"] {
+.js .reveal[data-reveal="rotate-in"] {
     transform: perspective(600px) rotateY(-8deg) translateX(-30px);
 }
 
 /* Zoom in with blur */
-.reveal[data-reveal="zoom-in"] {
+.js .reveal[data-reveal="zoom-in"] {
     transform: scale(0.92);
     filter: blur(6px);
 }
 
 /* Simple fade (no movement) */
-.reveal[data-reveal="fade"] {
+.js .reveal[data-reveal="fade"] {
     transform: none;
 }
 
@@ -3068,7 +3068,7 @@ html {
 }
 
 /* ===== STAGGERED SCROLL REVEAL ANIMATIONS ===== */
-.reveal {
+.js .reveal {
     opacity: 0;
     transform: translateY(40px);
     transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
@@ -3830,4 +3830,56 @@ html {
         display: none !important;
     }
     .reveal { opacity: 1 !important; transform: none !important; }
+}
+
+
+/* ================================================================
+   CASE-STUDY ARCHITECTURE DIAGRAM & SCREENSHOTS
+   ================================================================ */
+.arch-diagram {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 4px 0;
+}
+.arch-node {
+    fill: rgba(0, 212, 255, 0.06);
+    stroke: var(--accent-primary, #00d4ff);
+    stroke-width: 1.4;
+}
+.arch-label {
+    fill: var(--text-primary, #e8ecf4);
+    font: 600 14px 'Space Grotesk', 'Inter', sans-serif;
+    text-anchor: middle;
+}
+.arch-sublabel {
+    fill: var(--text-secondary, #9aa5b8);
+    font: 400 11px 'Inter', sans-serif;
+    text-anchor: middle;
+}
+.arch-connector {
+    fill: none;
+    stroke: var(--accent-primary, #00d4ff);
+    stroke-width: 1.6;
+    opacity: 0.75;
+}
+.arch-arrowhead {
+    fill: var(--accent-primary, #00d4ff);
+}
+
+.project-thumb {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 4px 0 14px;
+    border: 1px solid rgba(0, 212, 255, 0.18);
+    display: block;
+}
+
+.cs-shot {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    display: block;
 }

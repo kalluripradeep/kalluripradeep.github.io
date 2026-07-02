@@ -1160,19 +1160,20 @@ function initCaseStudyModal() {
         const archEl = document.getElementById('csModalArch');
         archEl.innerHTML = '';
         if (card.dataset.csArch) {
-            const steps = card.dataset.csArch.split('→').map(s => s.trim());
-            steps.forEach((step, i) => {
-                if (i > 0) {
-                    const arrow = document.createElement('span');
-                    arrow.className = 'cs-arch-arrow';
-                    arrow.textContent = '→';
-                    archEl.appendChild(arrow);
-                }
-                const el = document.createElement('span');
-                el.className = 'cs-arch-step';
-                el.textContent = step;
-                archEl.appendChild(el);
-            });
+            archEl.appendChild(buildArchDiagram(card.dataset.csArch));
+        }
+
+        // Optional screenshot
+        const shotEl = document.getElementById('csModalShot');
+        if (shotEl) {
+            if (card.dataset.csImg) {
+                shotEl.src = card.dataset.csImg;
+                shotEl.alt = (card.dataset.csTitle || 'Project') + ' screenshot';
+                shotEl.parentElement.style.display = '';
+            } else {
+                shotEl.removeAttribute('src');
+                shotEl.parentElement.style.display = 'none';
+            }
         }
 
         // Impact metrics
@@ -1433,3 +1434,99 @@ initCaseStudyModal();
             if (staticFeed) staticFeed.style.display = 'block';
         });
 })();
+
+
+// ================================================================
+// ===== ARCHITECTURE DIAGRAM (SVG, theme-aware via CSS vars) =====
+// ================================================================
+function buildArchDiagram(archString) {
+    // Parse "Kafka \u2192 S3 (raw) \u2192 ..." into { name, sub } stages
+    const stages = archString.split('\u2192').map(s => {
+        const m = s.trim().match(/^(.*?)\s*\(([^)]*)\)\s*$/);
+        return m ? { name: m[1].trim(), sub: m[2].trim() } : { name: s.trim(), sub: '' };
+    });
+
+    const perRow = 3;
+    const nodeW = 168, nodeH = 58, hGap = 44, vGap = 40, pad = 8;
+    const rows = Math.ceil(stages.length / perRow);
+    const cols = Math.min(stages.length, perRow);
+    const width = pad * 2 + cols * nodeW + (cols - 1) * hGap;
+    const height = pad * 2 + rows * nodeH + (rows - 1) * vGap;
+
+    const NS = 'http://www.w3.org/2000/svg';
+    const svg = document.createElementNS(NS, 'svg');
+    svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+    svg.setAttribute('class', 'arch-diagram');
+    svg.setAttribute('role', 'img');
+    svg.setAttribute('aria-label', 'Architecture: ' + stages.map(s => s.name).join(', then '));
+
+    // Arrowhead marker
+    const defs = document.createElementNS(NS, 'defs');
+    defs.innerHTML = `<marker id="archArrow" viewBox="0 0 10 10" refX="9" refY="5"
+        markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M0 0L10 5L0 10z" class="arch-arrowhead"/></marker>`;
+    svg.appendChild(defs);
+
+    // Serpentine layout: even rows left-to-right, odd rows right-to-left
+    const pos = stages.map((_, i) => {
+        const row = Math.floor(i / perRow);
+        let col = i % perRow;
+        if (row % 2 === 1) col = perRow - 1 - col;
+        return {
+            x: pad + col * (nodeW + hGap),
+            y: pad + row * (nodeH + vGap),
+            row
+        };
+    });
+
+    // Connectors first (under nodes)
+    for (let i = 0; i < stages.length - 1; i++) {
+        const a = pos[i], b = pos[i + 1];
+        const line = document.createElementNS(NS, 'path');
+        let d;
+        if (a.row === b.row) {
+            const y = a.y + nodeH / 2;
+            d = b.x > a.x
+                ? `M ${a.x + nodeW} ${y} L ${b.x - 3} ${y}`
+                : `M ${a.x} ${y} L ${b.x + nodeW + 3} ${y}`;
+        } else {
+            // vertical drop between rows
+            const x = a.x + nodeW / 2;
+            d = `M ${x} ${a.y + nodeH} L ${x} ${b.y - 3}`;
+        }
+        line.setAttribute('d', d);
+        line.setAttribute('class', 'arch-connector');
+        line.setAttribute('marker-end', 'url(#archArrow)');
+        svg.appendChild(line);
+    }
+
+    // Nodes
+    stages.forEach((s, i) => {
+        const g = document.createElementNS(NS, 'g');
+        const r = document.createElementNS(NS, 'rect');
+        r.setAttribute('x', pos[i].x); r.setAttribute('y', pos[i].y);
+        r.setAttribute('width', nodeW); r.setAttribute('height', nodeH);
+        r.setAttribute('rx', 10);
+        r.setAttribute('class', 'arch-node');
+        g.appendChild(r);
+
+        const t = document.createElementNS(NS, 'text');
+        t.setAttribute('x', pos[i].x + nodeW / 2);
+        t.setAttribute('y', pos[i].y + (s.sub ? 24 : 34));
+        t.setAttribute('class', 'arch-label');
+        t.textContent = s.name;
+        g.appendChild(t);
+
+        if (s.sub) {
+            const t2 = document.createElementNS(NS, 'text');
+            t2.setAttribute('x', pos[i].x + nodeW / 2);
+            t2.setAttribute('y', pos[i].y + 43);
+            t2.setAttribute('class', 'arch-sublabel');
+            t2.textContent = s.sub;
+            g.appendChild(t2);
+        }
+        svg.appendChild(g);
+    });
+
+    return svg;
+}
