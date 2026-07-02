@@ -18,9 +18,22 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <!-- Devicon is non-critical (skill logos only): load async, no render blocking -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
+    </noscript>
+    <!-- Apply saved theme before first paint to prevent flash of wrong theme -->
+    <script>
+        (function () {
+            try {
+                var t = localStorage.getItem('portfolioTheme');
+                if (t) document.documentElement.setAttribute('data-theme', t);
+            } catch (e) { }
+        })();
+    </script>
 </head>
 
 <body>
@@ -36,24 +49,6 @@
             </linearGradient>
         </defs>
     </svg>
-
-    <!-- ===== PRELOADER ===== -->
-    <div id="preloader" class="preloader">
-        <div class="preloader-inner">
-            <div class="preloader-logo-wrap">
-                <span class="preloader-p">P</span><span class="preloader-k">K</span><span class="preloader-dot">.</span>
-            </div>
-            <div class="preloader-bar-wrap">
-                <div class="preloader-bar" id="preloaderBar"></div>
-            </div>
-            <span class="preloader-counter" id="preloaderCounter">0%</span>
-        </div>
-        <div class="preloader-scanline" id="preloaderScanline"></div>
-    </div>
-
-    <!-- ===== MAGNETIC CURSOR ===== -->
-    <div id="cursorDot" class="cursor-dot"></div>
-    <div id="cursorRing" class="cursor-ring"></div>
 
     <!-- ===== NAVIGATION ===== -->
     <nav id="navbar" class="navbar">
@@ -256,7 +251,7 @@
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content glass-card">
-                        <img src="assets/logos/natwest.png" alt="NatWest" class="company-logo" loading="lazy">
+                        <img src="assets/logos/natwest.png" alt="NatWest" class="company-logo" loading="lazy" width="48" height="48" decoding="async">
                         <div class="timeline-header">
                             <h3>Data Engineer</h3>
                             <span class="company">NatWest Bank</span>
@@ -290,7 +285,7 @@
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content glass-card">
-                        <img src="assets/logos/accenture.png" alt="Accenture" class="company-logo" loading="lazy">
+                        <img src="assets/logos/accenture.png" alt="Accenture" class="company-logo" loading="lazy" width="48" height="48" decoding="async">
                         <div class="timeline-header">
                             <h3>Data Engineer</h3>
                             <span class="company">Accenture</span>
@@ -322,7 +317,7 @@
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content glass-card">
-                        <img src="assets/logos/dpoint.png" alt="Dpoint Group" class="company-logo" loading="lazy">
+                        <img src="assets/logos/dpoint.png" alt="Dpoint Group" class="company-logo" loading="lazy" width="48" height="48" decoding="async">
                         <div class="timeline-header">
                             <h3>Data Engineer</h3>
                             <span class="company">Dpoint Group</span>
@@ -1267,7 +1262,7 @@
         </div>
     </div>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
 </body>
 
 </html>

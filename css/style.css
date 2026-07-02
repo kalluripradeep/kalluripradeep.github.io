@@ -2015,80 +2015,6 @@ a.pr-item:hover {
     line-height: 1.3;
 }
 
-/* ===== PRELOADER ===== */
-.preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--bg-primary);
-    z-index: 99999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: opacity 0.6s ease, visibility 0.6s ease;
-}
-
-.preloader.hidden {
-    opacity: 0;
-    visibility: hidden;
-}
-
-.preloader-inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-}
-
-.preloader-logo {
-    font-family: var(--font-heading);
-    font-size: 3.5rem;
-    font-weight: 700;
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: preloaderPulse 1.2s ease-in-out infinite;
-}
-
-.preloader-dot {
-    background: var(--gradient-secondary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.preloader-spinner {
-    width: 40px;
-    height: 40px;
-    border: 3px solid rgba(255, 255, 255, 0.08);
-    border-top-color: var(--accent-blue);
-    border-radius: 50%;
-    animation: preloaderSpin 0.8s linear infinite;
-}
-
-@keyframes preloaderPulse {
-
-    0%,
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-
-    50% {
-        transform: scale(1.08);
-        opacity: 0.8;
-    }
-}
-
-@keyframes preloaderSpin {
-    to {
-        transform: rotate(360deg);
-    }
-}
-
 /* ===== CURSOR GLOW ===== */
 .cursor-glow {
     position: fixed;
@@ -2413,16 +2339,6 @@ a.pr-item:hover {
 [data-theme="light"] .resume-modal-content {
     background: #ffffff;
     border: 1px solid rgba(0, 0, 0, 0.08);
-}
-
-/* Preloader */
-[data-theme="light"] .preloader {
-    background: var(--bg-primary);
-}
-
-[data-theme="light"] .preloader-spinner {
-    border-color: rgba(0, 0, 0, 0.08);
-    border-top-color: var(--accent-blue);
 }
 
 /* Cursor glow */
@@ -3413,7 +3329,6 @@ html {
     .cursor-glow,
     .hero-bg-animation,
     .parallax-divider,
-    .preloader,
     .hero-canvas,
     .github-heatmap,
     .career-chart-wrapper,
@@ -3502,164 +3417,9 @@ html {
     }
 }
 
-/* ================================================================
-   UPGRADE 1 — CINEMATIC PRELOADER
-   ================================================================ */
-.preloader-logo-wrap {
-    display: flex;
-    align-items: baseline;
-    font-family: var(--font-heading);
-    font-size: 4rem;
-    font-weight: 700;
-    letter-spacing: -2px;
-}
-
-.preloader-p,
-.preloader-k {
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: preloaderCharIn 0.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
-}
-
-.preloader-k {
-    animation-delay: 0.15s;
-}
-
-.preloader-dot {
-    background: var(--gradient-secondary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    opacity: 0;
-    transform: translateY(20px) scale(0.5);
-    animation: preloaderDotIn 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0.3s forwards;
-}
-
-@keyframes preloaderCharIn {
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes preloaderDotIn {
-    to { opacity: 1; transform: translateY(0) scale(1); }
-}
-
-.preloader-bar-wrap {
-    width: 200px;
-    height: 2px;
-    background: rgba(255, 255, 255, 0.06);
-    border-radius: 2px;
-    overflow: hidden;
-    margin-top: 28px;
-}
-
-.preloader-bar {
-    height: 100%;
-    width: 0%;
-    background: var(--gradient-primary);
-    border-radius: 2px;
-    transition: width 0.05s linear;
-    box-shadow: 0 0 10px rgba(0, 212, 255, 0.6);
-}
-
-.preloader-counter {
-    font-family: var(--font-heading);
-    font-size: 0.8rem;
-    color: var(--text-muted);
-    letter-spacing: 2px;
-    margin-top: 12px;
-}
-
-.preloader-scanline {
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.03), rgba(0, 212, 255, 0.06), rgba(0, 212, 255, 0.03), transparent);
-    pointer-events: none;
-}
-
-.preloader.scanning .preloader-scanline {
-    animation: scanlineWipe 0.7s cubic-bezier(0.77, 0, 0.18, 1) forwards;
-}
-
-.preloader.scanning .preloader-inner {
-    animation: preloaderFadeOut 0.4s ease 0.3s forwards;
-}
-
 @keyframes scanlineWipe {
     0%   { left: -100%; }
     100% { left: 100%; }
-}
-
-@keyframes preloaderFadeOut {
-    to { opacity: 0; transform: scale(0.96); }
-}
-
-.preloader.hidden {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.5s ease 0.4s, visibility 0.5s ease 0.4s;
-}
-
-/* ================================================================
-   UPGRADE 2 — MAGNETIC CURSOR
-   ================================================================ */
-body.has-custom-cursor * { cursor: none !important; }
-
-.cursor-dot {
-    position: fixed;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--accent-blue);
-    pointer-events: none;
-    z-index: 99998;
-    transform: translate(-50%, -50%);
-    transition: width 0.2s ease, height 0.2s ease, background 0.2s ease, opacity 0.3s ease;
-    opacity: 0;
-    mix-blend-mode: screen;
-}
-
-.cursor-ring {
-    position: fixed;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    border: 1.5px solid rgba(0, 212, 255, 0.5);
-    pointer-events: none;
-    z-index: 99997;
-    transform: translate(-50%, -50%);
-    transition: width 0.35s cubic-bezier(0.23, 1, 0.32, 1),
-                height 0.35s cubic-bezier(0.23, 1, 0.32, 1),
-                border-color 0.3s ease,
-                opacity 0.3s ease,
-                background 0.3s ease;
-    opacity: 0;
-}
-
-.cursor-dot.active  { opacity: 1; }
-.cursor-ring.active { opacity: 1; }
-
-.cursor-ring.hovering {
-    width: 56px;
-    height: 56px;
-    border-color: var(--accent-blue);
-    background: rgba(0, 212, 255, 0.05);
-}
-
-.cursor-ring.clicking {
-    width: 28px;
-    height: 28px;
-    background: rgba(0, 212, 255, 0.15);
-}
-
-@media (max-width: 768px) {
-    .cursor-dot, .cursor-ring { display: none; }
 }
 
 /* ================================================================

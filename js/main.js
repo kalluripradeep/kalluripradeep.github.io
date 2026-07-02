@@ -677,87 +677,10 @@ initSkillCards();
 initGitHubActivity();
 
 
-// ================================================================
-// ===== UPGRADE 1: CINEMATIC PRELOADER =====
-// ================================================================
-window.addEventListener('load', () => {
-    const preloader = document.getElementById('preloader');
-    const bar = document.getElementById('preloaderBar');
-    const counter = document.getElementById('preloaderCounter');
-    if (!preloader) return;
-
-    let progress = 0;
-    const interval = setInterval(() => {
-        progress += Math.random() * 18 + 4;
-        if (progress >= 100) {
-            progress = 100;
-            clearInterval(interval);
-            if (bar) bar.style.width = '100%';
-            if (counter) counter.textContent = '100%';
-            setTimeout(() => {
-                preloader.classList.add('scanning');
-                setTimeout(() => {
-                    preloader.classList.add('hidden');
-                    setTimeout(() => preloader.remove(), 600);
-                }, 700);
-            }, 300);
-            return;
-        }
-        if (bar) bar.style.width = Math.min(progress, 100) + '%';
-        if (counter) counter.textContent = Math.floor(Math.min(progress, 100)) + '%';
-    }, 80);
-});
 
 
-// ================================================================
-// ===== UPGRADE 2: MAGNETIC CURSOR =====
-// ================================================================
-function initMagneticCursor() {
-    if (window.innerWidth < 768) return;
 
-    const dot = document.getElementById('cursorDot');
-    const ring = document.getElementById('cursorRing');
-    if (!dot || !ring) return;
 
-    document.body.classList.add('has-custom-cursor');
-
-    let mouseX = 0, mouseY = 0;
-    let ringX = 0, ringY = 0;
-
-    document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-        dot.style.left = mouseX + 'px';
-        dot.style.top  = mouseY + 'px';
-        dot.classList.add('active');
-        ring.classList.add('active');
-    });
-
-    document.addEventListener('mouseleave', () => {
-        dot.classList.remove('active');
-        ring.classList.remove('active');
-    });
-
-    document.addEventListener('mousedown', () => ring.classList.add('clicking'));
-    document.addEventListener('mouseup',   () => ring.classList.remove('clicking'));
-
-    function animateRing() {
-        ringX += (mouseX - ringX) * 0.1;
-        ringY += (mouseY - ringY) * 0.1;
-        ring.style.left = ringX + 'px';
-        ring.style.top  = ringY + 'px';
-        requestAnimationFrame(animateRing);
-    }
-    animateRing();
-
-    const hoverTargets = document.querySelectorAll('a, button, .btn, .glass-card, .bento-card, .project-card, .social-icon');
-    hoverTargets.forEach(el => {
-        el.addEventListener('mouseenter', () => ring.classList.add('hovering'));
-        el.addEventListener('mouseleave', () => ring.classList.remove('hovering'));
-    });
-}
-
-initMagneticCursor();
 
 
 // ================================================================
