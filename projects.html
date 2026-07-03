@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects — Pradeep Kalluri</title>
+    <meta name="description" content="Production data platforms and open-source builds: real-time pipelines at NatWest, enterprise cloud platforms, ML data-quality monitoring — with verified screenshots.">
+    <link rel="canonical" href="https://kalluripradeep.github.io/projects.html">
+    <meta property="og:title" content="Projects — Pradeep Kalluri">
+    <meta property="og:description" content="Production data platforms and open-source builds: real-time pipelines at NatWest, enterprise cloud platforms, ML data-quality monitoring — with verified screenshots.">
+    <meta property="og:image" content="https://kalluripradeep.github.io/assets/og-image.png">
+    <meta property="og:url" content="https://kalluripradeep.github.io/projects.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700&family=Instrument+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="wrap header-inner">
+            <a class="brand" href="index.html">PK<span class="dot">.</span></a>
+            <nav aria-label="Primary">
+                <ul class="tabs">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="open-source.html">Open Source</a></li>
+                <li><a href="writing.html">Writing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <a class="header-cta" href="assets/Pradeep_Kalluri_Resume.pdf" target="_blank" rel="noopener">Résumé ↓</a>
+        </div>
+        <div class="streamline" aria-hidden="true"></div>
+    </header>
+
+    <main>
+        <div class="page-head">
+            <div class="wrap">
+                <span class="eyebrow">Projects</span>
+                <h1>Built, shipped, screenshotted</h1>
+                <p class="lede">Three production platforms and three open-source builds. Every screenshot in the case studies below was captured from the project actually running — nothing mocked.</p>
+            </div>
+        </div>
+
+        <section class="block">
+            <div class="wrap">
+                <div class="proj-grid">
+                <article class="proj-card" tabindex="0" role="button"
+                    aria-label="Open case study: Real-Time Data Pipeline Platform"
+                    data-cs-title="Real-Time Data Pipeline Platform"
+                    data-cs-org="NatWest Bank"
+                    data-cs-problem="Processing millions of daily banking transactions required high-throughput, fault-tolerant pipelines with sub-minute freshness SLAs and automated recovery from failures."
+                    data-cs-solution="Designed event-driven architecture with Kafka for real-time ingestion, PySpark for distributed processing, and Snowflake as the analytics warehouse. Built 40+ Airflow DAGs with automated alerting and self-healing capabilities."
+                    data-cs-impact="10K+ events/sec throughput|40+ orchestrated DAGs|Recovery time: 6h → 30min|Zero data loss in production"
+                    data-cs-arch="Kafka → S3 (raw) → PySpark (transform) → Snowflake (warehouse) → Airflow (orchestration) → dbt (modeling)"
+                    data-cs-tech="Kafka,PySpark,Snowflake,Airflow,S3,dbt,Docker,Terraform">
+                    
+                    <div class="proj-body">
+                        <span class="tag prod">Production</span>
+                        <h3>Real-Time Data Pipeline Platform</h3>
+                        <span class="org">NatWest Bank</span>
+                        <p>Production-grade pipelines processing millions of daily banking transactions with real-time streaming and automated quality frameworks.</p>
+                        <div class="proj-metrics"><span class="metric"><b>10K+</b> events/sec</span><span class="metric"><b>40+</b> DAGs</span><span class="metric">6h → <b>30min</b> recovery</span></div>
+                        <span class="open-cs">Open case study →</span>
+                    </div>
+                </article>
+                <article class="proj-card" tabindex="0" role="button"
+                    aria-label="Open case study: Enterprise Cloud Data Platform"
+                    data-cs-title="Enterprise Cloud Data Platform"
+                    data-cs-org="Accenture"
+                    data-cs-problem="Fortune 500 clients needed unified cloud data platforms that could handle diverse data sources, scale elastically, and enable self-service analytics for 1000+ business users."
+                    data-cs-solution="Architected data mesh platforms on Azure with Databricks for processing, Snowflake for warehousing, Fabric for BI, and Terraform for IaC. Implemented CI/CD with dbt for transformation layer."
+                    data-cs-impact="1000+ active users|70% faster deployments|Multi-cloud architecture|Self-service data access"
+                    data-cs-arch="Azure Data Lake → Databricks (ETL) → Snowflake (warehouse) → dbt (transform) → Fabric (BI) → Terraform (IaC)"
+                    data-cs-tech="Azure Databricks,Snowflake,Microsoft Fabric,dbt,Terraform,CI/CD">
+                    
+                    <div class="proj-body">
+                        <span class="tag prod">Production</span>
+                        <h3>Enterprise Cloud Data Platform</h3>
+                        <span class="org">Accenture</span>
+                        <p>Unified cloud data platforms for Fortune 500 clients using Azure Databricks, Snowflake and Microsoft Fabric with data mesh architecture.</p>
+                        <div class="proj-metrics"><span class="metric"><b>1000+</b> users</span><span class="metric"><b>70%</b> faster deploys</span></div>
+                        <span class="open-cs">Open case study →</span>
+                    </div>
+                </article>
+                <article class="proj-card" tabindex="0" role="button"
+                    aria-label="Open case study: Business Intelligence Platform"
+                    data-cs-title="Business Intelligence Platform"
+                    data-cs-org="Dpoint Group"
+                    data-cs-problem="Manufacturing and logistics operations relied on manual Excel-based reporting, causing delays and errors in executive decision-making across multiple business units."
+                    data-cs-solution="Built automated BI platform with SSIS for ETL, Power BI dashboards for real-time KPI monitoring, and Azure Data Factory for cloud migration of legacy SAP BW processes."
+                    data-cs-impact="30+ reports automated|Reporting time: Days → Hours|Executive dashboard adoption|Legacy system migration"
+                    data-cs-arch="SAP BW → SSIS (ETL) → Azure Data Factory (cloud) → Power BI (dashboards)"
+                    data-cs-tech="SSIS,Power BI,SAP BW,Azure Data Factory,Python,Excel VBA">
+                    
+                    <div class="proj-body">
+                        <span class="tag prod">Production</span>
+                        <h3>Business Intelligence Platform</h3>
+                        <span class="org">Dpoint Group</span>
+                        <p>Automated BI for manufacturing and logistics — 30+ manual reporting processes replaced with SSIS, Power BI and Azure Data Factory.</p>
+                        <div class="proj-metrics"><span class="metric"><b>30+</b> reports automated</span><span class="metric">Days → <b>Hours</b></span></div>
+                        <span class="open-cs">Open case study →</span>
+                    </div>
+                </article>
+                <article class="proj-card" tabindex="0" role="button"
+                    aria-label="Open case study: Real-Time Data Quality Monitor"
+                    data-cs-title="Real-Time Data Quality Monitor"
+                    data-cs-org="Open Source"
+                    data-cs-problem="Data pipelines often silently pass bad data downstream. Manual QA catches issues hours or days later, causing cascading failures and broken dashboards."
+                    data-cs-solution="Built ML-powered monitoring using Isolation Forest for anomaly detection on streaming data. Kafka handles ingestion, Spark Streaming processes in real-time, and PostgreSQL stores quality metrics with alerting."
+                    data-cs-impact="332K+ orders monitored|93% data quality score|<10ms detection latency|Automated anomaly alerts"
+                    data-cs-arch="Kafka (ingest) → Spark Streaming (process) → Isolation Forest (ML detect) → PostgreSQL (store) → Alerts"
+                    data-cs-tech="Kafka,Spark Streaming,scikit-learn,PostgreSQL,Python,Docker"
+                    data-cs-img="assets/projects/dqm-dashboard-6-dimensions.webp, assets/projects/dqm-alert-logs.webp, assets/projects/dqm-api-swagger.webp"
+                    data-cs-github="https://github.com/kalluripradeep/realtime-data-quality-monitor">
+                    <div class="proj-thumb"><img src="assets/projects/dqm-thumb.webp" alt="Real-Time Data Quality Monitor dashboard: six quality dimensions with live scores" loading="lazy"></div>
+                    <div class="proj-body">
+                        <span class="tag oss">Open Source</span>
+                        <h3>Real-Time Data Quality Monitor</h3>
+                        <span class="org">github.com/kalluripradeep</span>
+                        <p>ML-powered anomaly detection on streaming data: Isolation Forest over Kafka + Spark Streaming, quality metrics in PostgreSQL.</p>
+                        <div class="proj-metrics"><span class="metric"><b>332K+</b> orders monitored</span><span class="metric"><b>93%</b> quality score</span><span class="metric"><b>&lt;10ms</b> latency</span></div>
+                        <span class="open-cs">Open case study →</span>
+                    </div>
+                </article>
+                <article class="proj-card" tabindex="0" role="button"
+                    aria-label="Open case study: Modern ETL / Data Platform"
+                    data-cs-title="Modern ETL / Data Platform"
+                    data-cs-org="Open Source"
+                    data-cs-problem="Small and mid-size companies pay £100K+ annually for commercial ETL tools. Most only use a fraction of the features, making it an inefficient investment."
+                    data-cs-solution="Built a fully open-source modern data platform combining Airflow, Kafka, dbt, Spark, and Docker. Complete with CI/CD, monitoring, and comprehensive documentation."
+                    data-cs-impact="10K+ orders processed|£100K+ potential annual savings|Full Docker deployment|Production-grade monitoring"
+                    data-cs-arch="Kafka (ingest) → Airflow (orchestrate) → Spark (process) → dbt (transform) → Docker (deploy)"
+                    data-cs-tech="Airflow,Kafka,dbt,Spark,Docker,PostgreSQL"
+                    data-cs-img="assets/projects/metl-airflow-graph.webp, assets/projects/metl-spark-dag.webp, assets/projects/metl-dbt-lineage.webp, assets/projects/metl-ui.webp"
+                    data-cs-github="https://github.com/kalluripradeep/modern-etl-stack">
+                    <div class="proj-thumb"><img src="assets/projects/metl-airflow-thumb.webp" alt="Airflow graph view of the ingest_source_to_bronze DAG" loading="lazy"></div>
+                    <div class="proj-body">
+                        <span class="tag oss">Open Source</span>
+                        <h3>Modern ETL / Data Platform</h3>
+                        <span class="org">github.com/kalluripradeep</span>
+                        <p>A fully open-source data platform — Airflow, Kafka, dbt, Spark, Docker — built as a £100K/year alternative to commercial ETL tooling.</p>
+                        <div class="proj-metrics"><span class="metric"><b>10K+</b> orders processed</span><span class="metric"><b>£100K+</b> potential savings</span></div>
+                        <span class="open-cs">Open case study →</span>
+                    </div>
+                </article>
+                <article class="proj-card" tabindex="0" role="button"
+                    aria-label="Open case study: E-commerce Data Pipeline"
+                    data-cs-title="E-commerce Data Pipeline"
+                    data-cs-org="Open Source"
+                    data-cs-problem="E-commerce businesses need reliable, tested data pipelines but often lack end-to-end reference implementations that demonstrate best practices."
+                    data-cs-solution="Created a comprehensive, well-documented pipeline covering ingestion, transformation, testing, and monitoring — a blueprint for modern data engineering."
+                    data-cs-impact="End-to-end pipeline|Comprehensive testing|Documented best practices|Reproducible architecture"
+                    data-cs-arch="Source APIs → PySpark (ingest) → Airflow (orchestrate) → dbt (transform) → Docker (containerize)"
+                    data-cs-tech="PySpark,Airflow,dbt,Docker,PostgreSQL,Python"
+                    data-cs-img="assets/projects/ecommerce-airflow-dag.webp"
+                    data-cs-github="https://github.com/kalluripradeep/ecommerce-data-pipeline">
+                    <div class="proj-thumb"><img src="assets/projects/ecommerce-airflow-dag.webp" alt="Airflow graph view: seven-task daily transaction pipeline" loading="lazy"></div>
+                    <div class="proj-body">
+                        <span class="tag oss">Open Source</span>
+                        <h3>E-commerce Data Pipeline</h3>
+                        <span class="org">github.com/kalluripradeep</span>
+                        <p>An end-to-end reference pipeline — ingestion, transformation, testing, monitoring — documented as a blueprint for modern data engineering.</p>
+                        <div class="proj-metrics"><span class="metric">End-to-end pipeline</span><span class="metric">Comprehensive testing</span></div>
+                        <span class="open-cs">Open case study →</span>
+                    </div>
+                </article>
+                </div>
+            </div>
+        </section>
+
+        <div class="cs-overlay" id="csOverlay" role="dialog" aria-modal="true" aria-labelledby="csTitle">
+            <div class="cs-modal">
+                <button class="cs-close" aria-label="Close case study">✕</button>
+                <span class="cs-org" id="csOrg"></span>
+                <h2 id="csTitle"></h2>
+                <div class="cs-shots" id="csShots"></div>
+                <h4>The problem</h4>
+                <p id="csProblem"></p>
+                <h4>The solution</h4>
+                <p id="csSolution"></p>
+                <h4>Architecture</h4>
+                <div class="cs-arch" id="csArch"></div>
+                <h4>Impact</h4>
+                <ul class="cs-impact" id="csImpact"></ul>
+                <h4>Stack</h4>
+                <div class="chips" id="csTech"></div>
+                <a class="cs-gh" id="csGithub" href="#" target="_blank" rel="noopener">View repository on GitHub →</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap footer-inner">
+            <span>© 2026 Pradeep Kalluri · London</span>
+            <div class="footer-links">
+                <a href="https://github.com/kalluripradeep" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://linkedin.com/in/pradeepkalluri" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://medium.com/@kalluripradeep99" target="_blank" rel="noopener">Medium</a>
+                <a href="https://dev.to/pradeep_kaalluri" target="_blank" rel="noopener">Dev.to</a>
+                <a href="one-pager.html">One-Pager</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

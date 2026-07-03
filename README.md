@@ -8,10 +8,15 @@ Personal portfolio of **Pradeep Kalluri**, Data Engineer (London, UK).
 
 | Path | Purpose |
 |---|---|
-| `index.html` | Single-page portfolio (hero, experience, skills, projects, certifications, writing, open source, recognition, contact) |
+| `index.html` | Home — hero with live pipeline canvas, telemetry, routes, recognition |
+| `experience.html` | Roles, skills, certifications, education |
+| `projects.html` | Case studies with verified screenshots |
+| `open-source.html` | Airflow / dbt-core / Kafka contributions |
+| `writing.html` | Articles and conference talks |
+| `contact.html` | Contact channels and documents |
 | `one-pager.html` | Printable one-page résumé view |
-| `css/style.css` | All styles — CSS custom properties, dark/light themes, responsive layout, `prefers-reduced-motion` support |
-| `js/main.js` | Vanilla JS — theme toggle, scroll reveals, filters, case-study & résumé modals, live GitHub stats |
+| `css/style.css` | Control-room design system — petrol ink / signal amber, single dark theme, responsive, `prefers-reduced-motion` support |
+| `js/main.js` | Vanilla JS — tab state, pipeline canvas (medallion particles), counters, case-study modal, copy email |
 | `assets/` | Favicon, Open Graph image, company logos |
 | `sitemap.xml`, `robots.txt` | SEO |
 | `.github/workflows/deploy.yml` | GitHub Actions → GitHub Pages deployment |
