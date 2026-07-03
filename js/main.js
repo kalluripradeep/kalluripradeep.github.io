@@ -1138,15 +1138,19 @@ function initResumeModal() {
 
     if (!downloadBtn || !modal) return;
 
+    const resumeTrap = createFocusTrap(modal);
+
     downloadBtn.addEventListener('click', (e) => {
         e.preventDefault();
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
+        resumeTrap.activate();
     });
 
     function closeModal() {
         modal.classList.remove('active');
         document.body.style.overflow = '';
+        resumeTrap.deactivate();
     }
 
     if (closeBtn) closeBtn.addEventListener('click', closeModal);
@@ -1264,18 +1268,32 @@ function initCaseStudyModal() {
 
         overlay.classList.add('active');
         document.body.style.overflow = 'hidden';
+        csTrap.activate();
     }
 
     function closeModal() {
         overlay.classList.remove('active');
         document.body.style.overflow = '';
+        csTrap.deactivate();
     }
 
+    const csTrap = createFocusTrap(overlay);
+
     cards.forEach(card => {
+        // Keyboard accessibility: cards are div elements, make them operable
+        card.setAttribute('tabindex', '0');
+        card.setAttribute('role', 'button');
+        card.setAttribute('aria-haspopup', 'dialog');
         card.addEventListener('click', (e) => {
             // Don't open modal if clicking an external link
             if (e.target.closest('a')) return;
             openModal(card);
+        });
+        card.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openModal(card);
+            }
         });
     });
 
@@ -1582,4 +1600,44 @@ function buildArchDiagram(archString) {
     });
 
     return svg;
+}
+
+
+// ================================================================
+// ===== FOCUS TRAP (shared by modals) =====
+// ================================================================
+function createFocusTrap(container) {
+    let lastFocused = null;
+    const selector = 'a[href], button:not([disabled]), input, select, textarea, [tabindex]:not([tabindex="-1"])';
+
+    function focusables() {
+        return [...container.querySelectorAll(selector)]
+            .filter(el => el.offsetParent !== null);
+    }
+
+    function onKeydown(e) {
+        if (e.key !== 'Tab') return;
+        const els = focusables();
+        if (!els.length) return;
+        const first = els[0], last = els[els.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault(); last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault(); first.focus();
+        }
+    }
+
+    return {
+        activate() {
+            lastFocused = document.activeElement;
+            document.addEventListener('keydown', onKeydown);
+            const els = focusables();
+            (els[0] || container).focus();
+        },
+        deactivate() {
+            document.removeEventListener('keydown', onKeydown);
+            if (lastFocused && lastFocused.focus) lastFocused.focus();
+            lastFocused = null;
+        }
+    };
 }
