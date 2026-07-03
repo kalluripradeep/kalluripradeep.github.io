@@ -622,10 +622,14 @@ ul {
 }
 
 /* ===== VISIBLE STATE ===== */
-.reveal.visible {
+/* .js prefix keeps specificity (0-3-0) equal to the
+   .js .reveal[data-reveal=…] initial states above; being later in the
+   file, it wins — otherwise variant reveals stay blurred/tilted forever. */
+.reveal.visible,
+.js .reveal.visible {
     opacity: 1;
-    transform: translateY(0) translateX(0) scale(1) rotateX(0deg) rotateY(0deg);
-    filter: blur(0);
+    transform: none;
+    filter: none;
 }
 
 /* ===== STAGGER CHILDREN ===== */
