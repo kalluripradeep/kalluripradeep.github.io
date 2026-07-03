@@ -122,7 +122,34 @@ const revealObserver = new IntersectionObserver((entries) => {
     rootMargin: '0px 0px -60px 0px'
 });
 
-revealElements.forEach(el => revealObserver.observe(el));
+function revealNow(el) {
+    const delay = el.getAttribute('data-delay');
+    if (delay) el.style.transitionDelay = delay + 'ms';
+    el.classList.add('visible');
+    if (el.hasAttribute('data-stagger')) {
+        Array.from(el.children).forEach((child, i) => child.style.setProperty('--child-index', i));
+    }
+    revealObserver.unobserve(el);
+}
+
+revealElements.forEach(el => {
+    // Reveal immediately anything already in view on load (avoids stuck blur)
+    const r = el.getBoundingClientRect();
+    if (r.top < window.innerHeight && r.bottom > 0) revealNow(el);
+    else revealObserver.observe(el);
+});
+
+// Safety net: if any reveal is still hidden shortly after load (e.g. the
+// observer never fired on a tall section), force it visible. Prevents the
+// blurred/invisible Certifications & Contact sections seen in some browsers.
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        document.querySelectorAll('.reveal:not(.visible)').forEach(el => {
+            const r = el.getBoundingClientRect();
+            if (r.top < window.innerHeight * 1.5) revealNow(el);
+        });
+    }, 1200);
+});
 
 // ===== SKILL BAR ANIMATION =====
 const skillBars = document.querySelectorAll('.skill-progress');
@@ -785,8 +812,9 @@ function initTechBubbles() {
         const radiusY = h * 0.38;
 
         // Keep-out zone: the center area where hero text lives
-        const keepOutX = w * 0.20;
-        const keepOutY = h * 0.18;
+        // Keep-out: the whole central column where the name + subtitle + CTAs live
+        const keepOutX = w * 0.32;
+        const keepOutY = h * 0.30;
 
         techNodes.forEach((tech, i) => {
             const angle = (i / techNodes.length) * Math.PI * 2 - Math.PI / 2;
@@ -795,17 +823,21 @@ function initTechBubbles() {
             let tx = centerX + Math.cos(angle) * radiusX + jitter;
             let ty = centerY + Math.sin(angle) * radiusY + jitter;
 
-            // Push nodes out if they land inside the keep-out zone
+            // If a node lands inside the keep-out box, push it out along the
+            // dominant axis so it clears the text entirely (plus its own radius).
             const dx = tx - centerX;
             const dy = ty - centerY;
+            const pad = (tech.size || 22) + 10;
             if (Math.abs(dx) < keepOutX && Math.abs(dy) < keepOutY) {
-                const pushDir = Math.abs(dx / keepOutX) > Math.abs(dy / keepOutY) ? 'x' : 'y';
-                if (pushDir === 'x') {
-                    tx = centerX + (dx >= 0 ? keepOutX : -keepOutX) + jitter;
+                if (Math.abs(dx / keepOutX) > Math.abs(dy / keepOutY)) {
+                    tx = centerX + (dx >= 0 ? 1 : -1) * (keepOutX + pad);
                 } else {
-                    ty = centerY + (dy >= 0 ? keepOutY : -keepOutY) + jitter;
+                    ty = centerY + (dy >= 0 ? 1 : -1) * (keepOutY + pad);
                 }
             }
+            // Clamp inside the canvas so nothing drifts off-screen
+            tx = Math.max(pad, Math.min(w - pad, tx));
+            ty = Math.max(pad, Math.min(h - pad, ty));
 
             if (nodes[i]) {
                 nodes[i].tx = tx;
@@ -902,6 +934,20 @@ function initTechBubbles() {
             n.pulse += 0.015;
         });
 
+        // Keep nodes out of the central text column every frame
+        {
+            const cx = canvas.width / 2, cy = canvas.height / 2;
+            const koX = canvas.width * 0.32, koY = canvas.height * 0.30;
+            nodes.forEach(n => {
+                if (n === draggedNode) return;
+                const dx = n.x - cx, dy = n.y - cy;
+                if (Math.abs(dx) < koX && Math.abs(dy) < koY) {
+                    if (Math.abs(dx / koX) > Math.abs(dy / koY)) n.vx += (dx >= 0 ? 1 : -1) * 0.6;
+                    else n.vy += (dy >= 0 ? 1 : -1) * 0.6;
+                }
+            });
+        }
+
         // Repulsion
         for (let i = 0; i < nodes.length; i++) {
             for (let j = i + 1; j < nodes.length; j++) {
@@ -932,9 +978,9 @@ function initTechBubbles() {
             ctx.moveTo(na.x, na.y);
             ctx.lineTo(nb.x, nb.y);
             ctx.strokeStyle = isHighlighted
-                ? (light ? 'rgba(14, 165, 233, 0.6)' : 'rgba(0, 212, 255, 0.35)')
-                : (light ? 'rgba(100, 116, 139, 0.18)' : 'rgba(255, 255, 255, 0.04)');
-            ctx.lineWidth = isHighlighted ? 2.5 : 1.5;
+                ? (light ? 'rgba(14, 165, 233, 0.75)' : 'rgba(0, 212, 255, 0.5)')
+                : (light ? 'rgba(56, 118, 189, 0.28)' : 'rgba(255, 255, 255, 0.1)');
+            ctx.lineWidth = isHighlighted ? 2.5 : 1.4;
             ctx.stroke();
         });
 
