@@ -1209,16 +1209,23 @@ function initCaseStudyModal() {
             archEl.appendChild(buildArchDiagram(card.dataset.csArch));
         }
 
-        // Optional screenshot
-        const shotEl = document.getElementById('csModalShot');
-        if (shotEl) {
+        // Optional screenshot(s): data-cs-img supports a comma-separated list
+        const shotWrap = document.getElementById('csModalShots');
+        if (shotWrap) {
+            shotWrap.innerHTML = '';
             if (card.dataset.csImg) {
-                shotEl.src = card.dataset.csImg;
-                shotEl.alt = (card.dataset.csTitle || 'Project') + ' screenshot';
-                shotEl.parentElement.style.display = '';
+                card.dataset.csImg.split(',').map(s => s.trim()).filter(Boolean).forEach((src, i) => {
+                    const img = document.createElement('img');
+                    img.src = src;
+                    img.alt = (card.dataset.csTitle || 'Project') + ' screenshot ' + (i + 1);
+                    img.className = 'cs-shot';
+                    img.loading = 'lazy';
+                    img.decoding = 'async';
+                    shotWrap.appendChild(img);
+                });
+                shotWrap.parentElement.style.display = '';
             } else {
-                shotEl.removeAttribute('src');
-                shotEl.parentElement.style.display = 'none';
+                shotWrap.parentElement.style.display = 'none';
             }
         }
 

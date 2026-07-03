@@ -3882,3 +3882,9 @@ html {
     border: 1px solid rgba(0, 212, 255, 0.2);
     display: block;
 }
+
+.cs-shots {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
