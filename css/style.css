@@ -1,23 +1,29 @@
 /* ============================================================
-   PK — Control Room
-   Deep petrol ink · signal amber · stream cyan · IBM Plex Mono
+   PK — Stellar Control Room
+   Void black · signal amber · electric cyan · violet pulse
+   Skills: Aurora UI + Dark OLED + Glassmorphism + Kinetic Type
    ============================================================ */
 
 :root {
-    --bg0: #06141B;
-    --bg1: #0B1F29;
-    --bg2: #102833;
-    --line: #1C3947;
-    --line-soft: #142b36;
-    --text: #E8F1F2;
-    --muted: #8FADB6;
-    --faint: #5D7B84;
-    --amber: #FFB224;
-    --cyan: #4FD6DB;
-    --green: #43D9A3;
-    --gold: #F2C14E;
-    --radius: 10px;
-    --maxw: 1120px;
+    --bg0: #020912;
+    --bg1: #060f1b;
+    --bg2: #0a1828;
+    --line: #142234;
+    --line-soft: #0d1c2c;
+    --text: #e8f2f8;
+    --muted: #6a8da0;
+    --faint: #3a566a;
+    --amber: #f59e0b;
+    --amber-glow: rgba(245, 158, 11, 0.3);
+    --cyan: #06d6ea;
+    --cyan-glow: rgba(6, 214, 234, 0.25);
+    --green: #10d4a0;
+    --green-glow: rgba(16, 212, 160, 0.2);
+    --gold: #fcd34d;
+    --violet: #8b5cf6;
+    --violet-glow: rgba(139, 92, 246, 0.25);
+    --radius: 12px;
+    --maxw: 1140px;
     --font-display: "Unbounded", sans-serif;
     --font-body: "Instrument Sans", system-ui, sans-serif;
     --font-mono: "IBM Plex Mono", ui-monospace, monospace;
@@ -515,3 +521,372 @@ section.block + section.block { border-top: 1px solid var(--line-soft); }
     .cs-impact { grid-template-columns: 1fr; }
     .timeline { padding-left: 28px; }
 }
+
+/* ==========================================================
+   STELLAR REDESIGN — Visual upgrade layer
+   Aurora UI + Dark OLED + Glassmorphism + Kinetic Typography
+   ========================================================== */
+
+/* ── 1. Body: dot-grid texture + noise ─────────────────── */
+body {
+    background-color: var(--bg0);
+    background-image:
+        radial-gradient(circle, rgba(6,214,234,0.045) 1px, transparent 1px),
+        radial-gradient(circle, rgba(139,92,246,0.03) 1px, transparent 1px);
+    background-size: 40px 40px, 80px 80px;
+    background-position: 0 0, 20px 20px;
+}
+
+/* ── 2. Streamline: more vivid, faster ──────────────────── */
+.streamline {
+    height: 2px;
+    background: repeating-linear-gradient(
+        90deg,
+        var(--cyan) 0 10px,
+        var(--violet) 10px 24px,
+        transparent 24px 38px
+    );
+    opacity: 0.55;
+    background-size: 38px 2px;
+    animation: streamMove 1.1s linear infinite;
+    box-shadow: 0 0 8px var(--cyan-glow);
+}
+
+/* ── 3. Eyebrow: glowing pulse dot ──────────────────────── */
+.eyebrow::before {
+    background: var(--amber);
+    box-shadow: 0 0 12px var(--amber), 0 0 24px var(--amber-glow);
+    animation: dotPulse 2s ease-in-out infinite;
+}
+@keyframes dotPulse {
+    0%,100% { box-shadow: 0 0 8px var(--amber), 0 0 16px var(--amber-glow); }
+    50%      { box-shadow: 0 0 14px var(--amber), 0 0 30px var(--amber-glow); }
+}
+
+/* ── 4. Hero: aurora blobs + dramatic type ──────────────── */
+.hero {
+    padding: 96px 0 0;
+    position: relative;
+    overflow: hidden;
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 65% 70% at 15% 30%, rgba(139,92,246,0.12) 0%, transparent 60%),
+        radial-gradient(ellipse 55% 60% at 80% 10%, rgba(6,214,234,0.10) 0%, transparent 55%),
+        radial-gradient(ellipse 50% 50% at 50% 85%, rgba(245,158,11,0.07) 0%, transparent 60%);
+    animation: auroraShift 14s ease-in-out infinite alternate;
+    pointer-events: none;
+    z-index: 0;
+}
+.hero > * { position: relative; z-index: 1; }
+@keyframes auroraShift {
+    0%   { filter: hue-rotate(0deg) brightness(1); }
+    50%  { filter: hue-rotate(12deg) brightness(1.08); }
+    100% { filter: hue-rotate(-8deg) brightness(0.95); }
+}
+
+.hero-role {
+    font-size: 12px;
+    letter-spacing: 0.28em;
+    color: var(--cyan);
+    text-shadow: 0 0 14px var(--cyan-glow);
+}
+
+.hero h1 {
+    font-size: clamp(44px, 8.5vw, 96px);
+    letter-spacing: -0.02em;
+    line-height: 1.02;
+    margin: 20px 0 26px;
+    background: linear-gradient(135deg, #ffffff 0%, #cde8f0 50%, #a0c8d8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.hero h1 .k {
+    background: linear-gradient(135deg, var(--amber), var(--gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 16px rgba(245,158,11,0.35));
+}
+
+.hero-sub { font-size: 19px; line-height: 1.7; }
+.hero-sub a { color: var(--cyan); text-shadow: 0 0 10px var(--cyan-glow); }
+
+/* ── 5. Telemetry: bigger glow numbers ──────────────────── */
+.telemetry {
+    border-top: 1px solid var(--line-soft);
+    border-bottom: 1px solid var(--line-soft);
+    background: linear-gradient(180deg, rgba(6,214,234,0.03), transparent);
+}
+.telemetry .num {
+    font-size: clamp(32px, 5vw, 52px);
+    color: var(--amber);
+    text-shadow: 0 0 20px var(--amber-glow);
+}
+.telemetry .cell {
+    transition: background 0.2s;
+}
+.telemetry .cell:hover { background: rgba(245,158,11,0.04); }
+
+/* ── 6. Pipeline canvas band ────────────────────────────── */
+.pipeline-band {
+    border-top: 1px solid rgba(6,214,234,0.15);
+    border-bottom: 1px solid rgba(6,214,234,0.15);
+    background:
+        radial-gradient(ellipse 80% 140% at 50% 0%, rgba(6,214,234,0.07), transparent),
+        linear-gradient(180deg, var(--bg1), var(--bg0));
+    box-shadow: inset 0 1px 0 rgba(6,214,234,0.1), inset 0 -1px 0 rgba(139,92,246,0.08);
+}
+
+/* ── 7. Buttons: vivid glow ──────────────────────────────── */
+.btn {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(6px);
+    letter-spacing: 0.1em;
+    transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.btn:hover {
+    border-color: var(--cyan);
+    box-shadow: 0 0 0 1px var(--cyan), 0 0 20px var(--cyan-glow), 0 4px 12px rgba(0,0,0,0.4);
+    transform: translateY(-3px);
+}
+.btn.primary {
+    background: var(--amber);
+    color: #000;
+    border-color: var(--amber);
+    font-weight: 700;
+    box-shadow: 0 0 24px var(--amber-glow), 0 4px 16px rgba(0,0,0,0.3);
+}
+.btn.primary:hover {
+    filter: brightness(1.1);
+    box-shadow: 0 0 36px var(--amber-glow), 0 6px 20px rgba(0,0,0,0.4);
+    transform: translateY(-3px);
+}
+
+/* ── 8. Route cards: glass + category glow ───────────────── */
+.route-card {
+    background: rgba(255,255,255,0.025);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.07);
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+}
+.route-card::before {
+    content: "";
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(245,158,11,0.06), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.route-card:hover {
+    border-color: rgba(245,158,11,0.45);
+    box-shadow: 0 0 0 1px rgba(245,158,11,0.15), 0 0 30px var(--amber-glow), 0 8px 32px rgba(0,0,0,0.5);
+    transform: translateY(-5px);
+}
+.route-card:hover::before { opacity: 1; }
+.route-card .go { color: var(--amber); letter-spacing: 0.04em; }
+
+/* ── 9. Now strip: line accents ────────────────────────────── */
+.now-strip { border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); }
+.now-strip li::before {
+    color: var(--cyan);
+    text-shadow: 0 0 8px var(--cyan-glow);
+}
+
+/* ── 10. Quotes: vivid left border ───────────────────────── */
+.quote {
+    background: rgba(255,255,255,0.025);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-left: 3px solid var(--amber);
+    box-shadow: -4px 0 20px var(--amber-glow), 0 4px 20px rgba(0,0,0,0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.quote:hover {
+    transform: translateY(-3px);
+    box-shadow: -4px 0 28px var(--amber-glow), 0 8px 32px rgba(0,0,0,0.4);
+}
+
+/* ── 11. Cards (proj, cert, repo, contact) ────────────────── */
+.proj-card,
+.cert,
+.repo,
+.contact-card,
+.skill-group,
+.talk {
+    background: rgba(255,255,255,0.025);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.06);
+    transition: border-color 0.22s, box-shadow 0.22s, transform 0.22s;
+}
+.proj-card:hover,
+.cert:hover,
+.repo:hover {
+    border-color: rgba(245,158,11,0.4);
+    box-shadow: 0 0 24px var(--amber-glow), 0 8px 32px rgba(0,0,0,0.4);
+    transform: translateY(-4px);
+}
+.contact-card:hover {
+    border-color: rgba(6,214,234,0.45);
+    box-shadow: 0 0 24px var(--cyan-glow), 0 8px 32px rgba(0,0,0,0.4);
+}
+
+/* ── 12. Chips: vivid ─────────────────────────────────────── */
+.chip {
+    background: rgba(6,214,234,0.06);
+    border: 1px solid rgba(6,214,234,0.2);
+    color: var(--cyan);
+    transition: border-color 0.15s, box-shadow 0.15s;
+}
+.chip:hover {
+    border-color: var(--cyan);
+    box-shadow: 0 0 10px var(--cyan-glow);
+}
+
+/* ── 13. PR status badges ─────────────────────────────────── */
+.st.merged {
+    box-shadow: 0 0 8px var(--green-glow);
+}
+
+/* ── 14. Job timeline dots ───────────────────────────────── */
+.job::before {
+    background: var(--bg0);
+    border-color: var(--amber);
+    box-shadow: 0 0 14px var(--amber-glow), 0 0 4px var(--amber);
+}
+
+/* ── 15. Site footer: gradient top ───────────────────────── */
+.site-footer {
+    border-top: 1px solid transparent;
+    background: linear-gradient(180deg, var(--line-soft) 0px, transparent 1px) top / 100% 1px no-repeat,
+                var(--bg0);
+    position: relative;
+}
+.site-footer::before {
+    content: "";
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--cyan), var(--violet), var(--amber), transparent);
+    opacity: 0.4;
+}
+
+/* ── 16. Header brand: glow on hover ─────────────────────── */
+.brand:hover .dot {
+    text-shadow: 0 0 16px var(--amber);
+}
+
+/* ── 17. Header CTA: pulse glow ──────────────────────────── */
+.header-cta {
+    box-shadow: 0 0 18px var(--amber-glow);
+}
+.header-cta:hover {
+    box-shadow: 0 0 28px var(--amber-glow), 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* ── 18. Section block dividers: gradient lines ──────────── */
+section.block + section.block {
+    border-top: 1px solid transparent;
+    background-image: linear-gradient(90deg, transparent, rgba(6,214,234,0.12), transparent);
+    background-size: 100% 1px;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+/* ── 19. PR list hover ───────────────────────────────────── */
+.pr:hover {
+    border-color: var(--cyan);
+    box-shadow: 0 0 12px var(--cyan-glow);
+}
+
+/* ── 20. Article list hover ──────────────────────────────── */
+.article:hover {
+    border-color: rgba(245,158,11,0.45);
+    box-shadow: 0 0 20px var(--amber-glow);
+}
+
+/* ── 21. Page head: gradient text ────────────────────────── */
+.page-head h1 {
+    background: linear-gradient(135deg, #ffffff 0%, #c8e4f0 60%, #8bbcd0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ── 22. Custom scrollbar ─────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg0); }
+::-webkit-scrollbar-thumb { background: var(--line); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--faint); }
+
+/* ── 23. Focus visible: cyan ring ────────────────────────── */
+:focus-visible {
+    outline: 2px solid var(--cyan);
+    outline-offset: 3px;
+    box-shadow: 0 0 12px var(--cyan-glow);
+}
+
+/* ── 24. Text selection: amber ───────────────────────────── */
+::selection { background: var(--amber); color: #000; }
+
+/* ── 25. Eyebrow label links ─────────────────────────────── */
+.tabs a[aria-current="page"] {
+    color: var(--amber);
+    text-shadow: 0 0 10px var(--amber-glow);
+    background: rgba(245,158,11,0.06);
+}
+.tabs a[aria-current="page"]::after {
+    background: var(--amber);
+    box-shadow: 0 0 6px var(--amber-glow);
+}
+.tabs a:hover {
+    color: var(--text);
+    background: rgba(255,255,255,0.04);
+    text-shadow: none;
+}
+
+/* ── 26. Proj thumb overlay ──────────────────────────────── */
+.proj-thumb { position: relative; }
+.proj-thumb::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: linear-gradient(0deg, rgba(6,9,18,0.5), transparent);
+    pointer-events: none;
+}
+
+/* ── 27. Metric badges ───────────────────────────────────── */
+.metric {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+}
+.metric b { color: var(--amber); text-shadow: 0 0 6px var(--amber-glow); }
+
+/* ── 28. CS modal: glass dark ────────────────────────────── */
+.cs-overlay { background: rgba(2,9,18,0.88); }
+.cs-modal {
+    background: rgba(9,20,32,0.95);
+    backdrop-filter: blur(24px);
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 32px 80px rgba(0,0,0,0.7), 0 0 0 1px rgba(245,158,11,0.1);
+}
+
+/* ── 29. Editor note ─────────────────────────────────────── */
+.editor-note {
+    border: 1px dashed rgba(245,158,11,0.3);
+    background: rgba(245,158,11,0.04);
+}
+
+/* ── 30. Routes grid: hero cards get unique glow colors ──── */
+.routes .route-card:nth-child(1):hover { border-color: rgba(6,214,234,0.45); box-shadow: 0 0 28px var(--cyan-glow), 0 8px 32px rgba(0,0,0,0.4); }
+.routes .route-card:nth-child(1):hover::before { background: linear-gradient(135deg, rgba(6,214,234,0.07), transparent 60%); opacity: 1; }
+.routes .route-card:nth-child(2):hover { border-color: rgba(245,158,11,0.45); box-shadow: 0 0 28px var(--amber-glow), 0 8px 32px rgba(0,0,0,0.4); }
+.routes .route-card:nth-child(3):hover { border-color: rgba(16,212,160,0.45); box-shadow: 0 0 28px var(--green-glow), 0 8px 32px rgba(0,0,0,0.4); }
+.routes .route-card:nth-child(4):hover { border-color: rgba(139,92,246,0.45); box-shadow: 0 0 28px var(--violet-glow), 0 8px 32px rgba(0,0,0,0.4); }
+.routes .route-card:nth-child(5):hover { border-color: rgba(6,214,234,0.45); box-shadow: 0 0 28px var(--cyan-glow), 0 8px 32px rgba(0,0,0,0.4); }
+.routes .route-card:nth-child(6):hover { border-color: rgba(245,158,11,0.45); box-shadow: 0 0 28px var(--amber-glow), 0 8px 32px rgba(0,0,0,0.4); }
